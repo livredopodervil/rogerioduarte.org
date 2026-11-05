@@ -1,53 +1,98 @@
-import {EventBus} from '../spatialseed/EventBus.js';
-import {composeTransform,eulerQuaternion} from '../spatialseed/Matrix4.js';
-const $=s=>document.querySelector(s), bus=new EventBus();
 const pages=[
  {tag:'01 / MEDICINA',title:'Medicina e assistência clínica',label:'MEDICINA',color:'#73e9db',description:'Médico com experiência no Sistema Único de Saúde, atuando em atenção primária, Medicina de Família e Comunidade, pronto atendimento, urgência, emergência e assistência hospitalar. A prática envolve avaliação clínica, tomada de decisão, prescrição, monitoramento e continuidade do cuidado.',points:['Atendimento clínico de adultos, com acompanhamento de condições agudas e crônicas.','Atuação em equipes multiprofissionais e diferentes níveis de complexidade assistencial.','Integração de raciocínio clínico, comunicação e documentação técnica.']},
  {tag:'02 / ASSISTÊNCIA',title:'Atenção primária e urgências',label:'ASSISTÊNCIA',color:'#9dc8ff',description:'Experiência em serviços de atenção primária e em ambientes hospitalares, incluindo assistência em situações de urgência e emergência. Trabalho voltado à avaliação de riscos, priorização de condutas, acompanhamento longitudinal e articulação com equipes de saúde.',points:['Atenção primária e acompanhamento de pacientes ao longo do tempo.','Avaliação e manejo inicial de apresentações agudas e condições clínicas complexas.','Comunicação entre profissionais e organização do cuidado.']},
  {tag:'03 / COMPUTAÇÃO',title:'Desenvolvimento de software',label:'SISTEMAS',color:'#d5a8ff',description:'Experiência de longa duração em computação, programação e análise de sistemas. Desenvolvimento de soluções web, ferramentas de automação, interfaces gráficas e aplicações interativas, com atenção à arquitetura modular, desempenho e capacidade de manutenção.',points:['JavaScript, Python, sistemas web, automação e integração de componentes.','Interfaces gráficas, computação espacial, simulação e visualização de dados.','Arquitetura de software, testes, documentação e ferramentas de desenvolvimento.']},
  {tag:'04 / TECNOLOGIA',title:'Dados, estatística e IA',label:'DADOS & IA',color:'#ffc995',description:'Aplicação de métodos quantitativos e computacionais à exploração de problemas. Interesse em estatística, aprendizado de máquina, redes neurais, modelos generativos e sistemas baseados em agentes, com ênfase na interpretação crítica dos resultados.',points:['Análise exploratória, representação de dados e comunicação visual.','Automação e prototipagem de ferramentas assistidas por inteligência artificial.','Avaliação de limites, pressupostos e verificabilidade de soluções técnicas.']},
  {tag:'05 / INVESTIGAÇÃO',title:'Pesquisa e pensamento científico',label:'PESQUISA',color:'#a5f1a3',description:'Trajetória interdisciplinar nas interfaces entre Medicina, Matemática, Ciências Sociais e Geociências. Interesse por fundamentos científicos, modelagem, métodos de investigação e problemas que exigem integrar conhecimentos de áreas diferentes.',points:['Leitura crítica de evidências e distinção entre dados, hipóteses e interpretações.','Matemática aplicada, estatística e análise de sistemas complexos.','Investigação orientada por perguntas claras e documentação reproduzível.']},
- {tag:'06 / COMUNICAÇÃO',title:'Comunicação e produção técnica',label:'COMUNICAÇÃO',color:'#ff9fb5',description:'Experiência em produção gráfica e audiovisual, edição, organização de conteúdo e comunicação técnica. Integração de linguagem, imagem e programação para apresentar informações complexas de maneira acessível, sem perder precisão.',points:['Documentação, escrita técnica e organização editorial.','Produção gráfica, audiovisual e recursos multimídia.','Visualizações e experiências interativas para públicos diversos.']}
+ {tag:'06 / COMUNICAÇÃO',title:'Comunicação e produção técnica',label:'COMUNICAÇÃO',color:'#ff9fb5',description:'Experiência em produção gráfica e audiovisual, edição, organização de conteúdo e comunicação técnica. Integração de linguagem, imagem e programação para apresentar informações complexas de maneira acessível, sem perder precisão.',points:['Documentação, escrita técnica e organização editorial.','Produção gráfica, audiovisual e recursos multimídia.','Visualizações e experiências interativas para públicos diversos.']},
+
+ {tag:'07 / URGÊNCIAS',title:'Urgência e emergência',label:'URGÊNCIAS',description:'Atuação clínica em situações que exigem avaliação rápida, identificação de riscos e definição de prioridades assistenciais.',points:['Avaliação e estabilização inicial.','Decisões clínicas e trabalho em equipe.','Continuidade do cuidado e documentação.']},
+ {tag:'08 / GENÉTICA',title:'Genética e biologia molecular',label:'GENÉTICA',description:'Interesse científico em genética, biologia molecular e nas relações entre mecanismos biológicos, informação e saúde.',points:['Fundamentos moleculares e hereditariedade.','Interpretação crítica de evidências.','Interfaces entre biologia e computação.']},
+ {tag:'09 / MATEMÁTICA',title:'Matemática e modelagem',label:'MATEMÁTICA',description:'Aplicação de estruturas matemáticas, geometria, lógica e modelos formais à investigação de problemas científicos e computacionais.',points:['Geometria e representação espacial.','Modelagem de sistemas complexos.','Raciocínio quantitativo e métodos formais.']},
+ {tag:'10 / GEOCIÊNCIAS',title:'Natureza, Terra e sistemas',label:'NATUREZA',description:'Interesse interdisciplinar em geociências, ecologia e processos naturais, considerando a relação entre sistemas físicos, biológicos e sociais.',points:['Ciências da Terra e ambiente.','Sistemas e interações em múltiplas escalas.','Visualização de fenômenos naturais.']},
+ {tag:'11 / PUBLICAÇÕES',title:'Textos e publicações',label:'PUBLICAÇÕES',description:'Espaço para reunir artigos, notas técnicas, análises e materiais de divulgação de conhecimentos científicos e tecnológicos.',points:['Artigos e textos autorais.','Documentação e materiais técnicos.','Ensaios e análises interdisciplinares.']},
+ {tag:'12 / CONTATO',title:'Contato profissional',label:'CONTATO',description:'Canal de contato para colaboração, comunicação profissional, desenvolvimento de software e projetos interdisciplinares.',points:['Medicina, ciência e tecnologia.','Projetos e colaboração técnica.','E-mail: rd@rogerioduarte.org']}
 ];
-$('#year').textContent=new Date().getFullYear();
-let active=0,overview=true,sound=false,motion=!matchMedia('(prefers-reduced-motion: reduce)').matches,audio=null,THREE,renderer,scene,camera,raycaster,faces=[],solid,trail,trailGeometry,trailMaterial,frameId=0,last=0,drag=null,clock=0,zoom=1,ready=false;
-const canvas=$('#scene'),canvasParent=canvas.parentElement,events=[];
-const getStatus=s=>$('#status').textContent=s;
-function fill(){const p=pages[active];$('#kicker').textContent=p.tag;$('#heading').textContent=p.title;$('#description').textContent=p.description;$('#points').replaceChildren(...p.points.map(t=>{const li=document.createElement('li');li.textContent=t;return li}));$('#counter').textContent=overview?'VISÃO GERAL · 6 FACES':`${active+1} / 6 · ${p.label}`;$('#meta-title').textContent=overview?'Exploração espacial':p.label;$('#meta-text').textContent=overview?'Selecione uma face para aproximar a câmera e explorar sua área.':'A câmera está alinhada a esta face. Use Anterior ou Próximo para visitar as outras faces.'}
-function beep(kind='click'){if(!sound)return;try{audio??=new (window.AudioContext||window.webkitAudioContext)();audio.resume();const t=audio.currentTime,o=audio.createOscillator(),g=audio.createGain();o.type='sine';const hz=kind==='move'?340:kind==='zoom'?260:510;o.frequency.setValueAtTime(hz,t);o.frequency.exponentialRampToValueAtTime(hz*(kind==='move'?1.16:.91),t+.075);g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.007,t+.008);g.gain.exponentialRampToValueAtTime(.0001,t+.105);o.connect(g);g.connect(audio.destination);o.start(t);o.stop(t+.11)}catch{}}
-let targetPosition,targetLook,targetQuat,currentPosition,currentLook,currentQuat,transitionStart=0,fromPosition,fromLook,fromQuat;
-function viewFor(i){const a=i*Math.PI/3;const normal=new THREE.Vector3(Math.sin(a),0,Math.cos(a));const center=normal.clone().multiplyScalar(5.3);return {position:normal.clone().multiplyScalar(12.8*zoom).add(new THREE.Vector3(0,.2,0)),look:center,quat:new THREE.Quaternion()}}
-function setCameraTarget(){if(!ready)return;const v=overview?{position:new THREE.Vector3(0,6.2,20*zoom),look:new THREE.Vector3(0,0,0)}:viewFor(active);fromPosition=camera.position.clone();fromLook=currentLook.clone();targetPosition=v.position;targetLook=v.look;transitionStart=performance.now();bus.emit('camera:target',{active,overview});wake()}
-function focus(i){active=(i+pages.length)%pages.length;overview=false;fill();beep('move');setCameraTarget()}
-function home(){overview=true;fill();beep();setCameraTarget()}
-$('#prev').onclick=()=>focus(active-1);$('#next').onclick=()=>focus(active+1);$('#overview').onclick=home;
-$('#sound').onclick=()=>{sound=!sound;$('#sound').textContent=sound?'♫ Som ligado':'♫ Som';$('#sound').setAttribute('aria-pressed',String(sound));beep()};
-$('#motion').onclick=()=>{motion=!motion;$('#motion').textContent=motion?'Ⅱ Animação':'▶ Animação';$('#motion').setAttribute('aria-pressed',String(motion));wake()};
-for(const b of document.querySelectorAll('[data-face]'))b.onclick=()=>{focus(+b.dataset.face);canvasParent.scrollIntoView({behavior:'smooth',block:'center'})};
-addEventListener('keydown',e=>{if(e.target?.matches('input,textarea,select'))return;if(e.key==='ArrowRight')focus(active+1);if(e.key==='ArrowLeft')focus(active-1);if(e.key==='Escape')home()});fill();
-function labelTexture(p){const c=document.createElement('canvas');c.width=768;c.height=512;const g=c.getContext('2d');const grad=g.createLinearGradient(0,0,768,512);grad.addColorStop(0,'#1a4259');grad.addColorStop(.6,'#102a42');grad.addColorStop(1,'#091d30');g.fillStyle=grad;g.fillRect(0,0,768,512);g.fillStyle=p.color;g.fillRect(0,0,768,12);g.strokeStyle=p.color;g.globalAlpha=.25;for(let i=0;i<5;i++){g.beginPath();g.arc(655,235,75+i*60,0,Math.PI*2);g.stroke()}g.globalAlpha=1;g.fillStyle='#d9ebfa';g.font='bold 23px system-ui';g.fillText(p.tag,44,70);g.fillStyle='#ffffff';g.font='bold 58px system-ui';let words=p.title.split(' '),line='',y=220;for(const word of words){const t=line?line+' '+word:word;if(g.measureText(t).width>670){g.fillText(line,44,y);line=word;y+=69}else line=t}g.fillText(line,44,y);g.fillStyle=p.color;g.font='bold 25px system-ui';g.fillText(p.label,44,439);g.fillStyle='#d9e9f5';g.font='19px system-ui';g.fillText('TOQUE PARA APROXIMAR',44,481);const tex=new THREE.CanvasTexture(c);tex.colorSpace=THREE.SRGBColorSpace;return tex}
-function makeSolid(){solid=new THREE.Group();scene.add(solid);const geo=new THREE.PlaneGeometry(5.0,3.85),frameGeo=new THREE.BoxGeometry(5.23,4.09,.12),frameMat=new THREE.MeshStandardMaterial({color:0x24485c,metalness:.36,roughness:.35}),glassGeo=new THREE.BoxGeometry(5.29,4.18,.035),glassMat=new THREE.MeshPhysicalMaterial({color:0x93d7f1,transparent:true,opacity:.14,roughness:.15,metalness:.04,clearcoat:1,depthWrite:false});
- for(let i=0;i<6;i++){const a=i*Math.PI/3;const group=new THREE.Group();group.rotation.y=a;group.position.set(Math.sin(a)*5.3,0,Math.cos(a)*5.3);solid.add(group);const frame=new THREE.Mesh(frameGeo,frameMat);frame.position.z=-.1;group.add(frame);const tex=labelTexture(pages[i]);const panel=new THREE.Mesh(geo,new THREE.MeshBasicMaterial({map:tex,side:THREE.DoubleSide}));panel.userData.index=i;group.add(panel);const glass=new THREE.Mesh(glassGeo,glassMat);glass.position.z=-.2;group.add(glass);const edge=new THREE.LineSegments(new THREE.EdgesGeometry(frameGeo),new THREE.LineBasicMaterial({color:pages[i].color,transparent:true,opacity:.7}));edge.position.z=-.1;group.add(edge);faces.push({group,panel,tex})}
- // Interior prism joins the faces visually; low polygon count.
- const core=new THREE.Mesh(new THREE.CylinderGeometry(4.65,4.65,3.75,6,1),new THREE.MeshStandardMaterial({color:0x102c40,roughness:.38,metalness:.32,flatShading:true}));core.rotation.y=Math.PI/6;solid.add(core);
- const top=new THREE.Mesh(new THREE.CylinderGeometry(4.75,4.75,.13,6),new THREE.MeshStandardMaterial({color:0x20475e,metalness:.55,roughness:.23}));top.position.y=2.07;top.rotation.y=Math.PI/6;solid.add(top);
- const bottom=top.clone();bottom.position.y=-2.07;solid.add(bottom);
- // Affine transforms from SpatialSeed are used to position decorative guide instances.
- const guideGeo=new THREE.IcosahedronGeometry(.055,0),guideMat=new THREE.MeshBasicMaterial({color:0x8eece4,transparent:true,opacity:.52});const guides=new THREE.InstancedMesh(guideGeo,guideMat,36);const dummy=new THREE.Object3D();for(let i=0;i<36;i++){const a=i/36*Math.PI*2;const m=composeTransform({position:[Math.sin(a)*7.3,Math.sin(a*3)*1.4,Math.cos(a)*7.3],rotation:eulerQuaternion([0,0,0]),scale:[1,1,1]});dummy.matrix.fromArray(m);guides.setMatrixAt(i,dummy.matrix)}guides.instanceMatrix.needsUpdate=true;scene.add(guides);
- // One draw call for a fading trail. Per-instance scales are updated in a ring buffer.
- trailGeometry=new THREE.SphereGeometry(.07,5,4);trailMaterial=new THREE.MeshBasicMaterial({color:0x9de9e9,transparent:true,opacity:.28,depthWrite:false});trail=new THREE.InstancedMesh(trailGeometry,trailMaterial,28);trail.instanceMatrix.setUsage(THREE.DynamicDrawUsage);scene.add(trail);
+
+const $=s=>document.querySelector(s);let THREE,renderer,scene,camera,root,raycaster,faceMeshes=[],frame=0,previous=0,drag=null,selected=-1,auto=true,zoom=1,angleVelocity=.7,ready=false;
+const names=['Medicina','Atenção Primária','Computação','Dados & IA','Pesquisa','Comunicação','Urgências','Genética','Matemática','Natureza','Publicações','Contato'];
+const short=['Medicina e cuidado integral','Atenção primária e urgências','Software e modelagem 3D','Estatística e inteligência artificial','Ciência e investigação','Comunicação e audiovisual'];
+const colors=['#e8ef92','#b5e879','#c5f37c','#e7f2a6','#8edc8b','#d8e98b'];
+const cv=$('#scene'),viewport=$('#viewport');
+function status(s){$('#status').textContent=s}
+function detail(i){if(i<0||i>=12)return;selected=i;const p=pages[i];$('#detail-title').textContent=p.title;$('#detail-tag').textContent=p.tag;$('#detail-description').textContent=p.description;$('#detail-image').src='./images/face-'+(i+1)+'.jpg';$('#detail-image').alt=p.title;$('#detail-points').replaceChildren(...p.points.map(t=>{let li=document.createElement('li');li.textContent=t;return li}));$('#detail').hidden=false;document.body.classList.add('detail-open');$('#detail-close').focus();history.replaceState(null,'','#secao-'+(i+1))}
+function closeDetail(){if($('#detail').hidden)return;$('#detail').hidden=true;document.body.classList.remove('detail-open');history.replaceState(null,'',location.pathname+location.search);$('#scene').focus()}
+$('#detail-close').onclick=closeDetail;$('#detail-home').onclick=closeDetail;$('#home').onclick=()=>{closeDetail();root?.quaternion.identity();selected=-1};$('#about').onclick=()=>detail(0);$('#contact').href='mailto:rd@rogerioduarte.org';
+$('#pause').onclick=()=>{auto=!auto;$('#pause').textContent=auto?'Ⅱ Pausar':'▶ Animar';$('#pause').setAttribute('aria-pressed',String(auto))};
+$('#reset').onclick=()=>{root?.quaternion.identity();zoom=1;updateCamera();selected=-1};
+$('#fullscreen').onclick=()=>{if(document.fullscreenElement)document.exitFullscreen();else document.documentElement.requestFullscreen?.()};
+$('#zoom-in').onclick=()=>{zoom=Math.max(.62,zoom-.12);updateCamera()};$('#zoom-out').onclick=()=>{zoom=Math.min(1.65,zoom+.12);updateCamera()};
+for(const b of document.querySelectorAll('[data-section]'))b.onclick=()=>detail(+b.dataset.section);
+addEventListener('keydown',e=>{if(e.key==='Escape')closeDetail();if(!$('#detail').hidden)return;if(e.key==='ArrowLeft')root?.rotateY(-.22);if(e.key==='ArrowRight')root?.rotateY(.22);if(e.key==='ArrowUp')root?.rotateX(-.22);if(e.key==='ArrowDown')root?.rotateX(.22)});
+function updateCamera(){if(!camera)return;camera.position.set(0,0,12.6*zoom);camera.lookAt(0,0,0)}
+function texture(i){
+ const c=document.createElement('canvas');c.width=768;c.height=768;
+ const g=c.getContext('2d');g.fillStyle='#12371e';g.fillRect(0,0,768,768);
+ const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;
+ const im=new Image();
+ im.onload=()=>{
+   g.drawImage(im,0,0,768,768);
+   const shade=g.createLinearGradient(0,430,0,768);
+   shade.addColorStop(0,'rgba(0,22,9,0)');shade.addColorStop(1,'rgba(0,19,8,.88)');
+   g.fillStyle=shade;g.fillRect(0,430,768,338);
+   g.fillStyle='#f2f8d6';g.textAlign='center';g.font='600 48px system-ui';
+   g.fillText(names[i],384,660,670);
+   t.needsUpdate=true;
+ };
+ im.onerror=()=>{g.fillStyle='#e6f5a4';g.font='42px sans-serif';g.textAlign='center';g.fillText(names[i],384,410);t.needsUpdate=true};
+ im.src='./images/face-'+(i+1)+'.jpg';return t;
 }
-function updateTrail(){if(!trail)return;const d=new THREE.Object3D();for(let i=0;i<28;i++){const t=i/28;const a=clock*.28-t*.75;const r=7.2+.12*Math.sin(clock*.6);d.position.set(Math.sin(a)*r,1.65+.25*Math.sin(clock*.5-t*3),Math.cos(a)*r);d.scale.setScalar(.08+(1-t)*1.3);d.updateMatrix();trail.setMatrixAt(i,d.matrix)}trail.instanceMatrix.needsUpdate=true}
-function resize(){if(!renderer)return;const r=canvas.getBoundingClientRect();renderer.setSize(Math.max(1,Math.round(r.width)),Math.max(1,Math.round(r.height)),false);camera.aspect=r.width/r.height;camera.fov=r.width<720?65:52;camera.updateProjectionMatrix();wake()}
-function wake(){if(!frameId&&ready&&!document.hidden)frameId=requestAnimationFrame(loop)}
-function loop(now){frameId=0;if(!ready||document.hidden)return;const dt=Math.min(.045,(now-last)/1000||.016);last=now;const elapsed=now-transitionStart;const t=Math.min(1,elapsed/560),ease=1-Math.pow(1-t,3);if(fromPosition&&targetPosition){camera.position.copy(fromPosition).lerp(targetPosition,ease);currentLook.copy(fromLook).lerp(targetLook,ease)}camera.lookAt(currentLook);if(motion){clock+=dt;if(overview){solid.rotation.y+=dt*.045;solid.rotation.y=Math.min(.12,Math.max(-.12,solid.rotation.y))}updateTrail()}renderer.render(scene,camera);if(t<1||motion)frameId=requestAnimationFrame(loop)}
-async function init(){try{THREE=await import('https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.module.js');renderer=new THREE.WebGLRenderer({canvas,antialias:false,powerPreference:'low-power'});renderer.setPixelRatio(Math.min(devicePixelRatio||1,innerWidth<780?1:1.4));renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.25;renderer.setClearColor(0x0b2235);scene=new THREE.Scene();scene.fog=new THREE.FogExp2(0x0b2235,.016);camera=new THREE.PerspectiveCamera(52,1,.1,120);raycaster=new THREE.Raycaster();scene.add(new THREE.HemisphereLight(0xd7f4ff,0x0a243a,2.4));const sun=new THREE.DirectionalLight(0xc9ebff,2.3);sun.position.set(3,9,12);scene.add(sun);const accent=new THREE.PointLight(0x73dfd6,18,18);accent.position.set(-5,5,6);scene.add(accent);makeSolid();camera.position.set(0,6.2,20);currentLook=new THREE.Vector3(0,0,0);ready=true;resize();getStatus('EXPLORAÇÃO 3D · 6 FACES · OTIMIZADO');setCameraTarget();
- canvas.addEventListener('pointerdown',e=>{drag={x:e.clientX,y:e.clientY,moved:false};canvas.setPointerCapture(e.pointerId)});
- canvas.addEventListener('pointermove',e=>{if(!drag)return;const dx=e.clientX-drag.x,dy=e.clientY-drag.y;if(Math.abs(dx)+Math.abs(dy)>9)drag.moved=true;if(drag.moved&&Math.abs(dx)>48){focus(active+(dx<0?1:-1));drag.x=e.clientX;drag.y=e.clientY;drag.moved=true}});
- canvas.addEventListener('pointerup',e=>{if(!drag)return;const moved=drag.moved;drag=null;if(moved)return;const rect=canvas.getBoundingClientRect();raycaster.setFromCamera(new THREE.Vector2((e.clientX-rect.left)/rect.width*2-1,-((e.clientY-rect.top)/rect.height*2-1)),camera);const hit=raycaster.intersectObjects(faces.map(f=>f.panel),false)[0];if(hit)focus(hit.object.userData.index);else if(overview)focus(active)});
- canvas.addEventListener('pointercancel',()=>drag=null);
- canvas.addEventListener('wheel',e=>{e.preventDefault();if(Math.abs(e.deltaY)<2)return;zoom=Math.min(1.25,Math.max(.75,zoom+Math.sign(e.deltaY)*.06));beep('zoom');setCameraTarget()},{passive:false});
- addEventListener('resize',resize,{passive:true});document.addEventListener('visibilitychange',()=>{if(!document.hidden){last=0;wake()}});wake();
- }catch(err){console.error(err);getStatus('ERRO 3D · '+String(err.message||err).slice(0,110));$('#fallback').classList.add('show')}}
-$('#texture').addEventListener('change',async e=>{const file=e.target.files?.[0];if(!file)return;if(!/^image\/(png|jpeg|webp)$/.test(file.type)||file.size>12_000_000){alert('Use PNG, JPG ou WebP de até 12 MB.');return}if(!ready){alert('Aguarde o carregamento do 3D.');return}try{const bmp=await createImageBitmap(file),scale=Math.min(1,1024/Math.max(bmp.width,bmp.height)),c=document.createElement('canvas');c.width=Math.round(bmp.width*scale);c.height=Math.round(bmp.height*scale);c.getContext('2d').drawImage(bmp,0,0,c.width,c.height);bmp.close();const tex=new THREE.CanvasTexture(c);tex.colorSpace=THREE.SRGBColorSpace;const face=faces[active];face.panel.material.map?.dispose();face.panel.material.map=tex;face.panel.material.needsUpdate=true;getStatus('IMAGEM LOCAL · '+file.name.slice(0,35));beep();wake()}catch(err){console.error(err);alert('Falha ao carregar imagem.')}finally{e.target.value=''}});
+function build(){
+  root=new THREE.Group();scene.add(root);faceMeshes=[];
+  // Construct the dodecahedron as the dual of an icosahedron.
+  // Exactly 12 icosahedron vertices => exactly 12 pentagonal faces.
+  const ico=new THREE.IcosahedronGeometry(1,0);
+  const pos=ico.getAttribute('position');
+  const vertices=[],triangles=[];
+  function vertexId(v){let i=vertices.findIndex(w=>w.distanceToSquared(v)<1e-8);if(i<0){i=vertices.length;vertices.push(v.clone())}return i}
+  for(let k=0;k<pos.count;k+=3){
+    const ids=[];
+    for(let j=0;j<3;j++)ids.push(vertexId(new THREE.Vector3().fromBufferAttribute(pos,k+j)));
+    const center=vertices[ids[0]].clone().add(vertices[ids[1]]).add(vertices[ids[2]]).divideScalar(3);
+    triangles.push({ids,center});
+  }
+  if(vertices.length!==12||triangles.length!==20)throw Error('Icosaedro inválido: '+vertices.length+' vértices, '+triangles.length+' triângulos');
+  const scale=4.25/0.7946544723;
+  vertices.forEach((normal,i)=>{
+    const n=normal.clone().normalize();
+    const pent=triangles.filter(t=>t.ids.includes(i)).map(t=>t.center.clone().multiplyScalar(scale));
+    if(pent.length!==5)throw Error('Face '+i+': '+pent.length+' vértices');
+    const center=pent.reduce((a,v)=>a.add(v),new THREE.Vector3()).divideScalar(5);
+    const axis=Math.abs(n.y)<.9?new THREE.Vector3(0,1,0):new THREE.Vector3(1,0,0);
+    const u=axis.clone().cross(n).normalize(),v=n.clone().cross(u).normalize();
+    pent.sort((a,b)=>Math.atan2(a.clone().sub(center).dot(v),a.clone().sub(center).dot(u))-Math.atan2(b.clone().sub(center).dot(v),b.clone().sub(center).dot(u)));
+    const radius=Math.max(...pent.map(q=>q.distanceTo(center)));
+    const xyz=[],uv=[],normals=[];
+    for(let j=0;j<5;j++)for(const q of [center,pent[j],pent[(j+1)%5]]){
+      xyz.push(q.x,q.y,q.z);
+      uv.push(.5+q.clone().sub(center).dot(u)/(2*radius),.5+q.clone().sub(center).dot(v)/(2*radius));
+      normals.push(n.x,n.y,n.z);
+    }
+    const geom=new THREE.BufferGeometry();
+    geom.setAttribute('position',new THREE.Float32BufferAttribute(xyz,3));
+    geom.setAttribute('uv',new THREE.Float32BufferAttribute(uv,2));
+    geom.setAttribute('normal',new THREE.Float32BufferAttribute(normals,3));
+    const mesh=new THREE.Mesh(geom,new THREE.MeshBasicMaterial({map:texture(i),side:THREE.DoubleSide}));
+    mesh.userData.section=i;
+    root.add(mesh);faceMeshes.push(mesh);
+    const edges=pent.map(q=>q.clone().addScaledVector(n,.035));edges.push(edges[0]);
+    root.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(edges),new THREE.LineBasicMaterial({color:0xd9f872,transparent:true,opacity:.95})));
+  });
+  const glow=new THREE.Mesh(new THREE.DodecahedronGeometry(4.28,0),new THREE.MeshBasicMaterial({color:0x8fd83b,transparent:true,opacity:.035,side:THREE.BackSide,depthWrite:false}));
+  root.add(glow);root.rotation.set(.32,.35,.13);
+  ico.dispose();
+}
+function resize(){if(!renderer)return;const r=viewport.getBoundingClientRect();const w=Math.max(1,r.width),h=Math.max(1,r.height);renderer.setSize(w,h,false);camera.aspect=w/h;camera.fov=w/h<.8?63:45;camera.updateProjectionMatrix()}
+function loop(now){frame=requestAnimationFrame(loop);const dt=Math.min(.05,(now-previous)/1000||.016);previous=now;if(auto&&!drag&&!document.hidden){root.rotateOnWorldAxis(new THREE.Vector3(0,1,0),dt*.25);root.rotateOnWorldAxis(new THREE.Vector3(1,0,0),dt*.09);root.rotateOnWorldAxis(new THREE.Vector3(0,0,1),dt*.05)}renderer.render(scene,camera)}
+async function init(){try{THREE=await import('https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.module.js');renderer=new THREE.WebGLRenderer({canvas:cv,alpha:true,antialias:true,powerPreference:'high-performance'});renderer.setPixelRatio(Math.min(devicePixelRatio||1,1.7));renderer.outputColorSpace=THREE.SRGBColorSpace;scene=new THREE.Scene();camera=new THREE.PerspectiveCamera(45,1,.1,100);updateCamera();raycaster=new THREE.Raycaster();build();resize();new ResizeObserver(resize).observe(viewport);ready=true;status('DODECAEDRO · 12 FACES · 12 SEÇÕES');requestAnimationFrame(loop);cv.addEventListener('pointerdown',e=>{drag={x:e.clientX,y:e.clientY,startX:e.clientX,startY:e.clientY,moved:false};cv.setPointerCapture(e.pointerId)});cv.addEventListener('pointermove',e=>{if(!drag)return;const dx=e.clientX-drag.x,dy=e.clientY-drag.y;if(Math.abs(e.clientX-drag.startX)+Math.abs(e.clientY-drag.startY)>8)drag.moved=true;root.rotateOnWorldAxis(new THREE.Vector3(0,1,0),dx*.009);root.rotateOnWorldAxis(new THREE.Vector3(1,0,0),dy*.009);drag.x=e.clientX;drag.y=e.clientY});cv.addEventListener('pointerup',e=>{if(!drag)return;const moved=drag.moved;drag=null;if(moved)return;const r=cv.getBoundingClientRect();raycaster.setFromCamera(new THREE.Vector2((e.clientX-r.left)/r.width*2-1,-((e.clientY-r.top)/r.height*2-1)),camera);const hit=raycaster.intersectObjects(faceMeshes)[0];if(hit&&hit.object.userData.section!==null)detail(hit.object.userData.section)});cv.addEventListener('pointercancel',()=>drag=null);cv.addEventListener('wheel',e=>{e.preventDefault();zoom=Math.min(1.65,Math.max(.62,zoom+Math.sign(e.deltaY)*.08));updateCamera()},{passive:false});if(matchMedia('(prefers-reduced-motion: reduce)').matches){auto=false;$('#pause').textContent='▶ Animar'}}catch(err){status('ERRO 3D: '+err.message);console.error(err);const fb=$('#fallback');fb.hidden=false;fb.textContent='Falha no 3D: '+err.message}}
 init();
