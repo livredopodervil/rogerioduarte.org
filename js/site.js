@@ -13,7 +13,7 @@ const pages=[
 $('#year').textContent=new Date().getFullYear();
 let active=0,overview=true,sound=false,motion=!matchMedia('(prefers-reduced-motion: reduce)').matches,ctx=null,lastAudio=0;
 const nav=$('#navbuttons'),canvas=$('#scene');
-for(const [i,p] of pages.entries()){picking.idFor(p.id);const b=document.createElement('button');b.textContent=`${i+1} · ${p.short.split(' ')[0]}`;b.dataset.index=i;b.addEventListener('click',()=>focus(i));nav.append(b)}
+for(const [i,p] of pages.entries()){picking.idFor(p.id);const b=document.createElement('button');b.textContent=`${i+1} · ${p.short.split(' ')[0]}`;b.dataset.index=i;b.addEventListener('click',()=>focus(i));(nav || document.getElementById("navbuttons") || document.querySelector(".navbuttons"))?.append(b)}
 function tone(type='tap'){
  if(!sound||performance.now()-lastAudio<75)return;lastAudio=performance.now();
  try{ctx??=new (window.AudioContext||window.webkitAudioContext)();ctx.resume();const t=ctx.currentTime,o=ctx.createOscillator(),g=ctx.createGain();o.type='sine';const hz=type==='travel'?410:type==='scroll'?260:580;o.frequency.setValueAtTime(hz,t);o.frequency.exponentialRampToValueAtTime(hz*(type==='travel'?1.18:.92),t+.09);g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.008,t+.009);g.gain.exponentialRampToValueAtTime(.0001,t+.12);o.connect(g);g.connect(ctx.destination);o.start(t);o.stop(t+.13)}catch(e){console.debug(e)}
