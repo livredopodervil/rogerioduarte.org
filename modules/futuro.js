@@ -1,4 +1,5 @@
 export default {
+ theme: {"background": "./assets/themes/futuro.svg", "base": "#071b2c", "mid": "#124a68", "accent": "#8bdcf3", "text": "#e8faff", "muted": "#a7d8e8", "panel": "#0c293e", "panel2": "#164961"},
   "id": "futuro",
   "name": "Conexões",
   "color": "#8bdcf3",
@@ -25,6 +26,20 @@ export default {
     "Atualizações",
     "Arquivo",
     "Contato"
+  ],
+  "widgets": [
+    {"type":"facebook","url":"https://www.facebook.com/rogerio.duarte"},
+    {"type":"blog","url":"https://livredopodervil.blogspot.com/"},
+    {"type":"youtube","url":"https://www.youtube.com/@dr.rogerioduarte"},
+    {"type":"x","url":"https://x.com/livredopodervil"},
+    {"type":"instagram","url":"https://www.instagram.com/livredopodervil/"},
+    {"type":"blog","url":"https://livredopodervil.blogspot.com/"},
+    {"type":"youtube","url":"https://www.youtube.com/@dr.rogerioduarte/videos"},
+    {"type":"facebook","url":"https://www.facebook.com/rogerio.duarte"},
+    {"type":"instagram","url":"https://www.instagram.com/livredopodervil/"},
+    {"type":"x","url":"https://x.com/livredopodervil"},
+    {"type":"blog","url":"https://livredopodervil.blogspot.com/"},
+    {"type":"links","url":"https://www.facebook.com/rogerio.duarte"}
   ],
   "pages": [
     {

@@ -1,5 +1,6 @@
 // Pacote independente. Atualize este arquivo e suas imagens sem editar o motor.
 export default {
+ theme: {"background": "./assets/themes/sistemas.svg", "base": "#101923", "mid": "#30465a", "accent": "#e5f3e9", "text": "#f4f8ff", "muted": "#b9d2e2", "panel": "#172633", "panel2": "#34495b"},
   "id": "sistemas",
   "name": "Ferramentas",
   "color": "#e5f3e9",
