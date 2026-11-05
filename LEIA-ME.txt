@@ -1,0 +1,1 @@
+V12: corrigido bug de precedência na interpolação da escala. RSS tenta proxy local, AllOrigins e CodeTabs. Para testar com proxy local: python servidor_teste.py (porta 8089). No GitHub Pages, o proxy local não existe e fontes podem falhar por CORS ou bloqueios externos.

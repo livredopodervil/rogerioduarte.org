@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "modules": [
+    {
+      "id": "nucleo",
+      "src": "./modules/nucleo.js"
+    },
+    {
+      "id": "conhecimento",
+      "src": "./modules/conhecimento.js"
+    },
+    {
+      "id": "sistemas",
+      "src": "./modules/sistemas.js"
+    },
+    {
+      "id": "saude",
+      "src": "./modules/saude.js"
+    },
+    {
+      "id": "futuro",
+      "src": "./modules/futuro.js"
+    }
+  ],
+  "links": [
+    [
+      "nucleo",
+      "conhecimento"
+    ],
+    [
+      "nucleo",
+      "sistemas"
+    ],
+    [
+      "nucleo",
+      "saude"
+    ],
+    [
+      "nucleo",
+      "futuro"
+    ],
+    [
+      "conhecimento",
+      "sistemas"
+    ],
+    [
+      "sistemas",
+      "futuro"
+    ],
+    [
+      "futuro",
+      "saude"
+    ],
+    [
+      "saude",
+      "conhecimento"
+    ]
+  ]
+}
