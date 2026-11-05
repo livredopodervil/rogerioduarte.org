@@ -1,5 +1,4 @@
 export default {
- route: {"slug": "futuro", "sections": ["facebook", "blog", "youtube", "x", "instagram", "publicacoes", "videos", "comunidade", "fotografias", "atualizacoes", "arquivo", "contato"]},
  theme: {"background": "./assets/themes/futuro.svg", "base": "#071b2c", "mid": "#124a68", "accent": "#8bdcf3", "text": "#e8faff", "muted": "#a7d8e8", "panel": "#0c293e", "panel2": "#164961"},
   "id": "futuro",
   "name": "Conexões",

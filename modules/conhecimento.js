@@ -1,6 +1,5 @@
 // Módulo autônomo: substitua apenas este arquivo para editar o dodecaedro amarelo.
 export default {
- route: {"slug": "conhecimento", "sections": ["bbc-mundo", "al-jazeera", "france-24", "deutsche-welle", "the-guardian", "npr-world", "onu-noticias", "euronews", "nasa", "oms", "sciencedaily", "nhk-world"]},
  theme: {"background": "./assets/themes/conhecimento.svg", "base": "#171107", "mid": "#5b3d0c", "accent": "#f6d963", "text": "#fff4d7", "muted": "#e9c78d", "panel": "#271a0a", "panel2": "#4a3414"},
  id:'conhecimento',name:'Notícias do mundo',color:'#f6d963',rgb:'246,217,99',
  title:'Notícias <em>do mundo.</em>',intro:'Doze fontes internacionais. Selecione uma face para consultar as manchetes RSS da fonte correspondente.',
