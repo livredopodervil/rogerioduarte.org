@@ -1,0 +1,1 @@
+Atualização: caricatura discreta na seção Contato; cartão social 1200x630 com recorte real do site e caricatura; metadados Open Graph/Twitter. Base: rogerioduarte-site-home-v1.zip. Não publicar antes de testar.
