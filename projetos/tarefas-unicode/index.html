@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10, user-scalable=yes, viewport-fit=cover">
+<title>Lista de tarefas Unicode</title>
+<style>
+:root{
+  --bg:#10131a; --bg2:#171b24; --card:#1f2633; --line:#313b4d;
+  --text:#eef2f7; --muted:#aeb8c7; --ok:#7ee787; --accent:#8ab4ff;
+  --shadow:0 10px 28px rgba(0,0,0,.28); --radius:18px;
+}
+*{box-sizing:border-box}
+html,body{
+  margin:0;padding:0;color:var(--text);
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
+  background:
+    radial-gradient(circle at top right,#263247 0%,transparent 24%),
+    linear-gradient(180deg,var(--bg),#0c0f14 120%);
+}
+body{min-height:100dvh}
+.wrap{width:min(100%,860px);margin:0 auto;padding:max(12px,env(safe-area-inset-top)) 12px max(18px,env(safe-area-inset-bottom))}
+.hero,.painel,.lista,.rodape{
+  background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));
+  border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow);
+}
+.hero{padding:16px;display:grid;gap:10px;margin-bottom:12px}
+.titulo{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap}
+.titulo h1{margin:0;font-size:clamp(1.35rem,5vw,2.2rem);line-height:1.08}
+.sub{margin:0;color:var(--muted);font-size:clamp(.95rem,2.7vw,1.05rem);line-height:1.45}
+.decor{font-size:clamp(1.2rem,4.5vw,1.6rem);letter-spacing:.08em;user-select:none}
+.painel{padding:12px;display:grid;gap:10px;margin-bottom:12px}
+.row{display:grid;grid-template-columns:1fr;gap:10px}
+input[type="text"]{
+  width:100%;padding:14px;border-radius:14px;border:1px solid var(--line);
+  outline:none;background:var(--bg2);color:var(--text);font-size:1rem
+}
+input[type="text"]::placeholder{color:#8f9bb0}
+.acoes{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+button{
+  appearance:none;border:1px solid var(--line);background:linear-gradient(180deg,#283142,#1d2430);
+  color:var(--text);border-radius:14px;padding:13px 12px;font-weight:700;font-size:.98rem
+}
+button:active{transform:translateY(1px)}
+.meta{color:var(--muted);font-size:.95rem;display:flex;flex-wrap:wrap;gap:10px 14px}
+.lista{padding:10px}
+ul{list-style:none;margin:0;padding:0}
+.item{
+  display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:start;
+  padding:12px 10px;border-bottom:1px solid rgba(255,255,255,.06)
+}
+.item:last-child{border-bottom:none}
+.marcador{font-size:1.15rem;width:1.6rem;text-align:center;line-height:1.6rem;user-select:none}
+.txt{font-size:1rem;line-height:1.45;word-break:break-word}
+.feita .txt{text-decoration:line-through;color:#9fb09b}
+.feita .marcador{color:var(--ok)}
+.botoes-item{display:flex;gap:8px;flex-wrap:wrap}
+.mini{padding:8px 10px;border-radius:12px;font-size:.9rem}
+.rodape{margin-top:12px;padding:12px 14px;color:var(--muted);font-size:.92rem;line-height:1.4}
+.badge{
+  display:inline-block;padding:.25rem .55rem;border:1px solid var(--line);
+  border-radius:999px;background:#202734;margin-right:6px
+}
+.vazio{text-align:center;color:var(--muted);padding:18px 10px;font-size:1rem}
+svg{width:100%;height:auto;display:block}
+@media (min-width:680px){
+  .row{grid-template-columns:1fr auto}
+  .acoes{grid-template-columns:auto auto}
+  #btnAdd,#btnLimpar{min-width:170px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <section class="hero">
+    <div class="titulo">
+      <div class="decor">✦ ☑ ✎ ✿ ⌁</div>
+      <h1>Lista de tarefas</h1>
+    </div>
+    <p class="sub">Aplicativo local com decoração Unicode, interface em português e layout adaptado para telas móveis.</p>
+    <svg viewBox="0 0 900 120" aria-hidden="true">
+      <defs>
+        <linearGradient id="g" x1="0" x2="1">
+          <stop offset="0%" stop-color="#8ab4ff"/>
+          <stop offset="100%" stop-color="#7ee787"/>
+        </linearGradient>
+      </defs>
+      <rect x="0" y="0" width="900" height="120" rx="20" fill="#171b24"/>
+      <text x="22" y="48" fill="url(#g)" font-size="28" font-family="system-ui, sans-serif">☐ organizar ◦ ☑ concluir ◦ ✦ celebrar ◦</text>
+      <text x="22" y="86" fill="#aeb8c7" font-size="18" font-family="system-ui, sans-serif">HTML + CSS + JavaScript inline</text>
+    </svg>
+  </section>
+
+  <section class="painel">
+    <div class="row">
+      <input id="novaTarefa" type="text" placeholder="Digite uma nova tarefa…">
+      <div class="acoes">
+        <button id="btnAdd">✚ adicionar</button>
+        <button id="btnLimpar">⌫ limpar concluídas</button>
+      </div>
+    </div>
+    <div class="meta">
+      <span class="badge">◔ pendentes: <strong id="pendentes">0</strong></span>
+      <span class="badge">✓ concluídas: <strong id="concluidas">0</strong></span>
+      <span class="badge">≣ total: <strong id="total">0</strong></span>
+    </div>
+  </section>
+
+  <section class="lista">
+    <ul id="lista"></ul>
+    <div id="vazio" class="vazio">☁ Nenhuma tarefa ainda. Adicione a primeira.</div>
+  </section>
+
+  <section class="rodape">
+    <span class="badge">⚙ local</span>
+    <span class="badge">📱 mobile</span>
+    <span class="badge">🗂 persistente</span>
+    <div style="margin-top:8px">As tarefas ficam salvas no navegador usando armazenamento local.</div>
+  </section>
+</div>
+
+<script>
+(() => {
+  const key = "tarefas_unicode_app_v2";
+  const qs = (s) => document.querySelector(s);
+  const listaEl = qs("#lista");
+  const vazioEl = qs("#vazio");
+  const entrada = qs("#novaTarefa");
+  const pendEl = qs("#pendentes");
+  const concEl = qs("#concluidas");
+  const totalEl = qs("#total");
+  const btnAdd = qs("#btnAdd");
+  const btnLimpar = qs("#btnLimpar");
+
+  let tarefas = [];
+
+  function carregar() {
+    try {
+      const raw = localStorage.getItem(key);
+      tarefas = raw ? JSON.parse(raw) : [];
+      if (!Array.isArray(tarefas)) tarefas = [];
+    } catch {
+      tarefas = [];
+    }
+  }
+
+  function salvar() {
+    localStorage.setItem(key, JSON.stringify(tarefas));
+  }
+
+  function esc(s) {
+    return String(s)
+      .replaceAll("&","&amp;")
+      .replaceAll("<","&lt;")
+      .replaceAll(">","&gt;")
+      .replaceAll("\"","&quot;");
+  }
+
+  function atualizarMeta() {
+    const concluidas = tarefas.filter(t => t.feita).length;
+    const pendentes = tarefas.length - concluidas;
+    pendEl.textContent = String(pendentes);
+    concEl.textContent = String(concluidas);
+    totalEl.textContent = String(tarefas.length);
+    vazioEl.style.display = tarefas.length ? "none" : "block";
+  }
+
+  function render() {
+    listaEl.innerHTML = tarefas.map((t, i) => {
+      const feita = !!t.feita;
+      return `
+        <li class="item ${feita ? "feita" : ""}">
+          <div class="marcador">${feita ? "☑" : "☐"}</div>
+          <div class="txt">${esc(t.texto)}</div>
+          <div class="botoes-item">
+            <button class="mini" data-acao="toggle" data-i="${i}">${feita ? "↺ desfazer" : "✓ concluir"}</button>
+            <button class="mini" data-acao="remover" data-i="${i}">✖ apagar</button>
+          </div>
+        </li>`;
+    }).join("");
+    atualizarMeta();
+  }
+
+  function adicionar() {
+    const texto = entrada.value.trim();
+    if (!texto) return;
+    tarefas.unshift({ texto, feita: false, criadoEm: Date.now() });
+    entrada.value = "";
+    salvar();
+    render();
+    entrada.focus();
+  }
+
+  function limparConcluidas() {
+    tarefas = tarefas.filter(t => !t.feita);
+    salvar();
+    render();
+  }
+
+  listaEl.addEventListener("click", (ev) => {
+    const b = ev.target.closest("button[data-acao]");
+    if (!b) return;
+    const i = Number(b.dataset.i);
+    const acao = b.dataset.acao;
+    if (!Number.isInteger(i) || !tarefas[i]) return;
+
+    if (acao === "toggle") tarefas[i].feita = !tarefas[i].feita;
+    if (acao === "remover") tarefas.splice(i, 1);
+
+    salvar();
+    render();
+  });
+
+  btnAdd.addEventListener("click", adicionar);
+  btnLimpar.addEventListener("click", limparConcluidas);
+  entrada.addEventListener("keydown", (ev) => {
+    if (ev.key === "Enter") adicionar();
+  });
+
+  carregar();
+  if (tarefas.length === 0) {
+    tarefas = [
+      { texto: "Beber água ✧", feita: false, criadoEm: Date.now() },
+      { texto: "Organizar anotações ☼", feita: false, criadoEm: Date.now()+1 },
+      { texto: "Revisar tarefa concluída ✓", feita: true, criadoEm: Date.now()+2 }
+    ];
+    salvar();
+  }
+  render();
+})();
+</script>
+</body>
+</html>
