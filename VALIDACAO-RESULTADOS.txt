@@ -1,0 +1,28 @@
+VALIDAÇÃO — PÁGINA INICIAL PESSOAL / LABORATÓRIO 3D / TELEMEDICINA
+Base: ZIP rogerioduarte-site-telemedicina-integrado.zip (GitHub 44c77d8)
+
+APROVADO — arquivos e validação estática:
+- Nova página inicial em /; apresentação, atuação, projetos, interesses e contato.
+- Antigo portal 3D preservado em /laboratorio/.
+- Links internos e retorno da Telemedicina atualizados para a nova rota.
+- Arquivos de recursos locais do pacote resolvidos, incluindo <base href="../">.
+- 6 módulos, 11 conexões de grafo, 72 imagens de faces e 8 documentos HTML preservados.
+- JavaScript verificado com Node.js; script verificar_integracao.py executado com êxito.
+
+APROVADO — teste de interface isolada (Chromium, via HTML fornecido diretamente ao DOM):
+- Layout desktop (1440px), celular (390px) e celular pequeno (320px).
+- Largura sem deslocamento horizontal nos três tamanhos.
+- Menu móvel: abertura, navegação e fechamento por Escape.
+- Fonte de títulos definida como sem serifa, texto corrido com família Garamond/fallback.
+- Sem erros JavaScript na página inicial durante os testes de renderização isolada.
+
+PENDENTE — validação HTTP/WebGL no Termux:
+- O ambiente de testes do navegador bloqueou navegação direta por URL local
+  (ERR_BLOCKED_BY_ADMINISTRATOR). Por isso não se afirma teste funcional de
+  navegação HTTP da experiência 3D neste ambiente.
+- Conferir abertura real de /laboratorio/, Three.js por CDN, textura e picking
+  nas faces, vínculos do grafo, controle de câmera e retorno do projeto técnico.
+- Confirmar a experiência em navegador Android real antes de qualquer publicação.
+
+Os estudos de Telemedicina foram apenas preservados e roteados: não são
+apresentados como sistema clínico certificado. Nenhum commit/push realizado.

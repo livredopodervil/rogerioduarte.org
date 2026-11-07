@@ -1,3 +1,5 @@
+> **Atualização da estrutura pública (novembro de 2026):** a entrada `/` agora é uma página editorial pessoal. O portal tridimensional anteriormente servido pela raiz está preservado em `/laboratorio/`. As descrições antigas de `index.html` abaixo referem-se ao arquivo que agora se chama `laboratorio/index.html`. Consulte `README-NOVA-HOME.md` para rotas e mudanças de integração.
+
 # Portal em Grafo 3D — Arquitetura e construção
 
 ## 1. Objetivo

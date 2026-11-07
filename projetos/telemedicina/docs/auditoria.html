@@ -1,0 +1,1529 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auditoria Independente de Custos, Riscos &amp; Proposta de Investimento — Telemedicina SaaS</title>
+<style>
+  :root {
+    --bg-page: #f8fafc;
+    --bg-card: #ffffff;
+    --bg-alt: #f1f5f9;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #64748b;
+    --border: #e2e8f0;
+    --border-dark: #cbd5e1;
+    --brand-teal: #0d9488;
+    --brand-teal-light: #ccfbf1;
+    --brand-teal-dark: #115e59;
+    --brand-blue: #0284c7;
+    --brand-blue-light: #e0f2fe;
+    --accent-gold: #d97706;
+    --accent-gold-light: #fef3c7;
+    --accent-red: #e11d48;
+    --accent-red-light: #ffe4e6;
+    --accent-green: #059669;
+    --accent-green-light: #d1fae5;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  
+  body {
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+    font-family: var(--font);
+    line-height: 1.6;
+    font-size: 14.5px;
+  }
+
+  /* Top sticky navigation bar */
+  .top-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: 700;
+    font-size: 15px;
+  }
+
+  .nav-brand svg {
+    color: var(--brand-teal);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-size: 13px;
+    font-weight: 500;
+    transition: color 0.15s;
+  }
+
+  .nav-links a:hover {
+    color: var(--brand-teal);
+  }
+
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    border-radius: var(--radius-sm);
+    font-size: 12.5px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 0.2s;
+  }
+
+  .btn-outline {
+    background: #fff;
+    border-color: var(--border-dark);
+    color: var(--text-primary);
+  }
+
+  .btn-outline:hover {
+    background: var(--bg-alt);
+    border-color: var(--text-muted);
+  }
+
+  .btn-primary {
+    background: var(--brand-teal);
+    color: #fff;
+  }
+
+  .btn-primary:hover {
+    background: var(--brand-teal-dark);
+    box-shadow: 0 2px 8px rgba(13, 148, 136, 0.3);
+  }
+
+  /* Main Container */
+  .container {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 32px 24px 80px;
+  }
+
+  /* Hero Header */
+  .hero-header {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #fff;
+    border-radius: var(--radius-lg);
+    padding: 40px;
+    margin-bottom: 32px;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-header::after {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(13, 148, 136, 0.35) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(20, 184, 166, 0.2);
+    color: #5eead4;
+    border: 1px solid rgba(20, 184, 166, 0.4);
+    padding: 4px 10px;
+    border-radius: 99px;
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .hero-title {
+    font-size: 32px;
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    margin-bottom: 14px;
+    max-width: 850px;
+  }
+
+  .hero-subtitle {
+    font-size: 15.5px;
+    color: #cbd5e1;
+    max-width: 800px;
+    line-height: 1.5;
+    margin-bottom: 24px;
+  }
+
+  .hero-meta-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    font-size: 12.5px;
+    color: #94a3b8;
+  }
+
+  .hero-meta-item strong {
+    color: #f1f5f9;
+  }
+
+  /* Metric Cards Grid */
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .metric-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .metric-card-stripe {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--brand-teal);
+  }
+
+  .metric-card.gold .metric-card-stripe { background: var(--accent-gold); }
+  .metric-card.red .metric-card-stripe { background: var(--accent-red); }
+  .metric-card.blue .metric-card-stripe { background: var(--brand-blue); }
+
+  .metric-label {
+    font-size: 11.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+  }
+
+  .metric-value {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--text-primary);
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+
+  .metric-caption {
+    font-size: 12px;
+    color: var(--text-secondary);
+  }
+
+  .metric-caption strong {
+    color: var(--brand-teal-dark);
+  }
+
+  /* Sections */
+  .section {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    margin-bottom: 32px;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .section-header {
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .section-title-group h2 {
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .section-title-group p {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    margin-top: 4px;
+  }
+
+  .section-badge {
+    padding: 3px 10px;
+    border-radius: 99px;
+    font-size: 11.5px;
+    font-weight: 700;
+    background: var(--bg-alt);
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+  }
+
+  /* Alert Callout */
+  .callout {
+    padding: 16px 20px;
+    border-radius: var(--radius-md);
+    margin-bottom: 24px;
+    font-size: 13.5px;
+    line-height: 1.5;
+    border-left: 4px solid;
+  }
+
+  .callout-alert {
+    background: var(--accent-red-light);
+    border-color: var(--accent-red);
+    color: #881337;
+  }
+
+  .callout-alert strong {
+    color: #4c0519;
+    display: block;
+    margin-bottom: 4px;
+    font-size: 14px;
+  }
+
+  .callout-info {
+    background: var(--brand-teal-light);
+    border-color: var(--brand-teal);
+    color: #134e4a;
+  }
+
+  .callout-info strong {
+    color: #042f2e;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  /* Tables */
+  .table-box {
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    margin-bottom: 16px;
+  }
+
+  table.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    text-align: left;
+  }
+
+  table.styled-table th {
+    background: #f8fafc;
+    color: var(--text-secondary);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+  }
+
+  table.styled-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-primary);
+    vertical-align: middle;
+  }
+
+  table.styled-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  table.styled-table tr:hover td {
+    background: #f8fafc;
+  }
+
+  .text-right {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .tag-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 8px;
+    border-radius: 99px;
+    font-size: 11px;
+    font-weight: 700;
+  }
+
+  .tag-pill.success {
+    background: var(--accent-green-light);
+    color: #065f46;
+  }
+
+  .tag-pill.warning {
+    background: var(--accent-gold-light);
+    color: #92400e;
+  }
+
+  .tag-pill.danger {
+    background: var(--accent-red-light);
+    color: #9f1239;
+  }
+
+  .tag-pill.neutral {
+    background: var(--bg-alt);
+    color: var(--text-secondary);
+  }
+
+  /* Two Column Grid */
+  .grid-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+
+  /* Interactive Simulator Box */
+  .simulator-layout {
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 28px;
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    margin-bottom: 24px;
+  }
+
+  .control-group {
+    margin-bottom: 18px;
+  }
+
+  .control-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 6px;
+  }
+
+  .control-val {
+    font-weight: 800;
+    color: var(--brand-teal-dark);
+    font-size: 13.5px;
+  }
+
+  input[type="range"] {
+    width: 100%;
+    height: 6px;
+    border-radius: 4px;
+    background: #cbd5e1;
+    outline: none;
+    accent-color: var(--brand-teal);
+    cursor: pointer;
+  }
+
+  select.form-select {
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-dark);
+    background: #fff;
+    font-size: 13px;
+    color: var(--text-primary);
+  }
+
+  /* Live Results Panel */
+  .sim-results-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+
+  .sim-result-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 16px;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .sim-result-card.highlight {
+    border-color: var(--brand-teal);
+    background: #f0fdfa;
+  }
+
+  .sim-res-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+  }
+
+  .sim-res-value {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 1.2;
+    margin-bottom: 4px;
+  }
+
+  .sim-res-sub {
+    font-size: 11.5px;
+    color: var(--text-secondary);
+  }
+
+  /* Step Timeline */
+  .timeline-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 16px;
+  }
+
+  .step-card {
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 18px 20px;
+    display: grid;
+    grid-template-columns: 80px 1fr 140px;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .step-badge {
+    background: var(--brand-teal);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: var(--radius-sm);
+    font-weight: 800;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .step-badge.tranche2 {
+    background: var(--accent-gold);
+  }
+
+  .step-content strong {
+    font-size: 14.5px;
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .step-content p {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.45;
+  }
+
+  .step-amount {
+    text-align: right;
+  }
+
+  .step-amount .amount {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--text-primary);
+    display: block;
+  }
+
+  .step-amount .caption {
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 30px;
+    font-size: 12.5px;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border);
+    margin-top: 40px;
+  }
+
+  @media (max-width: 900px) {
+    .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+    .grid-2col, .simulator-layout { grid-template-columns: 1fr; }
+    .step-card { grid-template-columns: 1fr; text-align: left; }
+    .step-amount { text-align: left; }
+  }
+
+  @media (max-width: 600px) {
+    .metrics-grid { grid-template-columns: 1fr; }
+    .hero-header { padding: 24px; }
+    .hero-title { font-size: 24px; }
+    .section { padding: 20px; }
+    .nav-links { display: none; }
+  }
+
+  @media print {
+    body { background: #fff; font-size: 11px; }
+    .top-navbar, .btn, .simulator-layout input, .simulator-layout select { display: none !important; }
+    .container { max-width: 100%; padding: 0; }
+    .hero-header { background: #fff; color: #000; border: 1px solid #ccc; box-shadow: none; padding: 20px; }
+    .hero-title { color: #000; font-size: 20px; }
+    .hero-subtitle { color: #555; }
+    .section { break-inside: avoid; border: 1px solid #ddd; box-shadow: none; padding: 15px; margin-bottom: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Header Sticky -->
+<header class="top-navbar">
+  <div class="nav-container">
+    <a href="#auditoria" class="nav-brand">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+      </svg>
+      <span>Telemedicina SaaS · Auditoria &amp; Investimento</span>
+    </a>
+
+    <div class="nav-links">
+      <a href="#auditoria">Auditoria 24m</a>
+      <a href="#pesquisa">Pesquisa de Mercado</a>
+      <a href="#simulador">Simulador &amp; Break-even</a>
+      <a href="#riscos">Matriz de Riscos</a>
+      <a href="#proposta">Proposta (Term Sheet)</a>
+    </div>
+
+    <div class="nav-actions">
+      <button class="btn btn-outline" onclick="window.print()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+        Imprimir / PDF
+      </button>
+      <button class="btn btn-primary" onclick="downloadCurrentHTML()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+        Baixar Arquivo HTML
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- Hero Header -->
+  <div class="hero-header">
+    <div class="hero-tag">Dossiê Técnico &amp; Análise de Investimento · Novembro de 2026</div>
+    <h1 class="hero-title">Auditoria Independente de Custos, Riscos &amp; Proposta de Financiamento</h1>
+    <p class="hero-subtitle">
+      Confrontação analítica entre as estimativas de engenharia do projeto de software clínico (SaaS de Teleconsulta) e dados reais de mercado para telecomunicações, segurança, certificação SBIS e mão de obra especializada no Brasil.
+    </p>
+
+    <div class="hero-meta-bar">
+      <div class="hero-meta-item">Horizonte Analisado: <strong>24 Meses (2.100 médico-meses)</strong></div>
+      <div class="hero-meta-item">Escopo Técnico: <strong>PEP + Teleconsulta v5.2 (NGS2 Estágio 1)</strong></div>
+      <div class="hero-meta-item">Status da Certificação: <strong>Pré-submissão SBIS</strong></div>
+      <div class="hero-meta-item">Taxa de Câmbio Base: <strong>R$ 5,50 / US$</strong></div>
+    </div>
+  </div>
+
+  <!-- Metric Cards -->
+  <div class="metrics-grid">
+    <div class="metric-card">
+      <div class="metric-card-stripe"></div>
+      <div class="metric-label">TCO 24 Meses (Base)</div>
+      <div class="metric-value">R$ 822.519</div>
+      <div class="metric-caption">Faixa Total: <strong>R$ 520k a R$ 1,59M</strong></div>
+    </div>
+
+    <div class="metric-card gold">
+      <div class="metric-card-stripe"></div>
+      <div class="metric-label">Sweat Equity (Dev 1.810h)</div>
+      <div class="metric-value">R$ 228.250</div>
+      <div class="metric-caption">Valor hora ponderado: <strong>R$ 126,10/h PJ</strong></div>
+    </div>
+
+    <div class="metric-card red">
+      <div class="metric-card-stripe"></div>
+      <div class="metric-label">Custo Fixo Operacional</div>
+      <div class="metric-value">R$ 20.283 /mês</div>
+      <div class="metric-caption">Equipe + Pentest + Infra fixa (com 12% reserva)</div>
+    </div>
+
+    <div class="metric-card blue">
+      <div class="metric-card-stripe"></div>
+      <div class="metric-label">Break-even a R$ 99/mês</div>
+      <div class="metric-value">352 médicos</div>
+      <div class="metric-caption">Déficit acumulado 24m: <strong>-R$ 365.870</strong></div>
+    </div>
+  </div>
+
+  <!-- Alerta de Incompatibilidade -->
+  <div class="callout callout-alert">
+    <strong>Incompatibilidade Crítica entre o Aporte Proposto (R$ 60 mil) e o Burn Rate da Operação</strong>
+    A apresentação do projeto sugere captar R$ 60 mil (faixa de R$ 40k–100k) considerando que o fundador absorverá o desenvolvimento sem remuneração. Contudo, ao iniciar a operação comercial com a equipe de suporte N1, DevOps e segurança orçada na planilha (R$ 20.283/mês), <strong>o aporte de R$ 60 mil será esgotado em menos de 3 meses</strong>.
+    <br><br>
+    O valor de R$ 60k–80k cobre estritamente os custos <strong>pré-operacionais até a homologação SBIS</strong> (Marcos M0 a M4). A sustentação dos 24 meses exige um modelo de financiamento em <strong>Duas Tranches (R$ 80.000 pré-operacional + R$ 180.000–220.000 para tração comercial)</strong> ou a adoção imediata de mensalidades entre R$ 149 e R$ 179/mês.
+  </div>
+
+  <!-- SEÇÃO 1: AUDITORIA 24 MESES -->
+  <section class="section" id="auditoria">
+    <div class="section-header">
+      <div class="section-title-group">
+        <h2>01. Auditoria Integrada dos Custos (24 Meses)</h2>
+        <p>Curva de crescimento linear de 25 a 150 médicos ativos (126.000 consultas e 126.000 documentos assinados)</p>
+      </div>
+      <span class="section-badge">Cenário Base vs. Extremos</span>
+    </div>
+
+    <div class="table-box">
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th>Rubrica Orçamentária</th>
+            <th class="text-right">Cenário Inferior</th>
+            <th class="text-right">Cenário Base</th>
+            <th class="text-right">Cenário Superior</th>
+            <th>Classificação de Confiança</th>
+            <th>Impacto / Risco</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <strong>Desenvolvimento de Software (1.810 h)</strong><br>
+              <small style="color:var(--text-muted)">PEP, agenda, autenticação, ICP-Brasil, trilhas de auditoria</small>
+            </td>
+            <td class="text-right">R$ 156.250,00</td>
+            <td class="text-right" style="font-weight:700; color:var(--brand-teal-dark)">R$ 228.250,00</td>
+            <td class="text-right">R$ 399.802,50</td>
+            <td><span class="tag-pill warning">Grau C (Engenharia)</span></td>
+            <td>Mitigado por <em>sweat equity</em> do fundador</td>
+          </tr>
+
+          <tr>
+            <td>
+              <strong>Infraestrutura Cloud &amp; APIs Especializadas</strong><br>
+              <small style="color:var(--text-muted)">Servidores, PostgreSQL HA, AWS Chime, SMS Zenvia, Assinatura</small>
+            </td>
+            <td class="text-right">R$ 35.065,68</td>
+            <td class="text-right" style="font-weight:700">R$ 114.613,44</td>
+            <td class="text-right">R$ 383.484,00</td>
+            <td><span class="tag-pill success">Grau A/B (Preço Público)</span></td>
+            <td>Variável com volume de vídeo e docs</td>
+          </tr>
+
+          <tr>
+            <td>
+              <strong>Equipe de Sustentação &amp; Suporte N1</strong><br>
+              <small style="color:var(--text-muted)">Suporte (0,5 ETP), DevOps (0,33 ETP), Segurança (0,15 ETP), Admin</small>
+            </td>
+            <td class="text-right">R$ 264.300,00</td>
+            <td class="text-right" style="font-weight:700">R$ 367.680,00</td>
+            <td class="text-right">R$ 570.252,00</td>
+            <td><span class="tag-pill warning">Grau B/C (Salários)</span></td>
+            <td>Principal componente de burn rate</td>
+          </tr>
+
+          <tr>
+            <td>
+              <strong>Auditorias Externas Recorrentes</strong><br>
+              <small style="color:var(--text-muted)">Pentests anuais independentes de segurança e conformidade</small>
+            </td>
+            <td class="text-right">R$ 12.000,00</td>
+            <td class="text-right" style="font-weight:700">R$ 30.000,00</td>
+            <td class="text-right">R$ 70.000,00</td>
+            <td><span class="tag-pill warning">Grau C (Cotações)</span></td>
+            <td>Exigência do perfil NGS1/NGS2</td>
+          </tr>
+
+          <tr>
+            <td>
+              <strong>Custos Únicos (SBIS Estágio 1 + Implantação)</strong><br>
+              <small style="color:var(--text-muted)">Taxa oficial SBIS Perfil 0 (R$ 12.500) + setup inicial</small>
+            </td>
+            <td class="text-right">R$ 15.500,00</td>
+            <td class="text-right" style="font-weight:700">R$ 20.500,00</td>
+            <td class="text-right">R$ 47.000,00</td>
+            <td><span class="tag-pill success">Grau B (Tabela SBIS)</span></td>
+            <td>Requer reserva para reauditoria</td>
+          </tr>
+
+          <tr>
+            <td>
+              <strong>Reserva Operacional de Contingência (12%)</strong><br>
+              <small style="color:var(--text-muted)">Provisão contra estouro de horas e oscilação de câmbio</small>
+            </td>
+            <td class="text-right">R$ 37.363,88</td>
+            <td class="text-right" style="font-weight:700">R$ 61.475,21</td>
+            <td class="text-right">R$ 122.848,32</td>
+            <td><span class="tag-pill neutral">Prudencial</span></td>
+            <td>Absorve volatilidade do dólar</td>
+          </tr>
+
+          <tr style="background:#f1f5f9; font-weight:800;">
+            <td>CUSTO TOTAL DE PROPRIEDADE (TCO 24M)</td>
+            <td class="text-right">R$ 520.479,56</td>
+            <td class="text-right" style="color:var(--brand-teal-dark); font-size:15px;">R$ 822.518,65</td>
+            <td class="text-right">R$ 1.593.386,82</td>
+            <td colspan="2"><span class="tag-pill success">Auditoria Concluída</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Indicadores Unitários em Grid -->
+    <div class="grid-2col">
+      <div style="background:var(--bg-alt); padding:20px; border-radius:var(--radius-md); border:1px solid var(--border);">
+        <h3 style="font-size:14px; font-weight:700; margin-bottom:12px; color:var(--text-primary)">Custo Unitário por Médico Ativo (Cenário Base)</h3>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:8px; font-size:13px;">
+          <li style="display:flex; justify-content:space-between; border-bottom:1px solid #cbd5e1; padding-bottom:6px;">
+            <span>Vídeo WebRTC (AWS Chime 40 p-min / 30 consultas):</span>
+            <strong>R$ 11,18 /mês</strong>
+          </li>
+          <li style="display:flex; justify-content:space-between; border-bottom:1px solid #cbd5e1; padding-bottom:6px;">
+            <span>SMS de Notificação (Zenvia, 18 mensagens):</span>
+            <strong>R$ 1,80 /mês</strong>
+          </li>
+          <li style="display:flex; justify-content:space-between; border-bottom:1px solid #cbd5e1; padding-bottom:6px;">
+            <span>Assinaturas ICP-Brasil / Carimbo de Tempo (60 docs):</span>
+            <strong>R$ 24,00 /mês</strong>
+          </li>
+          <li style="display:flex; justify-content:space-between; border-bottom:1px solid #cbd5e1; padding-bottom:6px;">
+            <span>Servidores e WAF Rateados (Base 100 médicos):</span>
+            <strong>R$ 15,40 /mês</strong>
+          </li>
+          <li style="display:flex; justify-content:space-between; font-weight:700; color:var(--brand-teal-dark); padding-top:4px;">
+            <span>Custo Total de Tecnologia Direta:</span>
+            <span>R$ 52,38 /médico/mês</span>
+          </li>
+        </ul>
+      </div>
+
+      <div style="background:var(--bg-alt); padding:20px; border-radius:var(--radius-md); border:1px solid var(--border);">
+        <h3 style="font-size:14px; font-weight:700; margin-bottom:12px; color:var(--text-primary)">Custo Unitário por Consulta Realizada</h3>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:8px; font-size:13px;">
+          <li style="display:flex; justify-content:space-between; border-bottom:1px solid #cbd5e1; padding-bottom:6px;">
+            <span>Consultas Projetadas no Período:</span>
+            <strong>126.000 atendimentos</strong>
+          </li>
+          <li style="display:flex; justify-content:space-between; border-bottom:1px solid #cbd5e1; padding-bottom:6px;">
+            <span>Custo Operacional da Plataforma / Consulta:</span>
+            <strong style="color:var(--brand-teal-dark)">R$ 4,55 /consulta</strong>
+          </li>
+          <li style="display:flex; justify-content:space-between; border-bottom:1px solid #cbd5e1; padding-bottom:6px;">
+            <span>Custo Total (Incluindo Desenvolvimento):</span>
+            <strong>R$ 6,53 /consulta</strong>
+          </li>
+          <li style="display:flex; justify-content:space-between; font-weight:700; color:var(--brand-blue); padding-top:4px;">
+            <span>Custo Operacional Integral por Médico-mês:</span>
+            <span>R$ 273,22 /mês</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 2: PESQUISA INDEPENDENTE DE MERCADO -->
+  <section class="section" id="pesquisa">
+    <div class="section-header">
+      <div class="section-title-group">
+        <h2>02. Pesquisa Independente de Mercado &amp; Benchmarks 2026</h2>
+        <p>Validação das premissas com fontes primárias auditadas no Brasil e internacionalmente</p>
+      </div>
+      <span class="section-badge">Evidências Auditadas</span>
+    </div>
+
+    <div class="table-box">
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th>Item / Componente</th>
+            <th>Premissa do Modelo</th>
+            <th>Referência de Mercado (2026)</th>
+            <th>Veredito &amp; Análise Crítica</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Mídia de Vídeo WebRTC</strong></td>
+            <td>US$ 0,0017 / participante-minuto (AWS Chime SDK)</td>
+            <td>
+              <a href="https://aws.amazon.com/chime/chime-sdk/pricing/" target="_blank">AWS Chime SDK:</a> US$ 0,0017 / p-min.<br>
+              <a href="https://www.twilio.com/en-us/changelog/-twilio-video-will-remain-a-standalone-product" target="_blank">Twilio Video:</a> Descontinuação cancelada em out/2024; mantido a US$ 0,004.<br>
+              <a href="https://www.daily.co/pricing/video-sdk/" target="_blank">Daily.co:</a> US$ 0,004 / p-min após franquia.
+            </td>
+            <td><span class="tag-pill success">100% Confirmado</span><br>A escolha pela AWS reduz os custos de videoconferência em mais de 57% frente aos pares de mercado.</td>
+          </tr>
+
+          <tr>
+            <td><strong>Assinatura ICP-Brasil &amp; Prescrição</strong></td>
+            <td>R$ 0,40 / documento assinado</td>
+            <td>
+              <a href="https://www.bry.com.br/" target="_blank">Bry Tecnologia:</a> APIs especializadas em PAdES e Carimbo do Tempo ICP-Brasil.<br>
+              <a href="https://memed.com.br/parceiro-software/" target="_blank">Memed:</a> Ecossistema líder de receita digital integrada.<br>
+              <a href="https://www.clicksign.com/preco" target="_blank">Clicksign:</a> R$ 0,50 a R$ 1,50 por documento em planos base.
+            </td>
+            <td><span class="tag-pill warning">Requer Quota</span><br>Viável a R$ 0,40 em pacotes corporativos de carimbo de tempo, mas deve haver cobrança por excedente para evitar abuso de médicos que emitam centenas de laudos.</td>
+          </tr>
+
+          <tr>
+            <td><strong>Certificação de Software SBIS</strong></td>
+            <td>R$ 12.500 (Base) a R$ 22.000 (Teto)</td>
+            <td>
+              <a href="https://sbis.org.br/certificacoes/certificacao-software/tabelas-de-precos-para-certificacao-de-s-res-sbis/" target="_blank">Tabela Oficial SBIS S-RES:</a> Perfil 0 (receita anual até R$ 250k) = R$ 12.500 no Estágio 1.<br>
+              Prazo contratual de até 10 meses para auditoria.
+            </td>
+            <td><span class="tag-pill success">Confirmado</span><br>Valor correto. Atenção para pendências no relatório preliminar que podem demandar taxas adicionais de reavaliação (R$ 4k a R$ 8k).</td>
+          </tr>
+
+          <tr>
+            <td><strong>Mão de Obra de Engenharia (Dev)</strong></td>
+            <td>1.810 horas a R$ 100–150/h (Média R$ 126,10/h)</td>
+            <td>
+              <a href="https://www.roberthalf.com/br/pt/insights/guia-salarial" target="_blank">Guia Salarial Robert Half:</a><br>
+              Full-stack Pleno: R$ 9.700–16.200 CLT.<br>
+              DevOps/Segurança: R$ 14.250–23.850 CLT.<br>
+              Contratação PJ sênior de mercado: R$ 100–160/hora.
+            </td>
+            <td><span class="tag-pill success">Confirmado</span><br>A estimativa de R$ 228k para 1.810h é perfeitamente condizente com a contratação de especialistas no Brasil para arquitetura segura.</td>
+          </tr>
+
+          <tr>
+            <td><strong>Hospedagem &amp; Nuvem</strong></td>
+            <td>US$ 281 / mês (~R$ 1.540/mês)</td>
+            <td>
+              <a href="https://www.digitalocean.com/pricing/droplets" target="_blank">DigitalOcean Droplets:</a> Instâncias de 4GB/2vCPU ($24 a $48/mês).<br>
+              Postgres gerenciado com réplica: $60–120/mês.<br>
+              <a href="https://www.cloudflare.com/plans/" target="_blank">Cloudflare Pro:</a> $20–25/mês.
+            </td>
+            <td><span class="tag-pill success">Confirmado</span><br>Capacidade de infraestrutura robusta para atender com folga os 150 médicos simultâneos e garantir alta disponibilidade do banco clínico.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Precedentes e Concorrência -->
+    <div class="grid-2col" style="margin-top:20px;">
+      <div style="background:#fff; border:1px solid var(--border); border-radius:var(--radius-md); padding:20px;">
+        <h4 style="font-size:14px; font-weight:700; color:var(--text-primary); margin-bottom:8px;">Concorrentes com Certificação SBIS Ativa (Telessaúde)</h4>
+        <p style="font-size:12.5px; color:var(--text-muted); margin-bottom:12px;">Sistemas listados na <a href="https://sbis.org.br/certificacoes/certificacao-software/sistemas-certificados/" target="_blank">relação pública oficial SBIS</a>:</p>
+        <ul style="padding-left:18px; font-size:12.5px; color:var(--text-secondary); line-height:1.7;">
+          <li><strong>NOXCARE 9.0:</strong> Estágio 1 / NGS2 (Referência em operadoras e grandes redes).</li>
+          <li><strong>Prontu+ 3.30:</strong> Estágio 1 / NGS2 (Teleconsulta e teleinterconsulta).</li>
+          <li><strong>Ti.Clinic 2.0:</strong> Estágio 1 / NGS2 (Ambiente clínico e teleatendimento).</li>
+          <li><strong>Medicina Direta 5.7:</strong> Estágio 3 / NGS2 (Plataforma consolidada de alta maturidade).</li>
+          <li><strong>Feegow Clinic 9:</strong> Estágio 1 / NGS2 (Líder em consultórios e clínicas privadas).</li>
+        </ul>
+      </div>
+
+      <div style="background:#fff; border:1px solid var(--border); border-radius:var(--radius-md); padding:20px;">
+        <h4 style="font-size:14px; font-weight:700; color:var(--text-primary); margin-bottom:8px;">Precedentes Econômicos de Telemedicina no Brasil</h4>
+        <p style="font-size:12.5px; color:var(--text-muted); margin-bottom:12px;">Estudos acadêmicos de custo de saúde digital:</p>
+        <ul style="padding-left:18px; font-size:12.5px; color:var(--text-secondary); line-height:1.7;">
+          <li><strong>Padilha et al. (2024, RSP):</strong> Método TDABC em Joinville mostrou que o serviço de teleconsulta assistencial custa +4,5% na visão do gestor, mas gera economia expressiva ao evitar transporte de pacientes.</li>
+          <li><strong>TeleNordeste–BP (2025, JBES):</strong> Mediana de R$ 154,50 por teleinterconsulta assistencial; evidencia que ocupação da capacidade instalada é o fator crítico de viabilidade.</li>
+          <li><strong>Diferença Metodológica:</strong> O SaaS é o provedor do software, não o remunerador do ato médico. Seu foco deve ser margem bruta de tecnologia e retenção de assinantes.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 3: SIMULADOR INTERATIVO -->
+  <section class="section" id="simulador">
+    <div class="section-header">
+      <div class="section-title-group">
+        <h2>03. Simulador Interativo de Sensibilidade &amp; Ponto de Equilíbrio</h2>
+        <p>Ajuste os parâmetros abaixo para recalcular instantaneamente margens, ponto de equilíbrio e receita recorrente</p>
+      </div>
+      <button class="btn btn-outline" onclick="resetSimulator()">Restaurar Valores Padrão</button>
+    </div>
+
+    <div class="simulator-layout">
+      <!-- Painel de Controles -->
+      <div>
+        <h3 style="font-size:13px; font-weight:700; text-transform:uppercase; color:var(--text-primary); margin-bottom:16px;">Parâmetros da Operação</h3>
+
+        <div class="control-group">
+          <div class="control-label">
+            <span>Mensalidade / Médico</span>
+            <span class="control-val" id="val-price">R$ 149</span>
+          </div>
+          <input type="range" id="slider-price" min="49" max="299" step="10" value="149" oninput="updateCalculations()">
+        </div>
+
+        <div class="control-group">
+          <div class="control-label">
+            <span>Médicos Ativos (Meta Mês 24)</span>
+            <span class="control-val" id="val-docs">150</span>
+          </div>
+          <input type="range" id="slider-docs" min="10" max="400" step="10" value="150" oninput="updateCalculations()">
+        </div>
+
+        <div class="control-group">
+          <div class="control-label">
+            <span>Consultas / Médico / Mês</span>
+            <span class="control-val" id="val-consults">60</span>
+          </div>
+          <input type="range" id="slider-consults" min="20" max="120" step="5" value="60" oninput="updateCalculations()">
+        </div>
+
+        <div class="control-group">
+          <div class="control-label">
+            <span>% Consultas por Vídeo</span>
+            <span class="control-val" id="val-videoShare">50%</span>
+          </div>
+          <input type="range" id="slider-videoShare" min="10" max="100" step="5" value="50" oninput="updateCalculations()">
+        </div>
+
+        <div class="control-group">
+          <div class="control-label">
+            <span>Tarifa Assinatura ICP / Doc</span>
+            <span class="control-val" id="val-sign">R$ 0,40</span>
+          </div>
+          <input type="range" id="slider-sign" min="0.10" max="1.50" step="0.05" value="0.40" oninput="updateCalculations()">
+        </div>
+
+        <div class="control-group">
+          <div class="control-label">
+            <span>Câmbio USD / BRL</span>
+            <span class="control-val" id="val-usd">R$ 5,50</span>
+          </div>
+          <input type="range" id="slider-usd" min="4.50" max="7.00" step="0.10" value="5.50" oninput="updateCalculations()">
+        </div>
+
+        <div class="control-group">
+          <div class="control-label">
+            <span>Modelo de Equipe Operacional</span>
+          </div>
+          <select class="form-select" id="select-staff" onchange="updateCalculations()">
+            <option value="lean" selected="">Equipe Enxuta Pré-Tração (R$ 6.500/mês)</option>
+            <option value="full">Equipe Integral da Planilha (R$ 15.320/mês)</option>
+            <option value="founder">Operação Inicial pelo Fundador (R$ 2.500/mês infra/jurídico)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Painel de Resultados Dinâmicos -->
+      <div>
+        <div class="sim-results-grid">
+          <div class="sim-result-card highlight">
+            <div class="sim-res-label">Margem Unitária Líquida</div>
+            <div class="sim-res-value" id="out-cm" style="color:var(--brand-teal-dark)">R$ 107,54</div>
+            <div class="sim-res-sub" id="out-cmPct">Margem de 72.2% por médico</div>
+          </div>
+
+          <div class="sim-result-card">
+            <div class="sim-res-label">Ponto de Equilíbrio</div>
+            <div class="sim-res-value" id="out-be">97 médicos</div>
+            <div class="sim-res-sub" id="out-beDesc">Para cobrir R$ 10.411/mês fixos</div>
+          </div>
+
+          <div class="sim-result-card">
+            <div class="sim-res-label">Resultado no Mês 24</div>
+            <div class="sim-res-value" id="out-ebitda" style="color: var(--brand-teal-dark);">+ R$ 5.720 /mês</div>
+            <div class="sim-res-sub" id="out-arr">ARR Potencial: R$ 268.200</div>
+          </div>
+        </div>
+
+        <!-- Tabela Comparativa de Sensibilidade de Preços -->
+        <h4 style="font-size:13px; font-weight:700; margin-bottom:10px; color:var(--text-primary)">Sensibilidade por Faixa de Mensalidade</h4>
+        <div class="table-box">
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th>Preço Proposto</th>
+                <th class="text-right">Custo Variável Unitário</th>
+                <th class="text-right">Margem de Contribuição</th>
+                <th class="text-right">Break-even (Equipe Integral)</th>
+                <th class="text-right">Break-even (Equipe Enxuta)</th>
+                <th>Viabilidade Comercial</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>R$ 99 / mês (Atual)</strong></td>
+                <td class="text-right">R$ 41,42</td>
+                <td class="text-right">R$ 57,58</td>
+                <td class="text-right" style="color:var(--accent-red); font-weight:700;">352 médicos</td>
+                <td class="text-right">168 médicos</td>
+                <td><span class="tag-pill danger">Alto Risco de Caixa</span></td>
+              </tr>
+              <tr style="background:#f0fdfa;">
+                <td><strong>R$ 149 / mês (Recomendado)</strong></td>
+                <td class="text-right">R$ 41,42</td>
+                <td class="text-right" style="color:var(--brand-teal-dark); font-weight:700;">R$ 107,58</td>
+                <td class="text-right">188 médicos</td>
+                <td class="text-right" style="color:var(--brand-teal-dark); font-weight:700;">90 médicos</td>
+                <td><span class="tag-pill success">Equilibrado e Sustentável</span></td>
+              </tr>
+              <tr>
+                <td><strong>R$ 179 / mês</strong></td>
+                <td class="text-right">R$ 41,42</td>
+                <td class="text-right">R$ 137,58</td>
+                <td class="text-right">147 médicos</td>
+                <td class="text-right">70 médicos</td>
+                <td><span class="tag-pill success">Rápida Lucratividade</span></td>
+              </tr>
+              <tr>
+                <td><strong>R$ 249 / mês (Clínicas)</strong></td>
+                <td class="text-right">R$ 41,42</td>
+                <td class="text-right">R$ 207,58</td>
+                <td class="text-right">98 médicos</td>
+                <td class="text-right">47 médicos</td>
+                <td><span class="tag-pill success">Alta Margem Bruta</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Gráfico SVG Dinâmico do Ponto de Equilíbrio -->
+        <div style="background:#fff; border:1px solid var(--border); border-radius:var(--radius-md); padding:16px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+            <span style="font-size:12px; font-weight:700; text-transform:uppercase; color:var(--text-secondary)">Gráfico: Receita Bruta vs. Custo Operacional Mensal</span>
+            <div style="display:flex; gap:12px; font-size:11px;">
+              <span style="display:flex; align-items:center; gap:4px;"><span style="width:10px; height:3px; background:var(--brand-teal); display:inline-block;"></span> Receita</span>
+              <span style="display:flex; align-items:center; gap:4px;"><span style="width:10px; height:3px; background:var(--accent-red); display:inline-block;"></span> Custo Total</span>
+              <span style="display:flex; align-items:center; gap:4px;"><span style="width:8px; height:8px; background:var(--accent-gold); border-radius:50%; display:inline-block;"></span> Break-even</span>
+            </div>
+          </div>
+          <svg id="chart-svg" viewBox="0 0 650 180" style="width:100%; height:180px; display:block;"><line x1="60" y1="155" x2="630" y2="155" stroke="#e2e8f0" stroke-width="1"></line><text x="52" y="159" fill="#64748b" font-size="9.5" text-anchor="end">R$ 0k</text><line x1="60" y1="110" x2="630" y2="110" stroke="#e2e8f0" stroke-width="1"></line><text x="52" y="114" fill="#64748b" font-size="9.5" text-anchor="end">R$ 16k</text><line x1="60" y1="65.00000000000001" x2="630" y2="65.00000000000001" stroke="#e2e8f0" stroke-width="1"></line><text x="52" y="69.00000000000001" fill="#64748b" font-size="9.5" text-anchor="end">R$ 33k</text><line x1="60" y1="20" x2="630" y2="20" stroke="#e2e8f0" stroke-width="1"></line><text x="52" y="24" fill="#64748b" font-size="9.5" text-anchor="end">R$ 49k</text><text x="155" y="174" fill="#64748b" font-size="9.5" text-anchor="middle">50 méd.</text><text x="250" y="174" fill="#64748b" font-size="9.5" text-anchor="middle">100 méd.</text><text x="345" y="174" fill="#64748b" font-size="9.5" text-anchor="middle">150 méd.</text><text x="440" y="174" fill="#64748b" font-size="9.5" text-anchor="middle">200 méd.</text><text x="535" y="174" fill="#64748b" font-size="9.5" text-anchor="middle">250 méd.</text><text x="630" y="174" fill="#64748b" font-size="9.5" text-anchor="middle">300 méd.</text><line x1="60" y1="126.41591214154973" x2="630" y2="92.26445393532643" stroke="#e11d48" stroke-width="2.5"></line><line x1="60" y1="155" x2="630" y2="32.272727272727295" stroke="#0d9488" stroke-width="2.5"></line><line x1="244.29999999999998" y1="20" x2="244.29999999999998" y2="155" stroke="#d97706" stroke-width="1.5" stroke-dasharray="4 4"></line><circle cx="244.29999999999998" cy="115.31818181818183" r="5" fill="#d97706"></circle><text x="250.29999999999998" y="109.31818181818183" fill="#d97706" font-size="10" font-weight="700">Equilíbrio: 97 méd.</text><circle cx="345" cy="93.63636363636365" r="6" fill="#0284c7" stroke="#fff" stroke-width="2"></circle></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 4: MATRIZ DE RISCOS -->
+  <section class="section" id="riscos">
+    <div class="section-header">
+      <div class="section-title-group">
+        <h2>04. Matriz Integrada de Riscos &amp; Salvaguardas</h2>
+        <p>Mapeamento de riscos técnicos, financeiros, regulatórios e comerciais com planos de blindagem</p>
+      </div>
+      <span class="section-badge">Gestão de Incertezas</span>
+    </div>
+
+    <div class="table-box">
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th>Categoria</th>
+            <th>Fator de Risco</th>
+            <th>Probabilidade</th>
+            <th>Severidade</th>
+            <th>Impacto no Projeto</th>
+            <th>Plano de Ação e Mitigação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="tag-pill danger">Financeiro</span></td>
+            <td><strong>Esgotamento Prematuro de Caixa (Runway Mismatch)</strong></td>
+            <td>Alta</td>
+            <td>Crítica</td>
+            <td>Interrupção das operações antes de atingir tração comercial devido a aporte insuficiente de R$ 60k.</td>
+            <td>Fasear a captação em <strong>Duas Tranches por entregas</strong> (R$ 80k na Tranche 1 e R$ 180k–220k na Tranche 2 após o certificado).</td>
+          </tr>
+
+          <tr>
+            <td><span class="tag-pill danger">Regulatório</span></td>
+            <td><strong>Pendências e Retrabalho na Auditoria SBIS</strong></td>
+            <td>Média</td>
+            <td>Alta</td>
+            <td>Atraso de 4 a 8 meses para correção de requisitos de criptografia e auditoria NGS2 v5.2.</td>
+            <td>Contratação de <strong>pré-auditoria técnica independente</strong> no M3 e uso de bibliotecas de assinatura já homologadas.</td>
+          </tr>
+
+          <tr>
+            <td><span class="tag-pill warning">Tecnológico</span></td>
+            <td><strong>Vazamento de Prontuário ou Falha de Isolamento</strong></td>
+            <td>Baixa-Média</td>
+            <td>Crítica</td>
+            <td>Sanções graves da ANPD (LGPD), ações de reparação civil e dano reputacional irreversível.</td>
+            <td>Implementação de <strong>Row-Level Security (RLS)</strong> no PostgreSQL, trilhas de auditoria imutáveis e realização de 2 pentests externos.</td>
+          </tr>
+
+          <tr>
+            <td><span class="tag-pill warning">Unit Economics</span></td>
+            <td><strong>Abuso de APIs por Usuários de Alto Volume</strong></td>
+            <td>Alta</td>
+            <td>Média</td>
+            <td>Médicos com &gt;150 consultas/mês gastando mais de R$ 80 em vídeo e assinaturas em plano de R$ 99.</td>
+            <td>Estabelecer <strong>franquia no plano base</strong> (60 teleconsultas e 60 receitas) com cobrança de excedente (*over-quota*) de R$ 0,60/doc.</td>
+          </tr>
+
+          <tr>
+            <td><span class="tag-pill warning">Comercial</span></td>
+            <td><strong>CAC Elevado e Adoção Lenta por Médicos</strong></td>
+            <td>Média</td>
+            <td>Alta</td>
+            <td>Resistência médica à troca de prontuário, postergando o alcance do ponto de equilíbrio.</td>
+            <td>Foco em consultórios individuais, migração assistida sem custo de prontuários antigos e parcerias com sociedades médicas regionais.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 5: PROPOSTA DE INVESTIMENTO -->
+  <section class="section" id="proposta">
+    <div class="section-header">
+      <div class="section-title-group">
+        <h2>05. Proposta Reestruturada de Investimento (Term Sheet)</h2>
+        <p>Modelo societário e financeiro baseado em Mútuo Conversível (SAFE) com aportes atrelados a marcos</p>
+      </div>
+      <span class="section-badge">Estrutura de Financiamento</span>
+    </div>
+
+    <div class="grid-2col">
+      <!-- Resumo do Term Sheet -->
+      <div style="background:#fff; border:1px solid var(--border); border-radius:var(--radius-md); padding:24px;">
+        <h3 style="font-size:15px; font-weight:800; color:var(--text-primary); margin-bottom:16px;">Diretrizes do Term Sheet Indicativo</h3>
+        
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:12px; font-size:13px;">
+          <li style="display:flex; justify-content:space-between; border-bottom:1px solid var(--border); padding-bottom:8px;">
+            <span style="color:var(--text-secondary)">Instrumento de Aporte:</span>
+            <strong>Mútuo Conversível em Participação Societária (SAFE)</strong>
+          </li>
+          <li style="display:flex; justify-content:space-between; border-bottom:1px solid var(--border); padding-bottom:8px;">
+            <span style="color:var(--text-secondary)">Valuation Pre-money Estimado:</span>
+            <strong style="color:var(--brand-teal-dark)">R$ 800.000 — R$ 1.000.000</strong>
+          </li>
+          <li style="display:flex; justify-content:space-between; border-bottom:1px solid var(--border); padding-bottom:8px;">
+            <span style="color:var(--text-secondary)">Reconhecimento de Sweat Equity:</span>
+            <strong style="color:var(--accent-gold)">R$ 228.250 (1.810 h do Fundador)</strong>
+          </li>
+          <li style="display:flex; justify-content:space-between; border-bottom:1px solid var(--border); padding-bottom:8px;">
+            <span style="color:var(--text-secondary)">Desconto na Conversão Futura:</span>
+            <strong>20% de Desconto ou Valuation Cap de R$ 2,5M</strong>
+          </li>
+          <li style="display:flex; justify-content:space-between; padding-top:4px;">
+            <span style="color:var(--text-secondary)">Total do Programa de Financiamento:</span>
+            <strong style="color:var(--brand-blue); font-size:15px;">R$ 260.000 a R$ 300.000</strong>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Estratégia de Mitigação -->
+      <div class="callout callout-info" style="margin-bottom:0; display:flex; flex-direction:column; justify-content:center;">
+        <strong>Por que o Modelo de Duas Tranches Protege as Partes?</strong>
+        <p style="margin-top:6px; font-size:13px; line-height:1.5;">
+          Aportar R$ 60 mil de uma vez em um modelo deficitário queimaria todo o caixa antes da aprovação do produto. Com o modelo em <strong>Duas Tranches</strong>:
+        </p>
+        <ul style="padding-left:18px; margin-top:8px; font-size:12.5px; line-height:1.6;">
+          <li><strong>O Investidor</strong> arrisca apenas R$ 80k na fase inicial de incerteza técnica, aportando o valor maior (R$ 180k–220k) somente quando o software já tiver certificado SBIS emitido e 15 clientes em teste.</li>
+          <li><strong>O Fundador</strong> tem a garantia contratual de que haverá capital de giro robusto para escalar vendas e suporte quando o produto estiver regulatoriamente apto.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Timeline das Tranches -->
+    <div class="timeline-steps">
+      <div class="step-card">
+        <div class="step-badge">TRANCHE 1</div>
+        <div class="step-content">
+          <strong>Fase Pré-operacional &amp; Homologação SBIS (Meses 0 a 8)</strong>
+          <p>
+            Alocação estrita: Auditoria externa de segurança e pentest (R$ 18k), taxa SBIS Teleconsulta Perfil 0 (R$ 15k), infraestrutura cloud e servidores de teste (R$ 12k), assessoria jurídica/LGPD (R$ 10k) e reserva de contingência para retrabalho (R$ 25k).
+          </p>
+        </div>
+        <div class="step-amount">
+          <span class="amount" style="color:var(--brand-teal-dark)">R$ 80.000</span>
+          <span class="caption">Liberação no Fechamento</span>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-badge tranche2">TRANCHE 2</div>
+        <div class="step-content">
+          <strong>Fase Go-to-Market &amp; Tração Comercial (Meses 9 a 24)</strong>
+          <p>
+            Gatilho de liberação: <em>Emissão do certificado oficial SBIS NGS2 Estágio 1</em> e conclusão de piloto aprovado por 15 médicos. Financiará 14 a 16 meses de suporte N1, DevOps, aquisição médica e capital de giro até o ponto de equilíbrio.
+          </p>
+        </div>
+        <div class="step-amount">
+          <span class="amount" style="color:var(--accent-gold)">R$ 180k — 220k</span>
+          <span class="caption">Gatilho: Certificado SBIS</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabela de Marcos e Roteiro de 90 Dias -->
+    <div style="margin-top:24px;">
+      <h3 style="font-size:14px; font-weight:700; margin-bottom:12px; color:var(--text-primary)">Roteiro de 90 Dias &amp; Governança Executiva</h3>
+      <div class="table-box">
+        <table class="styled-table">
+          <thead>
+            <tr>
+              <th>Marco</th>
+              <th>Prazo Estimado</th>
+              <th>Entregável Principal</th>
+              <th>Critério Objetivo de Aceite</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>M0: Alinhamento Societário</strong></td>
+              <td>Semanas 1–2</td>
+              <td>MoU e Term Sheet de Mútuo Conversível assinados</td>
+              <td>Definição de alíquotas societárias, vesting do fundador e gatilhos da Tranche 2.</td>
+            </tr>
+            <tr>
+              <td><strong>M1: Núcleo Clínico &amp; Matriz</strong></td>
+              <td>Mês 1–3</td>
+              <td>Prontuário eletrônico funcional com matriz SBIS mapeada</td>
+              <td>Validação dos requisitos ECF.01 a ECF.07 e autenticação multifator ativa.</td>
+            </tr>
+            <tr>
+              <td><strong>M2: Integrações Críticas</strong></td>
+              <td>Mês 4–6</td>
+              <td>Módulos de vídeo (AWS Chime) e assinatura PAdES operando</td>
+              <td>Realização de teleconsultas simuladas com emissão de receitas válidas no validador oficial.</td>
+            </tr>
+            <tr>
+              <td><strong>M3: Pré-auditoria &amp; Pentest</strong></td>
+              <td>Mês 7–8</td>
+              <td>Relatório de pentest sem vulnerabilidades críticas e submissão SBIS</td>
+              <td>Inscrição formal na SBIS com pagamento da taxa do Perfil 0 (R$ 12.500).</td>
+            </tr>
+            <tr>
+              <td><strong>M4: Certificação &amp; Tração</strong></td>
+              <td>Mês 9–12</td>
+              <td>Certificado oficial emitido e liberação da Tranche 2</td>
+              <td>Início da comercialização ativa a R$ 149/mês e contratação do suporte N1.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p><strong>Dossiê de Auditoria &amp; Proposta de Investimento — Telemedicina SaaS</strong></p>
+  <p style="margin-top:4px;">Elaborado em conformidade com as tabelas de preços públicos da SBIS, AWS, Twilio, DigitalOcean e pesquisas salariais Robert Half de 2026.</p>
+</footer>
+
+<script>
+// Motor de Cálculo e Simulação Reativo
+function updateCalculations() {
+  const price = parseFloat(document.getElementById('slider-price').value) || 149;
+  const docs = parseFloat(document.getElementById('slider-docs').value) || 150;
+  const consults = parseFloat(document.getElementById('slider-consults').value) || 60;
+  const videoShare = (parseFloat(document.getElementById('slider-videoShare').value) || 50) / 100;
+  const signRate = parseFloat(document.getElementById('slider-sign').value) || 0.40;
+  const usd = parseFloat(document.getElementById('slider-usd').value) || 5.50;
+  const staffMode = document.getElementById('select-staff').value;
+
+  // Atualiza labels dos sliders
+  document.getElementById('val-price').textContent = 'R$ ' + price;
+  document.getElementById('val-docs').textContent = docs;
+  document.getElementById('val-consults').textContent = consults;
+  document.getElementById('val-videoShare').textContent = Math.round(videoShare * 100) + '%';
+  document.getElementById('val-sign').textContent = 'R$ ' + signRate.toFixed(2).replace('.', ',');
+  document.getElementById('val-usd').textContent = 'R$ ' + usd.toFixed(2).replace('.', ',');
+
+  // Custos Variáveis por Médico / Mês
+  const videoVisits = consults * videoShare;
+  const videoMins = videoVisits * 20 * 2; // 2 participantes, 20 min
+  const chimeRateUSD = 0.0017;
+  const videoCostBRL = videoMins * chimeRateUSD * usd;
+  const smsCostBRL = consults * 0.3 * 0.10; // 0.3 SMS por consulta * R$ 0.10
+  const signCostBRL = consults * 1.0 * signRate;
+
+  const varCostDirect = videoCostBRL + smsCostBRL + signCostBRL;
+  const varCostWithReserve = varCostDirect * 1.12;
+
+  // Custos Fixos Mensais
+  const fixedInfraUSD = 281; // App ($96), DB ($90), Storage ($20), WAF ($25), Mon ($30), Email ($20)
+  const fixedInfraBRL = fixedInfraUSD * usd;
+  const pentestMonthly = 30000 / 24; // R$ 1.250 / mês
+
+  let staffCostMonthly = 15320;
+  if (staffMode === 'lean') {
+    staffCostMonthly = 6500;
+  } else if (staffMode === 'founder') {
+    staffCostMonthly = 2500;
+  }
+
+  const fixedMonthlyTotal = (fixedInfraBRL + staffCostMonthly + pentestMonthly) * 1.12;
+
+  // Métricas Derivadas
+  const cm = price - varCostWithReserve;
+  const cmPct = (cm / price) * 100;
+  const beDocs = cm > 0 ? Math.ceil(fixedMonthlyTotal / cm) : 9999;
+
+  const totalRevMonthly = docs * price;
+  const totalVarMonthly = docs * varCostWithReserve;
+  const ebitda = totalRevMonthly - (fixedMonthlyTotal + totalVarMonthly);
+  const arr = totalRevMonthly * 12;
+
+  // Atualização dos Outputs no DOM
+  document.getElementById('out-cm').textContent = 'R$ ' + cm.toFixed(2).replace('.', ',');
+  document.getElementById('out-cmPct').textContent = 'Margem de ' + cmPct.toFixed(1) + '% por médico';
+  document.getElementById('out-be').textContent = cm > 0 ? beDocs + ' médicos' : 'Inviável';
+  document.getElementById('out-beDesc').textContent = 'Para cobrir R$ ' + Math.round(fixedMonthlyTotal).toLocaleString('pt-BR') + '/mês fixos';
+
+  const ebitdaEl = document.getElementById('out-ebitda');
+  const ebitdaStr = (ebitda >= 0 ? '+ ' : '- ') + 'R$ ' + Math.abs(Math.round(ebitda)).toLocaleString('pt-BR') + ' /mês';
+  ebitdaEl.textContent = ebitdaStr;
+  ebitdaEl.style.color = ebitda >= 0 ? 'var(--brand-teal-dark)' : 'var(--accent-red)';
+
+  document.getElementById('out-arr').textContent = 'ARR Potencial: R$ ' + Math.round(arr).toLocaleString('pt-BR');
+
+  // Desenho do Gráfico SVG
+  drawChart(price, varCostWithReserve, fixedMonthlyTotal, docs, beDocs);
+}
+
+function drawChart(price, varCost, fixedCost, currentDocs, beDocs) {
+  const svg = document.getElementById('chart-svg');
+  if (!svg) return;
+
+  const maxDocs = Math.max(300, beDocs * 1.15, currentDocs * 1.15);
+  const W = 650, H = 180, padL = 60, padR = 20, padT = 20, padB = 25;
+  const w = W - padL - padR, h = H - padT - padB;
+
+  const maxMoney = (maxDocs * price) * 1.1;
+  const scaleX = x => padL + (x / maxDocs) * w;
+  const scaleY = y => padT + h - (y / maxMoney) * h;
+
+  let out = '';
+
+  // Linhas de Grade Horizontais
+  for (let i = 0; i <= 3; i++) {
+    let yVal = maxMoney * (i / 3);
+    let yPos = scaleY(yVal);
+    out += `<line x1="${padL}" y1="${yPos}" x2="${W - padR}" y2="${yPos}" stroke="#e2e8f0" stroke-width="1"/>`;
+    out += `<text x="${padL - 8}" y="${yPos + 4}" fill="#64748b" font-size="9.5" text-anchor="end">R$ ${Math.round(yVal/1000)}k</text>`;
+  }
+
+  // Rótulos do Eixo X
+  [50, 100, 150, 200, 250, 300].forEach(d => {
+    if (d <= maxDocs) {
+      let xPos = scaleX(d);
+      out += `<text x="${xPos}" y="${H - 6}" fill="#64748b" font-size="9.5" text-anchor="middle">${d} méd.</text>`;
+    }
+  });
+
+  // Linha de Custo Total
+  const yCost0 = scaleY(fixedCost);
+  const yCostMax = scaleY(fixedCost + maxDocs * varCost);
+  out += `<line x1="${scaleX(0)}" y1="${yCost0}" x2="${scaleX(maxDocs)}" y2="${yCostMax}" stroke="#e11d48" stroke-width="2.5"/>`;
+
+  // Linha de Receita
+  const yRev0 = scaleY(0);
+  const yRevMax = scaleY(maxDocs * price);
+  out += `<line x1="${scaleX(0)}" y1="${yRev0}" x2="${scaleX(maxDocs)}" y2="${yRevMax}" stroke="#0d9488" stroke-width="2.5"/>`;
+
+  // Ponto de Equilíbrio
+  if (beDocs <= maxDocs) {
+    let xBe = scaleX(beDocs);
+    let yBe = scaleY(beDocs * price);
+    out += `<line x1="${xBe}" y1="${padT}" x2="${xBe}" y2="${padT + h}" stroke="#d97706" stroke-width="1.5" stroke-dasharray="4 4"/>`;
+    out += `<circle cx="${xBe}" cy="${yBe}" r="5" fill="#d97706"/>`;
+    out += `<text x="${xBe + 6}" y="${yBe - 6}" fill="#d97706" font-size="10" font-weight="700">Equilíbrio: ${beDocs} méd.</text>`;
+  }
+
+  // Ponto Atual da Carteira
+  if (currentDocs <= maxDocs) {
+    let xCur = scaleX(currentDocs);
+    let yCurRev = scaleY(currentDocs * price);
+    out += `<circle cx="${xCur}" cy="${yCurRev}" r="6" fill="#0284c7" stroke="#fff" stroke-width="2"/>`;
+  }
+
+  svg.innerHTML = out;
+}
+
+function resetSimulator() {
+  document.getElementById('slider-price').value = 149;
+  document.getElementById('slider-docs').value = 150;
+  document.getElementById('slider-consults').value = 60;
+  document.getElementById('slider-videoShare').value = 50;
+  document.getElementById('slider-sign').value = 0.40;
+  document.getElementById('slider-usd').value = 5.50;
+  document.getElementById('select-staff').value = 'lean';
+  updateCalculations();
+}
+
+// Função de Download do HTML Único
+function downloadCurrentHTML() {
+  const doctype = '<!DOCTYPE html>\n';
+  const htmlContent = doctype + document.documentElement.outerHTML;
+  const blob = new Blob([htmlContent], { type: 'text/html;charset=utf-8;' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'auditoria_custos_investimento_telemedicina.html';
+  document.body.appendChild(a);
+  a.click();
+  setTimeout(() => {
+    URL.revokeObjectURL(url);
+    a.remove();
+  }, 1000);
+}
+
+// Execução imediata e segura independente do momento de carga
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', updateCalculations);
+} else {
+  updateCalculations();
+}
+</script>
+
+
+</body></html>

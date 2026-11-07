@@ -20,6 +20,10 @@
     {
       "id": "futuro",
       "src": "./modules/futuro.js"
+    },
+    {
+      "id": "telemedicina",
+      "src": "./modules/telemedicina.js"
     }
   ],
   "links": [
@@ -54,6 +58,18 @@
     [
       "saude",
       "conhecimento"
+    ],
+    [
+      "nucleo",
+      "telemedicina"
+    ],
+    [
+      "saude",
+      "telemedicina"
+    ],
+    [
+      "sistemas",
+      "telemedicina"
     ]
   ]
 }
