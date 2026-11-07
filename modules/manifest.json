@@ -24,6 +24,10 @@
     {
       "id": "telemedicina",
       "src": "./modules/telemedicina.js"
+    },
+    {
+      "id": "portfolio",
+      "src": "./modules/portfolio.js"
     }
   ],
   "links": [
@@ -70,6 +74,14 @@
     [
       "sistemas",
       "telemedicina"
+    ],
+    [
+      "nucleo",
+      "portfolio"
+    ],
+    [
+      "sistemas",
+      "portfolio"
     ]
   ]
 }

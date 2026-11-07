@@ -1,0 +1,12 @@
+{
+  "cameraDistance": 13.8,
+  "zoomMin": 0.72,
+  "zoomMax": 1.9,
+  "zoomStep": 0.08,
+  "rotationFocus": 0.13,
+  "rotationNeighbors": 0.075,
+  "rotationTilt": 0.045,
+  "dragSensitivity": 0.008,
+  "autoplay": true,
+  "initialZoom": 0.8
+}

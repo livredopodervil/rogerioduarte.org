@@ -43,5 +43,13 @@ export const links = [
   [
     "sistemas",
     "telemedicina"
+  ],
+  [
+    "nucleo",
+    "portfolio"
+  ],
+  [
+    "sistemas",
+    "portfolio"
   ]
 ];
