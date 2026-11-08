@@ -1,0 +1,758 @@
+{
+  "schemaVersion": 1,
+  "generatedFrom": "content-src/<module>/<slug>.md",
+  "modules": [
+    {
+      "id": "nucleo",
+      "name": "Núcleo",
+      "color": "#3f8b59"
+    },
+    {
+      "id": "saude",
+      "name": "Saúde e cuidado",
+      "color": "#c05a58"
+    },
+    {
+      "id": "sistemas",
+      "name": "Ferramentas",
+      "color": "#356d92"
+    },
+    {
+      "id": "conhecimento",
+      "name": "Notícias do mundo",
+      "color": "#af8933"
+    },
+    {
+      "id": "futuro",
+      "name": "Conexões e comunicação",
+      "color": "#287eaa"
+    },
+    {
+      "id": "telemedicina",
+      "name": "Telemedicina",
+      "color": "#0a968f"
+    }
+  ],
+  "entries": [
+    {
+      "module": "nucleo",
+      "slug": "medicina",
+      "title": "Medicina e decisão clínica",
+      "url": "./conteudos/nucleo/medicina.html",
+      "index": 0,
+      "kind": "Caderno de estudo",
+      "summary": "Uma decisão médica transforma uma narrativa singular em hipóteses verificáveis.",
+      "source": "content-src/nucleo/medicina.md"
+    },
+    {
+      "module": "nucleo",
+      "slug": "atencao-primaria",
+      "title": "Atenção primária e continuidade do cuidado",
+      "url": "./conteudos/nucleo/atencao-primaria.html",
+      "index": 1,
+      "kind": "Caderno de estudo",
+      "summary": "A atenção primária não é apenas um conjunto de consultas de menor complexidade.",
+      "source": "content-src/nucleo/atencao-primaria.md"
+    },
+    {
+      "module": "nucleo",
+      "slug": "computacao",
+      "title": "Computação como construção de sistemas",
+      "url": "./conteudos/nucleo/computacao.html",
+      "index": 2,
+      "kind": "Caderno de estudo",
+      "summary": "Um programa é uma descrição operacional; um sistema é a organização de componentes, dados, decisões e pessoas que permite que esse programa seja útil.",
+      "source": "content-src/nucleo/computacao.md"
+    },
+    {
+      "module": "nucleo",
+      "slug": "dados-ia",
+      "title": "Dados, estatística e inteligência artificial",
+      "url": "./conteudos/nucleo/dados-ia.html",
+      "index": 3,
+      "kind": "Caderno de estudo",
+      "summary": "Dados não são fatos autoexplicativos.",
+      "source": "content-src/nucleo/dados-ia.md"
+    },
+    {
+      "module": "nucleo",
+      "slug": "pesquisa",
+      "title": "Pesquisa e método científico",
+      "url": "./conteudos/nucleo/pesquisa.html",
+      "index": 4,
+      "kind": "Caderno de estudo",
+      "summary": "A investigação começa quando uma pergunta é formulada de modo que diferentes respostas possam ser distinguidas por evidência.",
+      "source": "content-src/nucleo/pesquisa.md"
+    },
+    {
+      "module": "nucleo",
+      "slug": "comunicacao",
+      "title": "Comunicação do conhecimento",
+      "url": "./conteudos/nucleo/comunicacao.html",
+      "index": 5,
+      "kind": "Caderno de estudo",
+      "summary": "Comunicar ciência não é apenas simplificar um texto especializado.",
+      "source": "content-src/nucleo/comunicacao.md"
+    },
+    {
+      "module": "nucleo",
+      "slug": "urgencias",
+      "title": "Urgência: tempo e decisão",
+      "url": "./conteudos/nucleo/urgencias.html",
+      "index": 6,
+      "kind": "Caderno de estudo",
+      "summary": "Em situações de urgência, as prioridades não podem ser deduzidas apenas do diagnóstico mais provável.",
+      "source": "content-src/nucleo/urgencias.md"
+    },
+    {
+      "module": "nucleo",
+      "slug": "genetica",
+      "title": "Genética e informação biológica",
+      "url": "./conteudos/nucleo/genetica.html",
+      "index": 7,
+      "kind": "Caderno de estudo",
+      "summary": "A informação hereditária não atua isoladamente.",
+      "source": "content-src/nucleo/genetica.md"
+    },
+    {
+      "module": "nucleo",
+      "slug": "matematica",
+      "title": "Matemática, demonstração e modelagem",
+      "url": "./conteudos/nucleo/matematica.html",
+      "index": 8,
+      "kind": "Caderno de estudo",
+      "summary": "A matemática oferece ferramentas para deduzir consequências de hipóteses explícitas.",
+      "source": "content-src/nucleo/matematica.md"
+    },
+    {
+      "module": "nucleo",
+      "slug": "natureza",
+      "title": "Natureza e sistemas em múltiplas escalas",
+      "url": "./conteudos/nucleo/natureza.html",
+      "index": 9,
+      "kind": "Caderno de estudo",
+      "summary": "Fenômenos naturais resultam de interações em escalas de tempo e espaço muito diferentes.",
+      "source": "content-src/nucleo/natureza.md"
+    },
+    {
+      "module": "nucleo",
+      "slug": "publicacoes",
+      "title": "Publicações e documentação aberta",
+      "url": "./conteudos/nucleo/publicacoes.html",
+      "index": 10,
+      "kind": "Caderno de estudo",
+      "summary": "Uma publicação digital é mais útil quando pode ser encontrada, citada, compreendida e revisada.",
+      "source": "content-src/nucleo/publicacoes.md"
+    },
+    {
+      "module": "nucleo",
+      "slug": "contato",
+      "title": "Contato e colaboração",
+      "url": "./conteudos/nucleo/contato.html",
+      "index": 11,
+      "kind": "Caderno de estudo",
+      "summary": "Projetos interdisciplinares exigem definir o problema antes de discutir a tecnologia.",
+      "source": "content-src/nucleo/contato.md"
+    },
+    {
+      "module": "saude",
+      "slug": "clinica",
+      "title": "Raciocínio clínico e acompanhamento",
+      "url": "./conteudos/saude/clinica.html",
+      "index": 0,
+      "kind": "Caderno de estudo",
+      "summary": "A clínica combina observação, interpretação e decisão sob incerteza.",
+      "source": "content-src/saude/clinica.md"
+    },
+    {
+      "module": "saude",
+      "slug": "atencao-primaria",
+      "title": "Atenção Primária à Saúde",
+      "url": "./conteudos/saude/atencao-primaria.html",
+      "index": 1,
+      "kind": "Caderno de estudo",
+      "summary": "A APS tem função própria na organização do cuidado: acesso inicial, continuidade, coordenação e visão integral.",
+      "source": "content-src/saude/atencao-primaria.md"
+    },
+    {
+      "module": "saude",
+      "slug": "urgencias",
+      "title": "Urgências e prioridades assistenciais",
+      "url": "./conteudos/saude/urgencias.html",
+      "index": 2,
+      "kind": "Caderno de estudo",
+      "summary": "Na urgência, decidir a ordem das ações é tão importante quanto formular um diagnóstico.",
+      "source": "content-src/saude/urgencias.md"
+    },
+    {
+      "module": "saude",
+      "slug": "hospital",
+      "title": "Assistência hospitalar e transições",
+      "url": "./conteudos/saude/hospital.html",
+      "index": 3,
+      "kind": "Caderno de estudo",
+      "summary": "Internação não é apenas uma sucessão de prescrições.",
+      "source": "content-src/saude/hospital.md"
+    },
+    {
+      "module": "saude",
+      "slug": "sus",
+      "title": "SUS, território e organização do cuidado",
+      "url": "./conteudos/saude/sus.html",
+      "index": 4,
+      "kind": "Caderno de estudo",
+      "summary": "O Sistema Único de Saúde reúne princípios de universalidade, integralidade e equidade em uma rede cuja implementação depende de recursos, serviços e necessidades regionais..",
+      "source": "content-src/saude/sus.md"
+    },
+    {
+      "module": "saude",
+      "slug": "prevencao",
+      "title": "Prevenção e promoção da saúde",
+      "url": "./conteudos/saude/prevencao.html",
+      "index": 5,
+      "kind": "Caderno de estudo",
+      "summary": "Prevenir não significa apenas solicitar exames.",
+      "source": "content-src/saude/prevencao.md"
+    },
+    {
+      "module": "saude",
+      "slug": "evidencias",
+      "title": "Leitura crítica de evidências",
+      "url": "./conteudos/saude/evidencias.html",
+      "index": 6,
+      "kind": "Caderno de estudo",
+      "summary": "Uma evidência não responde a qualquer pergunta.",
+      "source": "content-src/saude/evidencias.md"
+    },
+    {
+      "module": "saude",
+      "slug": "educacao",
+      "title": "Educação em saúde e comunicação",
+      "url": "./conteudos/saude/educacao.html",
+      "index": 7,
+      "kind": "Caderno de estudo",
+      "summary": "Informação correta pode continuar inútil se não for compreensível.",
+      "source": "content-src/saude/educacao.md"
+    },
+    {
+      "module": "saude",
+      "slug": "tecnologia",
+      "title": "Tecnologia e informação em saúde",
+      "url": "./conteudos/saude/tecnologia.html",
+      "index": 8,
+      "kind": "Caderno de estudo",
+      "summary": "Software clínico é um sistema sociotécnico: o resultado depende das regras implementadas e das condições de uso, não apenas das telas..",
+      "source": "content-src/saude/tecnologia.md"
+    },
+    {
+      "module": "saude",
+      "slug": "documentacao",
+      "title": "Documentação clínica e rastreabilidade",
+      "url": "./conteudos/saude/documentacao.html",
+      "index": 9,
+      "kind": "Caderno de estudo",
+      "summary": "O registro assistencial tem valor clínico, comunicacional e jurídico.",
+      "source": "content-src/saude/documentacao.md"
+    },
+    {
+      "module": "saude",
+      "slug": "gestao",
+      "title": "Gestão, qualidade e segurança do paciente",
+      "url": "./conteudos/saude/gestao.html",
+      "index": 10,
+      "kind": "Caderno de estudo",
+      "summary": "Qualidade assistencial não se mede adequadamente por um indicador isolado.",
+      "source": "content-src/saude/gestao.md"
+    },
+    {
+      "module": "saude",
+      "slug": "contato",
+      "title": "Contato e colaboração em saúde",
+      "url": "./conteudos/saude/contato.html",
+      "index": 11,
+      "kind": "Caderno de estudo",
+      "summary": "Projetos em saúde exigem delimitar claramente finalidade, público e responsabilidade.",
+      "source": "content-src/saude/contato.md"
+    },
+    {
+      "module": "sistemas",
+      "slug": "spatialseed",
+      "title": "SpatialSeed",
+      "url": "./conteudos/sistemas/spatialseed.html",
+      "index": 0,
+      "kind": "Guia de ferramenta",
+      "summary": "O SpatialSeed é um projeto de criação geométrica e experimentação espacial.",
+      "source": "content-src/sistemas/spatialseed.md"
+    },
+    {
+      "module": "sistemas",
+      "slug": "editor-3d",
+      "title": "Editor 3D",
+      "url": "./conteudos/sistemas/editor-3d.html",
+      "index": 1,
+      "kind": "Guia de ferramenta",
+      "summary": "A edição tridimensional muda a forma de pensar interfaces: o usuário manipula coordenadas, orientação, projeção e hierarquias espaciais diretamente..",
+      "source": "content-src/sistemas/editor-3d.md"
+    },
+    {
+      "module": "sistemas",
+      "slug": "pastebin",
+      "title": "Pastebin",
+      "url": "./conteudos/sistemas/pastebin.html",
+      "index": 2,
+      "kind": "Guia de ferramenta",
+      "summary": "Serviços de colagem de texto são úteis para compartilhar pequenos exemplos de código, logs e configurações não sensíveis..",
+      "source": "content-src/sistemas/pastebin.md"
+    },
+    {
+      "module": "sistemas",
+      "slug": "github",
+      "title": "GitHub",
+      "url": "./conteudos/sistemas/github.html",
+      "index": 3,
+      "kind": "Guia de ferramenta",
+      "summary": "O GitHub reúne hospedagem de repositórios, revisão por pull requests, histórico e automações.",
+      "source": "content-src/sistemas/github.md"
+    },
+    {
+      "module": "sistemas",
+      "slug": "wikipedia",
+      "title": "Wikipédia",
+      "url": "./conteudos/sistemas/wikipedia.html",
+      "index": 4,
+      "kind": "Guia de ferramenta",
+      "summary": "A Wikipédia é uma porta de entrada útil para orientações gerais e referências adicionais, mas não substitui as fontes originais..",
+      "source": "content-src/sistemas/wikipedia.md"
+    },
+    {
+      "module": "sistemas",
+      "slug": "internet-archive",
+      "title": "Internet Archive",
+      "url": "./conteudos/sistemas/internet-archive.html",
+      "index": 5,
+      "kind": "Guia de ferramenta",
+      "summary": "O Internet Archive preserva cópias digitais de obras e páginas, permitindo comparar versões ou acessar acervos públicos..",
+      "source": "content-src/sistemas/internet-archive.md"
+    },
+    {
+      "module": "sistemas",
+      "slug": "openstreetmap",
+      "title": "OpenStreetMap",
+      "url": "./conteudos/sistemas/openstreetmap.html",
+      "index": 6,
+      "kind": "Guia de ferramenta",
+      "summary": "O OpenStreetMap é um mapa colaborativo de dados geográficos que pode apoiar aplicações, itinerários e análises espaciais..",
+      "source": "content-src/sistemas/openstreetmap.md"
+    },
+    {
+      "module": "sistemas",
+      "slug": "scielo",
+      "title": "SciELO",
+      "url": "./conteudos/sistemas/scielo.html",
+      "index": 7,
+      "kind": "Guia de ferramenta",
+      "summary": "SciELO oferece acesso a periódicos e produção científica de diversas áreas, com forte presença de publicações brasileiras..",
+      "source": "content-src/sistemas/scielo.md"
+    },
+    {
+      "module": "sistemas",
+      "slug": "imgbb",
+      "title": "ImgBB",
+      "url": "./conteudos/sistemas/imgbb.html",
+      "index": 8,
+      "kind": "Guia de ferramenta",
+      "summary": "Serviços de hospedagem de imagens facilitam compartilhamento e incorporação, mas dependem de condições de disponibilidade e privacidade do fornecedor..",
+      "source": "content-src/sistemas/imgbb.md"
+    },
+    {
+      "module": "sistemas",
+      "slug": "qr-code",
+      "title": "QR Code",
+      "url": "./conteudos/sistemas/qr-code.html",
+      "index": 9,
+      "kind": "Guia de ferramenta",
+      "summary": "Códigos QR representam dados em uma matriz bidimensional e são usados para transportar URLs ou informações curtas..",
+      "source": "content-src/sistemas/qr-code.md"
+    },
+    {
+      "module": "sistemas",
+      "slug": "convertio",
+      "title": "Convertio",
+      "url": "./conteudos/sistemas/convertio.html",
+      "index": 10,
+      "kind": "Guia de ferramenta",
+      "summary": "Conversores on-line ajudam na transformação de formatos, mas podem exigir envio de arquivos a terceiros..",
+      "source": "content-src/sistemas/convertio.md"
+    },
+    {
+      "module": "sistemas",
+      "slug": "cyberchef",
+      "title": "CyberChef",
+      "url": "./conteudos/sistemas/cyberchef.html",
+      "index": 11,
+      "kind": "Guia de ferramenta",
+      "summary": "CyberChef reúne operações de codificação, conversão e análise de dados em uma interface de receitas..",
+      "source": "content-src/sistemas/cyberchef.md"
+    },
+    {
+      "module": "conhecimento",
+      "slug": "bbc-mundo",
+      "title": "BBC Mundo",
+      "url": "./conteudos/conhecimento/bbc-mundo.html",
+      "index": 0,
+      "kind": "Guia de leitura de fonte",
+      "summary": "Cobertura internacional em espanhol, útil para cotejar terminologia e enquadramentos entre idiomas..",
+      "source": "content-src/conhecimento/bbc-mundo.md"
+    },
+    {
+      "module": "conhecimento",
+      "slug": "al-jazeera",
+      "title": "Al Jazeera",
+      "url": "./conteudos/conhecimento/al-jazeera.html",
+      "index": 1,
+      "kind": "Guia de leitura de fonte",
+      "summary": "Fonte de cobertura internacional com perspectiva editorial própria e presença em várias regiões..",
+      "source": "content-src/conhecimento/al-jazeera.md"
+    },
+    {
+      "module": "conhecimento",
+      "slug": "france-24",
+      "title": "France 24",
+      "url": "./conteudos/conhecimento/france-24.html",
+      "index": 2,
+      "kind": "Guia de leitura de fonte",
+      "summary": "Emissora internacional com material textual e audiovisual, adequada para exercícios de comparação multimídia..",
+      "source": "content-src/conhecimento/france-24.md"
+    },
+    {
+      "module": "conhecimento",
+      "slug": "deutsche-welle",
+      "title": "Deutsche Welle",
+      "url": "./conteudos/conhecimento/deutsche-welle.html",
+      "index": 3,
+      "kind": "Guia de leitura de fonte",
+      "summary": "Cobertura internacional e materiais em múltiplos idiomas, úteis para contrastar traduções e contextos..",
+      "source": "content-src/conhecimento/deutsche-welle.md"
+    },
+    {
+      "module": "conhecimento",
+      "slug": "guardian",
+      "title": "The Guardian",
+      "url": "./conteudos/conhecimento/guardian.html",
+      "index": 4,
+      "kind": "Guia de leitura de fonte",
+      "summary": "Jornal com formatos de reportagem, opinião e investigação; a distinção de gênero textual é essencial..",
+      "source": "content-src/conhecimento/guardian.md"
+    },
+    {
+      "module": "conhecimento",
+      "slug": "npr-world",
+      "title": "NPR World",
+      "url": "./conteudos/conhecimento/npr-world.html",
+      "index": 5,
+      "kind": "Guia de leitura de fonte",
+      "summary": "Cobertura internacional com conteúdo sonoro e textual, útil para pensar a relação entre áudio e transcrição..",
+      "source": "content-src/conhecimento/npr-world.md"
+    },
+    {
+      "module": "conhecimento",
+      "slug": "onu-noticias",
+      "title": "ONU Notícias",
+      "url": "./conteudos/conhecimento/onu-noticias.html",
+      "index": 6,
+      "kind": "Guia de leitura de fonte",
+      "summary": "Canal institucional com informes, resoluções e coberturas das atividades da Organização das Nações Unidas..",
+      "source": "content-src/conhecimento/onu-noticias.md"
+    },
+    {
+      "module": "conhecimento",
+      "slug": "euronews",
+      "title": "Euronews",
+      "url": "./conteudos/conhecimento/euronews.html",
+      "index": 7,
+      "kind": "Guia de leitura de fonte",
+      "summary": "Cobertura de temas europeus e internacionais, com materiais visuais e várias edições linguísticas..",
+      "source": "content-src/conhecimento/euronews.md"
+    },
+    {
+      "module": "conhecimento",
+      "slug": "nasa",
+      "title": "NASA",
+      "url": "./conteudos/conhecimento/nasa.html",
+      "index": 8,
+      "kind": "Guia de leitura de fonte",
+      "summary": "Fonte institucional para missões espaciais, imagens, divulgação técnica e documentação científica..",
+      "source": "content-src/conhecimento/nasa.md"
+    },
+    {
+      "module": "conhecimento",
+      "slug": "oms",
+      "title": "OMS",
+      "url": "./conteudos/conhecimento/oms.html",
+      "index": 9,
+      "kind": "Guia de leitura de fonte",
+      "summary": "Canal institucional de saúde global, orientações, informes e dados epidemiológicos..",
+      "source": "content-src/conhecimento/oms.md"
+    },
+    {
+      "module": "conhecimento",
+      "slug": "sciencedaily",
+      "title": "ScienceDaily",
+      "url": "./conteudos/conhecimento/sciencedaily.html",
+      "index": 10,
+      "kind": "Guia de leitura de fonte",
+      "summary": "Agregador de notícias sobre pesquisas; o texto jornalístico serve como entrada para o trabalho científico original..",
+      "source": "content-src/conhecimento/sciencedaily.md"
+    },
+    {
+      "module": "conhecimento",
+      "slug": "nhk-world",
+      "title": "NHK World",
+      "url": "./conteudos/conhecimento/nhk-world.html",
+      "index": 11,
+      "kind": "Guia de leitura de fonte",
+      "summary": "Canal internacional com temas do Japão e da região Ásia-Pacífico, útil para ampliar perspectivas geográficas..",
+      "source": "content-src/conhecimento/nhk-world.md"
+    },
+    {
+      "module": "futuro",
+      "slug": "facebook",
+      "title": "Facebook",
+      "url": "./conteudos/futuro/facebook.html",
+      "index": 0,
+      "kind": "Caderno de comunicação",
+      "summary": "Redes sociais permitem conversar com públicos amplos, mas condensam conteúdo e favorecem circulação descontextualizada..",
+      "source": "content-src/futuro/facebook.md"
+    },
+    {
+      "module": "futuro",
+      "slug": "blog",
+      "title": "Blog",
+      "url": "./conteudos/futuro/blog.html",
+      "index": 1,
+      "kind": "Caderno de comunicação",
+      "summary": "Um blog pode servir de arquivo cronológico de ensaios, observações e materiais de referência..",
+      "source": "content-src/futuro/blog.md"
+    },
+    {
+      "module": "futuro",
+      "slug": "youtube",
+      "title": "YouTube",
+      "url": "./conteudos/futuro/youtube.html",
+      "index": 2,
+      "kind": "Caderno de comunicação",
+      "summary": "Vídeos são adequados a demonstrações de software, explicações visuais e experimentos, desde que possam ser localizados e compreendidos sem depender apenas da imagem..",
+      "source": "content-src/futuro/youtube.md"
+    },
+    {
+      "module": "futuro",
+      "slug": "x",
+      "title": "X",
+      "url": "./conteudos/futuro/x.html",
+      "index": 3,
+      "kind": "Caderno de comunicação",
+      "summary": "Publicações breves podem divulgar achados, perguntas e links, mas o espaço reduzido aumenta o risco de omitir condições e ressalvas..",
+      "source": "content-src/futuro/x.md"
+    },
+    {
+      "module": "futuro",
+      "slug": "instagram",
+      "title": "Instagram",
+      "url": "./conteudos/futuro/instagram.html",
+      "index": 4,
+      "kind": "Caderno de comunicação",
+      "summary": "Recursos visuais permitem apresentar diagramas, sequências e fotografias de projetos; imagens precisam ser legíveis em telas pequenas..",
+      "source": "content-src/futuro/instagram.md"
+    },
+    {
+      "module": "futuro",
+      "slug": "publicacoes",
+      "title": "Publicações",
+      "url": "./conteudos/futuro/publicacoes.html",
+      "index": 5,
+      "kind": "Caderno de comunicação",
+      "summary": "Uma coleção editorial deve permitir encontrar os textos por assunto, formato, data e estágio de revisão..",
+      "source": "content-src/futuro/publicacoes.md"
+    },
+    {
+      "module": "futuro",
+      "slug": "videos",
+      "title": "Vídeos",
+      "url": "./conteudos/futuro/videos.html",
+      "index": 6,
+      "kind": "Caderno de comunicação",
+      "summary": "O catálogo audiovisual pode reunir demonstrações de aplicativos e explicações científicas organizadas por projeto..",
+      "source": "content-src/futuro/videos.md"
+    },
+    {
+      "module": "futuro",
+      "slug": "comunidade",
+      "title": "Comunidade",
+      "url": "./conteudos/futuro/comunidade.html",
+      "index": 7,
+      "kind": "Caderno de comunicação",
+      "summary": "Comunidades de prática podem contribuir com testes, relatos de uso e sugestões de melhoria..",
+      "source": "content-src/futuro/comunidade.md"
+    },
+    {
+      "module": "futuro",
+      "slug": "fotografias",
+      "title": "Fotografias",
+      "url": "./conteudos/futuro/fotografias.html",
+      "index": 8,
+      "kind": "Caderno de comunicação",
+      "summary": "A fotografia documenta ambientes, protótipos e observações, mas precisa de contexto para funcionar como evidência..",
+      "source": "content-src/futuro/fotografias.md"
+    },
+    {
+      "module": "futuro",
+      "slug": "atualizacoes",
+      "title": "Atualizações",
+      "url": "./conteudos/futuro/atualizacoes.html",
+      "index": 9,
+      "kind": "Caderno de comunicação",
+      "summary": "Um histórico de atualizações mostra como um projeto evoluiu e quais limitações foram resolvidas ou introduzidas..",
+      "source": "content-src/futuro/atualizacoes.md"
+    },
+    {
+      "module": "futuro",
+      "slug": "arquivo",
+      "title": "Arquivo",
+      "url": "./conteudos/futuro/arquivo.html",
+      "index": 10,
+      "kind": "Caderno de comunicação",
+      "summary": "Arquivar não é apenas guardar arquivos: é preservar contexto e relações entre versões..",
+      "source": "content-src/futuro/arquivo.md"
+    },
+    {
+      "module": "futuro",
+      "slug": "contato",
+      "title": "Contato",
+      "url": "./conteudos/futuro/contato.html",
+      "index": 11,
+      "kind": "Caderno de comunicação",
+      "summary": "Canais públicos são adequados a propostas e dúvidas gerais, não ao envio de registros clínicos ou segredos de acesso..",
+      "source": "content-src/futuro/contato.md"
+    },
+    {
+      "module": "telemedicina",
+      "slug": "visao",
+      "title": "Visão",
+      "url": "./conteudos/telemedicina/visao.html",
+      "index": 0,
+      "kind": "Guia de projeto",
+      "summary": "Uma teleconsulta integrada precisa de mais do que transmissão de áudio e vídeo.",
+      "source": "content-src/telemedicina/visao.md"
+    },
+    {
+      "module": "telemedicina",
+      "slug": "produto",
+      "title": "Produto",
+      "url": "./conteudos/telemedicina/produto.html",
+      "index": 1,
+      "kind": "Guia de projeto",
+      "summary": "A primeira versão precisa ser definida por requisitos observáveis, não pela quantidade de telas..",
+      "source": "content-src/telemedicina/produto.md"
+    },
+    {
+      "module": "telemedicina",
+      "slug": "teleconsulta",
+      "title": "Teleconsulta",
+      "url": "./conteudos/telemedicina/teleconsulta.html",
+      "index": 2,
+      "kind": "Guia de projeto",
+      "summary": "Vídeo é um componente especializado com requisitos próprios de conectividade, disponibilidade e privacidade..",
+      "source": "content-src/telemedicina/teleconsulta.md"
+    },
+    {
+      "module": "telemedicina",
+      "slug": "prontuario",
+      "title": "Prontuário",
+      "url": "./conteudos/telemedicina/prontuario.html",
+      "index": 3,
+      "kind": "Guia de projeto",
+      "summary": "O prontuário precisa conservar o contexto do cuidado ao longo do tempo e entre intervenções..",
+      "source": "content-src/telemedicina/prontuario.md"
+    },
+    {
+      "module": "telemedicina",
+      "slug": "certificacao",
+      "title": "Certificação",
+      "url": "./conteudos/telemedicina/certificacao.html",
+      "index": 4,
+      "kind": "Guia de projeto",
+      "summary": "A certificação de sistemas eletrônicos de saúde depende de escopo e critérios verificáveis..",
+      "source": "content-src/telemedicina/certificacao.md"
+    },
+    {
+      "module": "telemedicina",
+      "slug": "seguranca",
+      "title": "Segurança",
+      "url": "./conteudos/telemedicina/seguranca.html",
+      "index": 5,
+      "kind": "Guia de projeto",
+      "summary": "Segurança deve ser definida como propriedade dos fluxos, dados e operações de um sistema..",
+      "source": "content-src/telemedicina/seguranca.md"
+    },
+    {
+      "module": "telemedicina",
+      "slug": "arquitetura",
+      "title": "Arquitetura",
+      "url": "./conteudos/telemedicina/arquitetura.html",
+      "index": 6,
+      "kind": "Guia de projeto",
+      "summary": "Uma arquitetura modular separa responsabilidades e torna as mudanças rastreáveis..",
+      "source": "content-src/telemedicina/arquitetura.md"
+    },
+    {
+      "module": "telemedicina",
+      "slug": "desenvolvimento",
+      "title": "Desenvolvimento",
+      "url": "./conteudos/telemedicina/desenvolvimento.html",
+      "index": 7,
+      "kind": "Guia de projeto",
+      "summary": "O plano de desenvolvimento deve entregar evidências progressivas de funcionamento e segurança..",
+      "source": "content-src/telemedicina/desenvolvimento.md"
+    },
+    {
+      "module": "telemedicina",
+      "slug": "operacao",
+      "title": "Operação em 24 meses",
+      "url": "./conteudos/telemedicina/operacao.html",
+      "index": 8,
+      "kind": "Guia de projeto",
+      "summary": "Um orçamento de operação deve separar despesas recorrentes, variáveis e investimentos iniciais..",
+      "source": "content-src/telemedicina/operacao.md"
+    },
+    {
+      "module": "telemedicina",
+      "slug": "unitarios",
+      "title": "Custos unitários",
+      "url": "./conteudos/telemedicina/unitarios.html",
+      "index": 9,
+      "kind": "Guia de projeto",
+      "summary": "Custos unitários permitem entender quais operações mais influenciam o resultado do serviço..",
+      "source": "content-src/telemedicina/unitarios.md"
+    },
+    {
+      "module": "telemedicina",
+      "slug": "mercado",
+      "title": "Mercado e riscos",
+      "url": "./conteudos/telemedicina/mercado.html",
+      "index": 10,
+      "kind": "Guia de projeto",
+      "summary": "Uma oportunidade de mercado não elimina riscos regulatórios, técnicos ou comerciais..",
+      "source": "content-src/telemedicina/mercado.md"
+    },
+    {
+      "module": "telemedicina",
+      "slug": "investimento",
+      "title": "Investimento",
+      "url": "./conteudos/telemedicina/investimento.html",
+      "index": 11,
+      "kind": "Guia de projeto",
+      "summary": "Uma proposta de investimento deve relacionar recursos solicitados a etapas verificáveis de redução de incerteza..",
+      "source": "content-src/telemedicina/investimento.md"
+    }
+  ]
+}

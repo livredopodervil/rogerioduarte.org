@@ -21,6 +21,7 @@ let THREE,renderer,scene,camera,raycaster,worlds=[],faceMeshes=[],frame=0,last=0
 
 import {mountRSS} from '../modules/rss-reader.js';
 import {mountSocial} from '../modules/social-viewer.js';
+import contentPages from '../modules/content-pages.js';
 // Registro declarativo: adicionar ou remover módulos exige somente manifest.json.
 const manifest=await fetch('./modules/manifest.json',{cache:'no-cache'}).then(r=>{if(!r.ok)throw Error('Manifesto HTTP '+r.status);return r.json()});
 if(manifest.schemaVersion!==1||!Array.isArray(manifest.modules))throw Error('Manifesto inválido');
@@ -39,37 +40,51 @@ $('#pause').textContent=auto?'Ⅱ Pausar':'▶ Animar';
 
 const V=new Array(12).fill(0).map((_,i)=>i);
 function status(s){$('#status').textContent=s}
+// RD-EDITORIAL-ATLAS-V1: integração do catálogo às faces.
+// RD-EDITORIAL-LINKFIX-V1: função única de abertura de artigos.
 function modulePage(i){
- const m=modules[active],p=m.pages?.[i];
- if(p && typeof p === 'object')return {
-  tag:m.name.toUpperCase()+' / '+String(i+1).padStart(2,'0'),
-  title:p.title||m.menu[i],description:p.description||'',
-  points:Array.isArray(p.points)?p.points:[],
-  paragraphs:Array.isArray(p.paragraphs)?p.paragraphs:[],
-  documents:Array.isArray(p.documents)?p.documents:[],url:p.url
+ const m=modules[active];
+ const raw=m.pages?.[i];
+ const p=(raw && typeof raw==='object')?raw:{};
+ const e=contentPages[m.id]?.[i]||m.editorial?.[i]||{};
+ const fallback=active===0?pages[i]||{}:{};
+ const feed=m.feeds?.[i];
+ const choose=(...values)=>values.find(v=>typeof v==='string' && v.trim())||'';
+ const pickArray=(...values)=>values.find(v=>Array.isArray(v) && v.length)||[];
+ const isFeed=Boolean(feed||m.widgets?.[i]);
+ const contentUrl=choose(e.articleUrl,e.url);
+ return {
+  tag:choose(p.tag,fallback.tag,feed?'NOTICIÁRIO / '+String(i+1).padStart(2,'0'):'',m.name.toUpperCase()+' / '+String(i+1).padStart(2,'0')),
+  title:choose(p.title,e.title,feed?.name,fallback.title,m.menu[i]),
+  description:choose(p.description,e.description,fallback.description,feed?'Leitor RSS da fonte selecionada.':'','Conteúdo do módulo '+m.name+'.'),
+  points:pickArray(p.points,e.points,fallback.points),
+  paragraphs:pickArray(p.paragraphs,e.paragraphs),
+  documents:pickArray(p.documents,e.documents),
+  articleUrl:choose(p.articleUrl,contentUrl),
+  // Links externos mantêm seu destino original; RSS/widgets usam artigo apenas na seção de leituras.
+  url:choose(p.url,!isFeed?contentUrl:'',fallback.url)
  };
- if(active===0)return pages[i];
- if(m.feeds?.[i])return {tag:'NOTICIÁRIO / '+String(i+1).padStart(2,'0'),title:m.feeds[i].name,description:'Leitor RSS da fonte selecionada.',points:[]};
- return {tag:m.name.toUpperCase()+' / '+String(i+1).padStart(2,'0'),title:m.menu[i],description:'Conteúdo do módulo '+m.name+'.',points:[]};
 }
-function mountProjectContent(p,i){
+function mountEditorialContent(p,i){
  const host=$('#detail-project');host.replaceChildren();
- const paragraph=(value,cls='')=>{const el=document.createElement('p');el.textContent=value;if(cls)el.className=cls;host.append(el)};
- for(const t of p.paragraphs||[])paragraph(t);
+ const mod=modules[active],isTele=mod.id==='telemedicina';
+ for(const t of p.paragraphs||[]){const e=document.createElement('p');e.textContent=t;host.append(e)}
  const links=document.createElement('div');links.className='tm-doclinks';
- const heading=document.createElement('h3');heading.textContent='Estudos e documentos integrais';links.append(heading);
- for(const d of p.documents||[]){
-  const a=document.createElement('a');a.href=d.url;a.textContent=d.title;a.setAttribute('aria-label','Abrir documento: '+d.title);
-  a.target='_self';links.append(a);
- }
- const hub=document.createElement('a');hub.href='./projetos/telemedicina/index.html#biblioteca';hub.textContent='Biblioteca completa · 8 documentos';links.append(hub);
- host.append(links);
- const foot=document.createElement('nav');foot.className='tm-face-controls';foot.setAttribute('aria-label','Navegar entre faces de Telemedicina');
+ const heading=document.createElement('h3');heading.textContent=isTele?'Estudos e documentação':'Leituras, fontes e aprofundamento';links.append(heading);
+ const known=new Set();
+ function addLink(title,url){if(!url||known.has(url))return;known.add(url);
+   const a=document.createElement('a');a.href=url;a.textContent=title;a.setAttribute('aria-label','Abrir: '+title);links.append(a)}
+ if(p.articleUrl)addLink('Ler artigo completo →',p.articleUrl);
+ for(const d of p.documents||[])addLink(d.title,d.url);
+ if(isTele)addLink('Biblioteca técnica · 8 documentos','./projetos/telemedicina/index.html#biblioteca');
+ if(known.size)host.append(links);
+ const foot=document.createElement('nav');foot.className='tm-face-controls';foot.setAttribute('aria-label','Navegar entre as doze faces');
  const previous=document.createElement('button'),next=document.createElement('button');
- previous.type=next.type='button';previous.textContent='← '+modules[active].menu[(i+11)%12];next.textContent=modules[active].menu[(i+1)%12]+' →';
+ previous.type=next.type='button';previous.textContent='← '+mod.menu[(i+11)%12];next.textContent=mod.menu[(i+1)%12]+' →';
  previous.addEventListener('click',()=>detail((i+11)%12));next.addEventListener('click',()=>detail((i+1)%12));
  foot.append(previous,next);host.append(foot);
- paragraph('Projeto demonstrativo e pré-certificação. Nenhum prontuário operacional, certificado ou resultado comercial é afirmado.','tm-disclaimer');
+ if(isTele){const disclaimer=document.createElement('p');disclaimer.className='tm-disclaimer';
+ disclaimer.textContent='Projeto demonstrativo; não constitui sistema certificado ou serviço clínico em operação.';host.append(disclaimer)}
  host.hidden=false;
 }
 
@@ -87,9 +102,10 @@ function detail(i){
  else if(m.feeds?.[i]){mountRSS(rssHost,m.feeds[i]);$('#detail-image').hidden=true;$('#detail-points').hidden=true;}
  else{$('#detail-image').hidden=false;$('#detail-points').hidden=false;}
  const project=$('#detail-project');project.hidden=true;project.replaceChildren();
- if(tm)mountProjectContent(p,i);
+ if(tm||p.articleUrl||(p.paragraphs||[]).length||(p.documents||[]).length)mountEditorialContent(p,i);
+
  const link=$('#detail-external');link.hidden=!p.url;
- if(p.url){const u=new URL(p.url,document.baseURI);if(!['http:','https:'].includes(u.protocol))throw Error('URL inválida');link.href=u.href;link.textContent=tm?'Explorar a seção completa →':'Abrir '+p.title+' ↗';link.target=tm?'_self':'_blank';}
+ if(p.url){const u=new URL(p.url,document.baseURI);if(!['http:','https:'].includes(u.protocol))throw Error('URL inválida');link.href=u.href;link.textContent=tm?'Explorar a seção completa →':'Abrir '+p.title+' ↗';link.target=(tm || p.url?.startsWith('./conteudos/'))?'_self':'_blank';}
  panel.hidden=false;panel.scrollTop=0;document.body.classList.add('detail-open');$('#detail-close').focus();history.replaceState(null,'',`#${m.id}-${i+1}`);
 }
 

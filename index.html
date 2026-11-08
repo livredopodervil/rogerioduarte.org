@@ -143,7 +143,18 @@
     .contact-portrait{width:112px;height:142px;object-fit:cover;object-position:center 35%;border-radius:16px;border:1px solid #c9e3db;box-shadow:0 12px 30px #0a546012;flex:none}
     .contact-identity{display:flex;align-items:center;gap:22px;min-width:0}
     @media(max-width:680px){.contact-identity{align-items:flex-start;gap:15px}.contact-portrait{width:82px;height:110px}}
-  </style>
+  /* RD-EDITORIAL-ATLAS-V1: extensão da identidade visual existente. */
+.rd-editorial-section{background:linear-gradient(155deg,#f7fcfd,#edf8f6);border-block:1px solid #dcecec}
+.rd-editorial-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:26px}
+.rd-editorial-cards a{display:flex;flex-direction:column;gap:10px;padding:24px;border:1px solid #cfe5e7;border-radius:16px;background:#fff;text-decoration:none;min-height:154px;box-shadow:0 8px 28px #196d780a}
+.rd-editorial-cards strong{font:740 19px/1.2 var(--sans);color:#123e4e}
+.rd-editorial-cards span{font:18px/1.45 var(--serif);color:#4d6c74}
+.rd-editorial-cards a:hover{border-color:#078fa7;transform:translateY(-1px)}
+.rd-editorial-foot{display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin:30px 0 0;font:650 13px var(--sans);color:#176d7c}
+@media(max-width:860px){.rd-editorial-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:570px){.rd-editorial-cards{grid-template-columns:1fr}.rd-editorial-cards a{min-height:0}}
+
+</style>
 </head>
 <body>
   <a class="skip" href="#conteudo">Ir para conteúdo</a>
@@ -156,7 +167,7 @@
       <a class="mobile-lab" href="./laboratorio/">Laboratório 3D <span aria-hidden="true">↗</span></a>
       <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu <span aria-hidden="true">☰</span></button>
       <nav id="site-nav" class="nav" aria-label="Navegação principal">
-        <a href="#sobre">Sobre</a><a href="#atuacao">Atuação</a><a href="#projetos">Projetos</a><a href="./projetos/">Portfólio</a><a href="#interesses">Interesses</a><a href="#contato">Contato</a>
+        <a href="#sobre">Sobre</a><a href="#atuacao">Atuação</a><a href="#projetos">Projetos</a><a href="./conteudos/">Caderno</a><a href="./projetos/">Portfólio</a><a href="#interesses">Interesses</a><a href="#contato">Contato</a>
         <a class="lab-link" href="./laboratorio/">Explorar laboratório 3D <span aria-hidden="true">↗</span></a>
       </nav>
     </div>
@@ -236,7 +247,23 @@
         </div>
       </div>
     </section>
-    <section class="section contact-section" id="contato" aria-labelledby="contato-title">
+        <!-- RD-EDITORIAL-ATLAS-V1: índice de conteúdo separado dos aplicativos. -->
+    <section class="section rd-editorial-section" id="caderno" aria-labelledby="caderno-title">
+      <div class="wrap">
+        <div class="kicker">Caderno de estudos</div>
+        <div class="section-head"><h2 id="caderno-title">Ideias que podem ser examinadas em profundidade.</h2><p class="section-text">Textos completos, exemplos, limites e ligações entre saúde, computação e ciência. O acervo pode ser explorado por lista ou no laboratório tridimensional.</p></div>
+        <div class="rd-editorial-cards">
+          <a href="./conteudos/#nucleo"><strong>Fundamentos interdisciplinares</strong><span>Medicina, lógica, investigação e representação do conhecimento · 12 textos</span></a>
+          <a href="./conteudos/#saude"><strong>Saúde e cuidado</strong><span>Raciocínio clínico, APS, evidência e sistemas assistenciais · 12 textos</span></a>
+          <a href="./conteudos/#sistemas"><strong>Ferramentas e software</strong><span>Aplicações, código aberto, formatos e produção digital · 12 guias</span></a>
+          <a href="./conteudos/#conhecimento"><strong>Leitura crítica de fontes</strong><span>Notícias, ciência e análise comparada de informações · 12 guias</span></a>
+          <a href="./conteudos/#futuro"><strong>Comunicação e publicações</strong><span>Escrita, vídeo, arquivos, comunidades e rastreabilidade · 12 textos</span></a>
+          <a href="./conteudos/#telemedicina"><strong>Telemedicina em estudo</strong><span>Produto, arquitetura, segurança, custos e certificação · 12 capítulos</span></a>
+        </div>
+        <p class="rd-editorial-foot"><a class="button button-outline" href="./conteudos/">Explorar os 72 textos completos <span aria-hidden="true">↗</span></a> <a href="./laboratorio/">Ou navegar pelo atlas espacial</a></p>
+      </div>
+    </section>
+<section class="section contact-section" id="contato" aria-labelledby="contato-title">
       <div class="wrap contact-inner"><div class="contact-identity"><img class="contact-portrait" src="./assets/caricatura-contato.jpg" width="112" height="142" loading="lazy" decoding="async" alt="Caricatura de Rogério Duarte em um laboratório com vegetação e computador Linux"><div><div class="kicker">Contato</div><h2 id="contato-title">Projetos relevantes começam com uma boa pergunta.</h2><p>Para conversar sobre ciência, tecnologia, desenvolvimento de software e iniciativas interdisciplinares, o contato pode ser feito diretamente por e-mail.</p></div></div><a class="button button-primary mail-link" href="mailto:rd@rogerioduarte.org">rd@rogerioduarte.org <span aria-hidden="true">↗</span></a></div>
     </section>
   </main>

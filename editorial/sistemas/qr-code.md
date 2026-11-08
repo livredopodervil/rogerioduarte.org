@@ -1,0 +1,59 @@
+# QR Code — Ligação entre papel e web
+
+- Área: **Ferramentas**
+- Face: **10/12**
+- Rota pública: `/conteudos/sistemas/qr-code.html`
+- Origem editorial: pacote de site disponibilizado na conversa; texto-base autoral de 2026-11-08.
+- Estado: **texto-base redigido; revisão crítica e bibliográfica pendente**.
+
+## Pergunta orientadora
+
+Um código QR traduz dados em representação visual legível por câmera, permitindo abrir URLs ou transferir informações. A experiência depende de contraste, margem, tamanho, versão e permanência do destino.
+
+## Tópicos e desenvolvimento
+
+### 1. O que esta seção oferece
+
+Um código QR traduz dados em representação visual legível por câmera, permitindo abrir URLs ou transferir informações. A experiência depende de contraste, margem, tamanho, versão e permanência do destino.
+
+**Instrução editorial:** acrescentar definição de termos na primeira ocorrência, exemplos verificáveis, limites da evidência e links internos pertinentes. Não atribuir novos resultados ao autor sem documento de origem.
+
+### 2. Como explorar o conteúdo
+
+Gerar um QR para um endereço público e testar sua leitura em diferentes telas e impressões.
+
+**Instrução editorial:** acrescentar definição de termos na primeira ocorrência, exemplos verificáveis, limites da evidência e links internos pertinentes. Não atribuir novos resultados ao autor sem documento de origem.
+
+### 3. Verificação e continuidade
+
+O catálogo mantém uma página permanente para QR Code, independente da disponibilidade momentânea do serviço ou de sua incorporação. A revisão editorial deve registrar data da conferência e, quando houver exemplo concreto, a versão ou fonte utilizada.
+
+**Instrução editorial:** acrescentar definição de termos na primeira ocorrência, exemplos verificáveis, limites da evidência e links internos pertinentes. Não atribuir novos resultados ao autor sem documento de origem.
+
+## Exemplo ou demonstração planejada
+
+Gerar um QR para um endereço público e testar sua leitura em diferentes telas e impressões.
+
+## Cuidados e revisão
+
+Códigos podem ocultar destinos inseguros; exibir também a URL em texto.
+
+## Checklist de publicação
+
+- [ ] Conferir referências e documentos oficiais quando houver afirmações verificáveis.
+- [ ] Separar dado observado, hipótese, interpretação e opinião.
+- [ ] Acrescentar data e versão aos exemplos de software.
+- [ ] Revisar links e licenças de mídias.
+- [ ] Confirmar acessibilidade (títulos, contraste, texto alternativo).
+- [ ] Conferir navegação entre biblioteca, atlas 3D e página original.
+- [ ] Executar vistoria do RD Studio e revisar o diff antes de publicar.
+
+## Referências e próximas fontes a levantar
+
+- Documentação e código do projeto relacionado, quando houver.
+- Fontes primárias ou diretrizes oficiais pertinentes ao tema.
+- Literatura metodológica adequada à afirmação, com identificação de ano e autoria.
+
+## Recurso externo a conferir
+
+https://www.qrcode-monkey.com/

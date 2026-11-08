@@ -1,0 +1,121 @@
+{
+  "date": "2026-11-08",
+  "baseline": "rogerioduarte-site-home-og-v2.zip",
+  "areas": {
+    "nucleo": {
+      "pages_html": 12,
+      "plans_md": 12,
+      "titles": [
+        "Medicina e raciocínio clínico",
+        "Atenção primária e cuidado longitudinal",
+        "Desenvolvimento de software e arquitetura",
+        "Dados, estatística e inteligência artificial",
+        "Pesquisa e método científico",
+        "Comunicação científica e técnica",
+        "Urgência e avaliação de risco",
+        "Genética e biologia molecular",
+        "Matemática, lógica e modelagem",
+        "Geociências, natureza e sistemas",
+        "Publicações, notas e documentação",
+        "Contato, colaboração e propostas"
+      ]
+    },
+    "saude": {
+      "pages_html": 12,
+      "plans_md": 12,
+      "titles": [
+        "Clínica e avaliação integral",
+        "Atenção Primária à Saúde",
+        "Urgências e reconhecimento de gravidade",
+        "Assistência hospitalar",
+        "SUS e organização do cuidado",
+        "Prevenção, rastreamento e promoção",
+        "Medicina baseada em evidências",
+        "Educação em saúde",
+        "Tecnologia em saúde e teleatendimento",
+        "Prontuários, registros e rastreabilidade",
+        "Gestão e qualidade assistencial",
+        "Contato sobre saúde e projetos"
+      ]
+    },
+    "sistemas": {
+      "pages_html": 12,
+      "plans_md": 12,
+      "titles": [
+        "SpatialSeed — Editor e laboratório de computação espacial",
+        "Editor 3D — Geometria, câmera e manipulação",
+        "Pastebin — Compartilhamento mínimo de texto",
+        "GitHub — Código-fonte e colaboração versionada",
+        "Wikipédia — Enciclopédia colaborativa e verificabilidade",
+        "Internet Archive — Memória digital e preservação",
+        "OpenStreetMap — Dados geográficos colaborativos",
+        "SciELO — Literatura científica e acervos",
+        "ImgBB — Publicação e referência de imagens",
+        "QR Code — Ligação entre papel e web",
+        "Convertio — Conversão de formatos digitais",
+        "CyberChef — Transformações de dados reproduzíveis"
+      ]
+    },
+    "conhecimento": {
+      "pages_html": 13,
+      "plans_md": 12,
+      "titles": [
+        "BBC Mundo — Reportagem internacional em espanhol",
+        "Al Jazeera — Noticiário internacional",
+        "France 24 — Notícias e cobertura multilíngue",
+        "Deutsche Welle — Reportagem internacional e cultura",
+        "The Guardian — Jornalismo e análise internacional",
+        "NPR World — Noticiário e jornalismo em áudio",
+        "ONU Notícias — Comunicados e organismos multilaterais",
+        "Euronews — Noticiário e cobertura europeia",
+        "NASA — Ciência espacial e missões",
+        "OMS — Saúde pública internacional",
+        "ScienceDaily — Divulgação de resultados científicos",
+        "NHK World — Jornalismo e cobertura asiática"
+      ]
+    },
+    "futuro": {
+      "pages_html": 12,
+      "plans_md": 12,
+      "titles": [
+        "Facebook — Debates e publicações em rede",
+        "Blog — Arquivo cronológico de textos",
+        "YouTube — Vídeos e demonstrações",
+        "X — Publicações curtas e debate público",
+        "Instagram — Imagens e narrativa visual",
+        "Publicações — Textos e ensaios reunidos",
+        "Vídeos — Coleção audiovisual por projeto",
+        "Comunidade — Interação e colaboração",
+        "Fotografias — Registro visual e documentação",
+        "Atualizações — Registro de mudanças",
+        "Arquivo — Memória e recuperação",
+        "Contato — Canais de comunicação"
+      ]
+    },
+    "telemedicina": {
+      "pages_html": 12,
+      "plans_md": 12,
+      "titles": [
+        "Problema e oportunidade",
+        "Produto SaaS",
+        "Teleconsulta",
+        "Prontuário eletrônico",
+        "SBIS NGS2 — Estágio 1",
+        "Segurança e responsabilidade",
+        "Arquitetura híbrida",
+        "Desenvolvimento: esforço e custo",
+        "Operação por 24 meses",
+        "Simulador unitário",
+        "Mercado, fornecedores e riscos",
+        "Captação e execução"
+      ]
+    }
+  },
+  "notes": [
+    "HTML e markdown gerados a partir de texto-base autoral; bibliografia individual ainda não verificada.",
+    "Dados atuais de RSS não foram inventados; leitores existentes preservados.",
+    "Sites externos e widgets dependem de permissões/serviços de terceiros.",
+    "Nenhuma modificação Git ou publicação remota foi realizada.",
+    "Atualizações remotas posteriores à base precisam ser reconciliadas antes de aplicar a versão completa."
+  ]
+}
