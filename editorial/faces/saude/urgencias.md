@@ -1,27 +1,20 @@
-# Ficha editorial — Urgências e prioridades assistenciais
+# Ficha da face 03/12 — Urgências e prioridades assistenciais
 
-**Seção:** Saúde e cuidado
-**Face:** 03
-**Fonte de conteúdo:** `content-src/saude/urgencias.md`
-**Rota pública:** `/conteudos/saude/urgencias.html`
+**Módulo 3D:** Saúde. **Fonte:** `content-src/saude/urgencias.md`. **Página:** `/conteudos/saude/urgencias.html`.
+**Complemento interativo:** `/projetos/emergencias/` (cenários educativos fictícios).
 
-## Objetivo
+## Papel desta face no atlas
 
-Na urgência, decidir a ordem das ações é tão importante quanto formular um diagnóstico. A identificação precoce de risco e a reavaliação após intervenções são tarefas contínuas.
+A face conduz a um artigo que apresenta a avaliação de gravidade, a organização temporal, os elementos ABCDE, os fluxos de comunicação e as evidências atualizadas. O mesmo artigo deve ser acessível sem WebGL. O painel didático é um recurso vinculado à página, não um novo motor tridimensional.
 
-## Pontos que precisam ser desenvolvidos e revisados
+## Contrato técnico
 
-1. **Pergunta de partida:** transformar a ideia principal em uma pergunta clara e delimitada.
-2. **Fundamentação:** aprofundar o seguinte eixo, distinguindo princípios, resultados e hipóteses: Protocolos estruturam a abordagem inicial, mas cada observação depende do momento e das condições de atendimento. Quando há transferência, comunicar mudanças de estado, intervenções e pendências é parte da segurança assistencial.
-3. **Exemplo ou demonstração:** detalhar uma aplicação reproduzível: Uma demonstração educativa pode mostrar uma linha do tempo de atendimento fictício, com pontos de decisão e caminhos alternativos. A intenção é explicar o processo, não recomendar tratamentos em situações reais.
-4. **Limites e desenvolvimento futuro:** Incluir fluxos revisáveis, lista de fontes clínicas atualizadas e discussão sobre fatores humanos. Evitar valores de dose ou condutas operacionais sem revisão técnica.
-5. **Materiais desejáveis:** incluir diagrama ou captura real, legenda, descrição alternativa, fonte dos dados e versão pertinente.
-6. **Rastreabilidade:** acrescentar links primários verificados, data de atualização e eventuais conflitos entre fontes.
+- Preservar o índice 03/12 e a rota existentes; não modificar `modules/manifest.json`, `modules/content-pages.js` ou `js/site-v10.js`.
+- Conservar título e organização visual coerentes com os outros textos da área Saúde.
+- Não classificar pacientes reais, nem solicitar dados clínicos pessoais.
+- Manter a ilustração como recurso com texto alternativo.
+- Usar atualizações isoladas verificadas por SHA-256 e remoção reversível pelo Studio.
 
-## Critérios de aceite
+## Critérios de teste
 
-- O artigo contém conteúdo próprio, sem texto provisório ou afirmação biográfica não verificada.
-- O link de leitura abre pelo portfólio convencional e pela face do dodecaedro.
-- O exemplo respeita privacidade e não publica arquivos de desenvolvimento internos.
-- A página é legível em telefone, navegação por teclado e sem WebGL.
-- Todas as fontes utilizadas são identificáveis; não há alegação de certificação, validação ou publicação inexistente.
+Selecionar **Saúde → Urgências** no laboratório, abrir artigo integral, conferir links bibliográficos e visitar `/projetos/emergencias/`. Repetir após desinstalar o pacote: o artigo anterior deve voltar e a página do painel deixar de existir.
