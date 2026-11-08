@@ -8,11 +8,7 @@ export default {
   "title": "Ferramentas <em>e sistemas.</em>",
   "intro": "Projetos, editor tridimensional e utilidades abertas na web. Selecione uma face para abrir a ferramenta correspondente.",
   "subtitle": "Módulo branco · Ferramentas",
-  "position": [
-    9,
-    7,
-    -10
-  ],
+  "position": [12.0, 8.5, 0.0],
   "texturePath": "./assets/modules/sistemas/face-{n}.jpg",
   "menu": [
     "SpatialSeed",

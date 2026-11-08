@@ -1,55 +1,33 @@
-# Atenção Primária à Saúde
+# Plano editorial — Atenção Primária à Saúde (APS)
 
-- Área: **Saúde**
-- Face: **02/12**
-- Rota pública: `/conteudos/saude/atencao-primaria.html`
-- Origem editorial: pacote de site disponibilizado na conversa; texto-base autoral de 2026-11-08.
-- Estado: **texto-base redigido; revisão crítica e bibliográfica pendente**.
+**Unidade editorial:** Saúde · face 02/12. **Rota pública:** `conteudos/saude/atencao-primaria.html`. **Fonte:** `content-src/saude/atencao-primaria.md`. **Imagem:** `assets/editorial/aps-rede-cuidado.webp`. **Estado:** artigo aprofundado, revisão de fontes em 2026-11-08.
 
-## Pergunta orientadora
+## Intenção, público e compromisso metodológico
 
-A APS acompanha pessoas e comunidades, integra prevenção e cuidado e organiza relações com a rede de atenção.
+Artigo técnico-educativo para profissionais, gestores, estudantes e leitores com interesse em organização dos serviços de saúde. Apresentar APS como arranjo longitudinal e territorial de cuidado, não como triagem burocrática ou atenção clínica de menor complexidade. Distinguir atributos conceituais, regras normativas, evidências empíricas e exemplos hipotéticos. Evitar prescrever protocolos sem contextualização. Não publicar dados de pacientes, imagens de usuários reais ou mapas identificáveis de comunidades sem autorização e fundamento jurídico.
 
-## Tópicos e desenvolvimento
+## Tópicos de evolução
 
-### 1. Acesso e longitudinalidade
+- **Atributos essenciais:** primeiro contato, longitudinalidade, integralidade, coordenação e centralidade da pessoa. Comparar definições clássicas com a terminologia da OMS.
+- **Território e equidade:** criar exemplos de análise de vulnerabilidades e obstáculos de acesso usando apenas dados agregados, fictícios ou abertos não identificáveis.
+- **Organização do acesso:** experimentar esquemas de agenda e acolhimento, sem impor quotas universais. Distinguir segurança clínica e fluxo administrativo.
+- **Continuidade clínica:** representar lista de problemas, linha do tempo, decisões compartilhadas, conciliação e transições de cuidado.
+- **Integração em rede:** incluir fluxos reais apenas quando autorizados; citar referência e contrarreferência, regulação e níveis de cuidado.
+- **Informação e tecnologia:** descrever registros, trilha de auditoria, interoperabilidade com e-SUS APS, confidencialidade e limites de sistemas de demonstração.
+- **Avaliação:** selecionar indicadores por estrutura, processo, resultado, experiência e equidade. Explicitar numeradores, denominadores e periodicidade quando acrescentar dados.
+- **Evidências:** separar associação de causalidade; atualizar revisões sistemáticas e bases oficiais, inclusive resultados heterogêneos.
+- **Casos:** usar situações sintéticas declaradamente fictícias; identificar onde diretrizes clínicas locais seriam necessárias.
+- **Ilustrações:** diagramar relações entre equipe, território e rede; oferecer texto alternativo e não confundir arte conceitual com dado observado.
 
-A experiência de cuidado depende de disponibilidade, vínculo e acompanhamento. Cadastros e listas de problemas devem servir à continuidade, não apenas à produção de números.
+## Critérios de revisão antes da publicação
 
-**Instrução editorial:** acrescentar definição de termos na primeira ocorrência, exemplos verificáveis, limites da evidência e links internos pertinentes. Não atribuir novos resultados ao autor sem documento de origem.
+1. Conferir legislação atualizada na fonte oficial; financiamento da APS muda periodicamente e não deve ser tratado como regra fixa.
+2. Verificar que cada afirmação de estudo ou resultado tenha fonte suficiente e descrever limites de generalização.
+3. Abrir o HTML em 360, 768 e 1280 px; imagem responsiva e carregamento correto sem bibliotecas externas.
+4. Validar os links externos, conteúdo da rota pública e acesso pela face Saúde 02.
+5. Atualizar a data de revisão bibliográfica, distinguir versão de documento e bibliografia complementar.
+6. Publicar apenas o Markdown, o HTML derivado, o recurso visual e as fichas editoriais; não incluir backups, tokens ou projetos alheios.
 
-### 2. Condições crônicas e multimorbidade
+## Referências prioritárias
 
-Protocolos por doença ajudam, mas pessoas acumulam condições, medicamentos e prioridades concorrentes. Revisões periódicas devem integrar objetivos clínicos e preferências.
-
-**Instrução editorial:** acrescentar definição de termos na primeira ocorrência, exemplos verificáveis, limites da evidência e links internos pertinentes. Não atribuir novos resultados ao autor sem documento de origem.
-
-### 3. Coordenação
-
-A transição entre unidades, exames e especialistas requer retorno de informação. O acompanhamento de encaminhamentos pendentes reduz a fragmentação.
-
-**Instrução editorial:** acrescentar definição de termos na primeira ocorrência, exemplos verificáveis, limites da evidência e links internos pertinentes. Não atribuir novos resultados ao autor sem documento de origem.
-
-## Exemplo ou demonstração planejada
-
-Exemplo editorial: linha de cuidado com primeiro contato, acompanhamento, encaminhamento e contrarreferência.
-
-## Cuidados e revisão
-
-Não tratar calendários e fluxos administrativos como universais; verificar normas locais.
-
-## Checklist de publicação
-
-- [ ] Conferir referências e documentos oficiais quando houver afirmações verificáveis.
-- [ ] Separar dado observado, hipótese, interpretação e opinião.
-- [ ] Acrescentar data e versão aos exemplos de software.
-- [ ] Revisar links e licenças de mídias.
-- [ ] Confirmar acessibilidade (títulos, contraste, texto alternativo).
-- [ ] Conferir navegação entre biblioteca, atlas 3D e página original.
-- [ ] Executar vistoria do RD Studio e revisar o diff antes de publicar.
-
-## Referências e próximas fontes a levantar
-
-- Documentação e código do projeto relacionado, quando houver.
-- Fontes primárias ou diretrizes oficiais pertinentes ao tema.
-- Literatura metodológica adequada à afirmação, com identificação de ano e autoria.
+Portaria nº 2.436/2017 e legislação consolidada; OMS (2025) APS; OMS/UNICEF (2022) avaliação da APS; Starfield, Shi & Macinko (2005); manual e-SUS APS (2026); notas e indicadores SAPS/MS (2026). Consultar links diretos e referências completas dentro do artigo.

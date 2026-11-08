@@ -45,6 +45,19 @@ def render_md(text):
         if line.startswith('# '):flush();out.append('<h1>'+inline(line[2:])+'</h1>')
         elif line.startswith('## '):flush();out.append('<h2>'+inline(line[3:])+'</h2>')
         elif line.startswith('### '):flush();out.append('<h3>'+inline(line[4:])+'</h3>')
+        elif line.startswith('!['):
+            # Figure Markdown: only full-line image syntax, escaped and filtered.
+            match=re.fullmatch(r'!\[([^\]]{1,350})\]\(([^)]+)\)', line)
+            if match:
+                flush()
+                alt,url=match.groups()
+                if re.search(r'(?i)\.(png|jpe?g|webp|svg)$',url) and url.startswith(('../','./','/')):
+                    out.append('<figure style="margin:30px 0"><img src="'+safe_link(url)+'" alt="'+html.escape(alt,quote=True)+'" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:14px;border:1px solid #d9e9ec;display:block"></figure>')
+                else:
+                    out.append('<p>Ilustração não disponível.</p>')
+            else:
+                if items:flush()
+                paragraph.append(line)
         elif line.startswith('- '):
             if paragraph:flush()
             items.append(line[2:])

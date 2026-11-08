@@ -7,7 +7,7 @@ export default {
   "title": "Projetos <em>e aplicações.</em>",
   "intro": "Aplicativos, experimentos e documentação reunidos num catálogo navegável.",
   "subtitle": "Catálogo · Ferramentas · Exploração",
-  "position": [11.0, 2.0, -14.0],
+  "position": [12.5, 2.0, 0.0],
   "texturePath": "./assets/modules/portfolio/face-{n}.svg",
   "menu": [
     "Tarefas Unicode",

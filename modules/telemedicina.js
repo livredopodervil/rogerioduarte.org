@@ -276,7 +276,7 @@ export default {
     base: '#081b25', mid: '#134553', accent: '#55dfd0',
     text: '#effffd', muted: '#b6dce0', panel: '#102c38', panel2: '#205260'
   },
-  position: [20, 8, -12],
+  position: [0.5, 13.0, 0.0],
   texturePath: './assets/modules/telemedicina/face-{n}.jpg',
   menu: FACES.map(face => face.label),
   pages: FACES.map(face => ({

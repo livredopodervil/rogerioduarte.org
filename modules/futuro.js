@@ -7,11 +7,7 @@ export default {
   "title": "Conexões <em>e comunicação.</em>",
   "intro": "Redes sociais, blog, vídeos e publicações. Selecione uma face para abrir o canal correspondente.",
   "subtitle": "Módulo azul-claro · Conexões",
-  "position": [
-    9,
-    -7,
-    -10
-  ],
+  "position": [11.0, -5.5, 0.0],
   "texturePath": "./assets/modules/futuro/face-{n}.jpg",
   "menu": [
     "Facebook",
