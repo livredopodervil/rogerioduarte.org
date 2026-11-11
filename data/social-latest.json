@@ -1,9 +1,14 @@
 {
   "youtube": {
-    "updated": "2026-11-10T23:16:14.826586+00:00",
+    "updated": "2026-11-11T14:16:25.924027+00:00",
     "channelId": "UC2euNTcdpfg6fdLylmTmgzg",
-    "videoId": "tQQ9waeXRtg",
+    "videoId": "_2NZXTVyJyo",
     "videos": [
+      {
+        "id": "_2NZXTVyJyo",
+        "title": "População; aquecimento global; cop31; armas nucleares; AI; navegação do ártico; especulações polít",
+        "published": "2026-11-11T13:28:09+00:00"
+      },
       {
         "id": "tQQ9waeXRtg",
         "title": "usando as armas que temos @ARTEDAGUERRA ",
@@ -38,11 +43,6 @@
         "id": "BPd0kVEV8mA",
         "title": "E se fosse na vera..?",
         "published": "2025-12-07T00:08:03+00:00"
-      },
-      {
-        "id": "mF4YODD3Fzs",
-        "title": "ESPERAR NÃO É SABER.",
-        "published": "2025-07-29T12:50:35+00:00"
       }
     ]
   }
