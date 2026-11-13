@@ -1,0 +1,37 @@
+{
+  "demo_version": "3.3",
+  "date_of_news": "2026-11-13",
+  "voice": "pt-BR-AntonioNeural",
+  "voice_rate": "+12%",
+  "source": "Textos autorais baseados nas manchetes e fontes indicadas na página. Imagens de arquivo.",
+  "items": [
+    {
+      "file": "noticia-01.mp3",
+      "text": "Boletim internacional, treze de novembro de dois mil e vinte e seis. Taiwan informou que mais de cem embarcações chinesas participaram de exercícios navais não anunciados no começo de novembro. Segundo a agência Reuters, Pequim descreveu os movimentos de seu porta-aviões como atividades rotineiras. Esta imagem é ilustrativa de arquivo."
+    },
+    {
+      "file": "noticia-02.mp3",
+      "text": "Oriente Médio. A Guarda Revolucionária iraniana afirma ter destruído um radar dos Estados Unidos no Bahrein e relata uma explosão no estreito de Ormuz. Segundo a agência Associated Press, essas alegações não haviam sido verificadas de forma independente. A imagem exibida é uma fotografia de arquivo de Manama."
+    },
+    {
+      "file": "noticia-03.mp3",
+      "text": "Europa e Ucrânia. Líderes europeus discutem como participar das negociações de paz e quem poderia representá-los. As divergências envolvem garantias de segurança e o formato das conversas. Este resumo se refere às informações publicadas em treze de novembro de dois mil e vinte e seis pela Associated Press."
+    },
+    {
+      "file": "noticia-04.mp3",
+      "text": "Tecnologia. Uma interrupção em serviços Microsoft, incluindo Outlook e Teams, afetou usuários em vários países. A empresa afirmou que as medidas de recuperação estavam produzindo resultados positivos. Até a publicação da notícia, não havia indicação de ataque cibernético, segundo o jornal The Guardian."
+    },
+    {
+      "file": "educacao.mp3",
+      "text": "Exemplo de educação e saúde. Este relógio é desenhado em SVG, um formato vetorial que mantém o desenho nítido em diferentes tamanhos de tela. Altere o horário para observar a posição dos ponteiros. Ambos giram em torno do centro do mostrador, sem gerar quadros em arquivos de imagem."
+    },
+    {
+      "file": "espacial.mp3",
+      "text": "Exemplo de visualização espacial. O cubo possui vértices em três dimensões, projetados em uma cena SVG pelo JavaScript do navegador. Você pode alterar a inclinação da câmera e a velocidade de rotação. Essa geometria é interativa; não depende da geração de imagens PNG a cada instante."
+    },
+    {
+      "file": "producao.mp3",
+      "text": "Exemplo de produção audiovisual. Altere o título da cena e escolha outra cor para a composição. Cada mudança modifica diretamente o documento SVG. Você pode baixar a ilustração editada. No Estúdio SVG completo, as apresentações também podem combinar locução, fotografia, vídeo e exportação para MP4."
+    }
+  ]
+}

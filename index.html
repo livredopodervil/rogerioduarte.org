@@ -316,5 +316,24 @@
       document.getElementById('year').textContent=new Date().getFullYear();
     })();
   </script>
+<script data-estudio-showcase-v2>
+/* ESTUDIO_SHOWCASE_V2_AUTOHEIGHT: ajuste do iframe de mesma origem. */
+(()=>{'use strict';
+ const f=document.querySelector('iframe[src="./projetos/estudio-svg/como-funciona/"]');
+ if(!f)return;
+ const adapt=()=>{
+  try{
+   const doc=f.contentDocument;if(!doc || !doc.documentElement)return;
+   const height=doc.documentElement.scrollHeight+16;
+   if(height>600 && height<9000)f.style.height=height+'px';
+  }catch(_){}
+ };
+ f.addEventListener('load',()=>{
+  adapt();
+  try{if(typeof ResizeObserver!=='undefined')new ResizeObserver(adapt).observe(f.contentDocument.documentElement)}catch(_){}
+ });
+ adapt();window.addEventListener('resize',adapt);
+})();
+</script>
 </body>
 </html>
