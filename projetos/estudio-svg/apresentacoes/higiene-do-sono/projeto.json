@@ -1,0 +1,2077 @@
+{
+  "versao": "3.0.0-alpha.4",
+  "titulo": "Higiene do sono — laboratório visual V3 Alpha 4",
+  "video": {
+    "width": 720,
+    "height": 1280,
+    "fps": 24,
+    "draw_fps": 6,
+    "background": "#061729"
+  },
+  "voz": "pt-BR-AntonioNeural",
+  "velocidade_voz": "+18%",
+  "motor_voz": "edge-tts",
+  "modelo_piper": "",
+  "voz_espeak": "pt-br",
+  "velocidade_espeak": 165,
+  "encaixe_voz": "estender",
+  "trilha": "trilha_ambiental_original.mp3",
+  "trilha_continua": true,
+  "volume_musica": 0.13,
+  "volume_voz": 1.2,
+  "cenas": [
+    {
+      "id": "01_abertura",
+      "tipo": "foto",
+      "duracao": 8.5,
+      "titulo": "DORMIR BEM",
+      "subtitulo": "Higiene do sono em hábitos possíveis",
+      "fala": "Dormir bem não depende de uma fórmula mágica. Pequenas decisões ao longo do dia influenciam nosso ritmo biológico e ajudam a criar condições para um sono mais reparador.",
+      "fonte": "NHLBI/NIH e CDC — hábitos saudáveis de sono; material educativo",
+      "categoria": "HIGIENE DO SONO",
+      "movimento": "suave",
+      "dados": [],
+      "itens": [],
+      "valor": "",
+      "unidade": "",
+      "sufixo": "",
+      "destaque": "",
+      "svg": "",
+      "animacoes": [
+        {
+          "alvo": "__imagem__",
+          "tipo": "fade",
+          "inicio": 0,
+          "fim": 0.17,
+          "easing": "sine.out",
+          "repeticoes": 0,
+          "yoyo": false,
+          "de": 0,
+          "ate": 1,
+          "de_x": 0.0,
+          "de_y": 0.0,
+          "ate_x": 0.0,
+          "ate_y": 0.0
+        },
+        {
+          "alvo": "__titulo__",
+          "tipo": "translacao",
+          "inicio": 0,
+          "fim": 0.24,
+          "easing": "back.out",
+          "repeticoes": 0,
+          "yoyo": false,
+          "de": 0.0,
+          "ate": 0.0,
+          "de_x": -105.0,
+          "de_y": 0.0,
+          "ate_x": 0.0,
+          "ate_y": 0.0
+        },
+        {
+          "alvo": "__subtitulo__",
+          "tipo": "fade",
+          "inicio": 0.08,
+          "fim": 0.35,
+          "easing": "power2.out",
+          "repeticoes": 0,
+          "yoyo": false,
+          "de": 0,
+          "ate": 1,
+          "de_x": 0.0,
+          "de_y": 0.0,
+          "ate_x": 0.0,
+          "ate_y": 0.0
+        }
+      ],
+      "video_clipe": {
+        "arquivo": "",
+        "x": 0.5,
+        "y": 0.56,
+        "w": 0.7,
+        "h": 0.4,
+        "fit": "cover",
+        "inicio": 0,
+        "repetir": true,
+        "opacidade": 1
+      },
+      "imagem": {
+        "arquivo": "sono_01_quarto_noite.jpg",
+        "fit": "cover",
+        "align_x": 0.5,
+        "align_y": 0.5,
+        "bg": "#0A1827",
+        "crop": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "modo": "fundo",
+        "x": 0.5,
+        "y": 0.53,
+        "w": 0.84,
+        "h": 0.4,
+        "frame": true
+      },
+      "cores": {
+        "fundo": "#061729",
+        "destaque": "#A9DCE7",
+        "texto": "#F2F7F5"
+      },
+      "audio": {
+        "voice_text": "Dormir bem não depende de uma fórmula mágica. Pequenas decisões ao longo do dia influenciam nosso ritmo biológico e ajudam a criar condições para um sono mais reparador.",
+        "voice_enabled": true,
+        "voice_file": "",
+        "voice_volume": 1.0,
+        "voice_delay": 0.12,
+        "music_file": "",
+        "music_volume": 0.16,
+        "duck_music": true,
+        "muted": false,
+        "tracks": []
+      }
+    },
+    {
+      "id": "02_relogio",
+      "tipo": "globo",
+      "duracao": 8.5,
+      "titulo": "RELÓGIO BIOLÓGICO",
+      "subtitulo": "Luz e rotina orientam o organismo",
+      "fala": "Nosso relógio interno responde à alternância entre luz e escuridão. Buscar luz natural durante o dia e reduzir a iluminação intensa à noite pode ajudar a sincronizar o ciclo de sono e vigília.",
+      "fonte": "NHLBI/NIH e CDC — hábitos saudáveis de sono; material educativo",
+      "categoria": "RITMO CIRCADIANO",
+      "movimento": "suave",
+      "dados": [],
+      "itens": [
+        "LUZ NATURAL",
+        "ROTINA",
+        "ESCURO À NOITE"
+      ],
+      "valor": "",
+      "unidade": "",
+      "sufixo": "",
+      "destaque": "",
+      "svg": "",
+      "animacoes": [
+        {
+          "alvo": "__titulo__",
+          "tipo": "fade",
+          "inicio": 0,
+          "fim": 0.25,
+          "easing": "expo.out",
+          "repeticoes": 0,
+          "yoyo": false,
+          "de": 0,
+          "ate": 1,
+          "de_x": 0.0,
+          "de_y": 0.0,
+          "ate_x": 0.0,
+          "ate_y": 0.0
+        }
+      ],
+      "video_clipe": {
+        "arquivo": "",
+        "x": 0.5,
+        "y": 0.56,
+        "w": 0.7,
+        "h": 0.4,
+        "fit": "cover",
+        "inicio": 0,
+        "repetir": true,
+        "opacidade": 1
+      },
+      "imagem": {
+        "arquivo": "",
+        "fit": "cover",
+        "align_x": 0.5,
+        "align_y": 0.5,
+        "bg": "#241b1a",
+        "crop": [],
+        "modo": "quadro",
+        "x": 0.5,
+        "y": 0.52,
+        "w": 0.82,
+        "h": 0.34,
+        "frame": true
+      },
+      "cores": {
+        "fundo": "#061729",
+        "destaque": "#F4BE77",
+        "texto": "#F2F7F5"
+      },
+      "audio": {
+        "voice_text": "Nosso relógio interno responde à alternância entre luz e escuridão. Buscar luz natural durante o dia e reduzir a iluminação intensa à noite pode ajudar a sincronizar o ciclo de sono e vigília.",
+        "voice_enabled": true,
+        "voice_file": "",
+        "voice_volume": 1.0,
+        "voice_delay": 0.12,
+        "music_file": "",
+        "music_volume": 0.16,
+        "duck_music": true,
+        "muted": false,
+        "tracks": []
+      }
+    },
+    {
+      "id": "03_sono_suficiente",
+      "tipo": "numero",
+      "duracao": 8.0,
+      "titulo": "QUANTO TEMPO DORMIR?",
+      "subtitulo": "Necessidade individual varia",
+      "fala": "Adultos geralmente precisam de sete a nove horas de sono por noite. A quantidade é importante, mas a regularidade e a qualidade do sono também contam.",
+      "fonte": "NHLBI/NIH e CDC — hábitos saudáveis de sono; material educativo",
+      "categoria": "DURAÇÃO DO SONO",
+      "movimento": "suave",
+      "dados": [],
+      "itens": [],
+      "valor": "7–9 h",
+      "unidade": "POR NOITE · ADULTOS",
+      "sufixo": "Referência geral, não prescrição individual",
+      "destaque": "",
+      "svg": "",
+      "animacoes": [
+        {
+          "alvo": "__conteudo__",
+          "tipo": "escala",
+          "inicio": 0,
+          "fim": 0.28,
+          "easing": "back.out",
+          "repeticoes": 0,
+          "yoyo": false,
+          "de": 0.67,
+          "ate": 1.0,
+          "de_x": 0.0,
+          "de_y": 0.0,
+          "ate_x": 0.0,
+          "ate_y": 0.0
+        }
+      ],
+      "video_clipe": {
+        "arquivo": "",
+        "x": 0.5,
+        "y": 0.56,
+        "w": 0.7,
+        "h": 0.4,
+        "fit": "cover",
+        "inicio": 0,
+        "repetir": true,
+        "opacidade": 1
+      },
+      "imagem": {
+        "arquivo": "",
+        "fit": "cover",
+        "align_x": 0.5,
+        "align_y": 0.5,
+        "bg": "#241b1a",
+        "crop": [],
+        "modo": "quadro",
+        "x": 0.5,
+        "y": 0.52,
+        "w": 0.82,
+        "h": 0.34,
+        "frame": true
+      },
+      "cores": {
+        "fundo": "#061729",
+        "destaque": "#F6CF91",
+        "texto": "#F2F7F5"
+      },
+      "audio": {
+        "voice_text": "Adultos geralmente precisam de sete a nove horas de sono por noite. A quantidade é importante, mas a regularidade e a qualidade do sono também contam.",
+        "voice_enabled": true,
+        "voice_file": "",
+        "voice_volume": 1.0,
+        "voice_delay": 0.12,
+        "music_file": "",
+        "music_volume": 0.16,
+        "duck_music": true,
+        "muted": false,
+        "tracks": []
+      }
+    },
+    {
+      "id": "04_relogio_svg",
+      "tipo": "svg",
+      "duracao": 9.0,
+      "titulo": "MANHÃ E NOITE",
+      "subtitulo": "Os sinais externos ajudam a regular o ritmo",
+      "fala": "Observe a diferença entre o dia e a noite. A claridade matinal favorece o alinhamento do relógio biológico. No fim do dia, tente diminuir estímulos, brilho e atividades agitadas.",
+      "fonte": "NHLBI/NIH e CDC — hábitos saudáveis de sono; material educativo",
+      "categoria": "ANIMAÇÃO SVG · RELÓGIO",
+      "movimento": "suave",
+      "dados": [],
+      "itens": [],
+      "valor": "",
+      "unidade": "",
+      "sufixo": "",
+      "destaque": "",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1280 2276\"><defs><linearGradient id=\"night\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop offset=\"0\" stop-color=\"#101F40\"/><stop offset=\"1\" stop-color=\"#08162B\"/></linearGradient><radialGradient id=\"gold_glow\"><stop stop-color=\"#FFE0AA\"/><stop offset=\"0.75\" stop-color=\"#F9B25C\"/><stop offset=\"1\" stop-color=\"#F18D59\"/></radialGradient><linearGradient id=\"blue_glow\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop stop-color=\"#93F4E1\"/><stop offset=\"1\" stop-color=\"#2988BA\"/></linearGradient></defs><rect  x=\"100\" y=\"540\" width=\"1080\" height=\"1180\" rx=\"58\" fill=\"#0D1C32\" fill-opacity=\"1\" stroke=\"#3D697F\" stroke-width=\"4\"/><circle id=\"dial\" cx=\"640\" cy=\"1090\" r=\"420\" fill=\"#111F39\" stroke=\"#2A5264\" stroke-width=\"20\"/><line x1=\"640.0\" y1=\"698.0\" x2=\"640.0\" y2=\"665.0\" stroke=\"#A7DCE2\" stroke-opacity=\".7\" stroke-width=\"11\"/><line x1=\"745.9\" y1=\"694.9\" x2=\"750.0\" y2=\"679.5\" stroke=\"#A7DCE2\" stroke-opacity=\".7\" stroke-width=\"4\"/><line x1=\"844.5\" y1=\"735.8\" x2=\"852.5\" y2=\"721.9\" stroke=\"#A7DCE2\" stroke-opacity=\".7\" stroke-width=\"4\"/><line x1=\"929.2\" y1=\"800.8\" x2=\"940.5\" y2=\"789.5\" stroke=\"#A7DCE2\" stroke-opacity=\".7\" stroke-width=\"4\"/><line x1=\"994.2\" y1=\"885.5\" x2=\"1008.1\" y2=\"877.5\" stroke=\"#A7DCE2\" stroke-opacity=\".7\" stroke-width=\"4\"/><line x1=\"1035.1\" y1=\"984.1\" x2=\"1050.5\" y2=\"980.0\" stroke=\"#A7DCE2\" stroke-opacity=\".7\" stroke-width=\"4\"/><line x1=\"1032.0\" y1=\"1090.0\" x2=\"1065.0\" y2=\"1090.0\" stroke=\"#A7DCE2\" stroke-opacity=\".7\" stroke-width=\"11\"/><line x1=\"1035.1\" y1=\"1195.9\" x2=\"1050.5\" y2=\"1200.0\" stroke=\"#A7DCE2\" stroke-opacity=\".7\" stroke-width=\"4\"/><line x1=\"994.2\" y1=\"1294.5\" x2=\"1008.1\" y2=\"1302.5\" stroke=\"#A7DCE2\" stroke-opacity=\".7\" stroke-width=\"4\"/><line x1=\"929.2\" y1=\"1379.2\" x2=\"940.5\" y2=\"1390.5\" stroke=\"#A7DCE2\" stroke-opacity=\".7\" stroke-width=\"4\"/><line x1=\"844.5\" y1=\"1444.2\" x2=\"852.5\" y2=\"1458.1\" stroke=\"#A7DCE2\" stroke-opacity=\".7\" stroke-width=\"4\"/><line x1=\"745.9\" y1=\"1485.1\" x2=\"750.0\" y2=\"1500.5\" stroke=\"#A7DCE2\" stroke-opacity=\".7\" stroke-width=\"4\"/><line x1=\"640.0\" y1=\"1482.0\" x2=\"640.0\" y2=\"1515.0\" stroke=\"#A7DCE2\" stroke-opacity=\".7\" stroke-width=\"11\"/><line x1=\"534.1\" y1=\"1485.1\" x2=\"530.0\" y2=\"1500.5\" stroke=\"#A7DCE2\" stroke-opacity=\".7\" stroke-width=\"4\"/><line x1=\"435.5\" y1=\"1444.2\" x2=\"427.5\" y2=\"1458.1\" stroke=\"#A7DCE2\" stroke-opacity=\".7\" stroke-width=\"4\"/><line x1=\"350.8\" y1=\"1379.2\" x2=\"339.5\" y2=\"1390.5\" stroke=\"#A7DCE2\" stroke-opacity=\".7\" stroke-width=\"4\"/><line x1=\"285.8\" y1=\"1294.5\" x2=\"271.9\" y2=\"1302.5\" stroke=\"#A7DCE2\" stroke-opacity=\".7\" stroke-width=\"4\"/><line x1=\"244.9\" y1=\"1195.9\" x2=\"229.5\" y2=\"1200.0\" stroke=\"#A7DCE2\" stroke-opacity=\".7\" stroke-width=\"4\"/><line x1=\"248.0\" y1=\"1090.0\" x2=\"215.0\" y2=\"1090.0\" stroke=\"#A7DCE2\" stroke-opacity=\".7\" stroke-width=\"11\"/><line x1=\"244.9\" y1=\"984.1\" x2=\"229.5\" y2=\"980.0\" stroke=\"#A7DCE2\" stroke-opacity=\".7\" stroke-width=\"4\"/><line x1=\"285.8\" y1=\"885.5\" x2=\"271.9\" y2=\"877.5\" stroke=\"#A7DCE2\" stroke-opacity=\".7\" stroke-width=\"4\"/><line x1=\"350.8\" y1=\"800.8\" x2=\"339.5\" y2=\"789.5\" stroke=\"#A7DCE2\" stroke-opacity=\".7\" stroke-width=\"4\"/><line x1=\"435.5\" y1=\"735.8\" x2=\"427.5\" y2=\"721.9\" stroke=\"#A7DCE2\" stroke-opacity=\".7\" stroke-width=\"4\"/><line x1=\"534.1\" y1=\"694.9\" x2=\"530.0\" y2=\"679.5\" stroke=\"#A7DCE2\" stroke-opacity=\".7\" stroke-width=\"4\"/><circle cx=\"640\" cy=\"1090\" r=\"320\" fill=\"none\" stroke=\"#6EACBD\" stroke-width=\"3\" stroke-dasharray=\"8 14\" opacity=\".5\"/><circle id=\"sun\" cx=\"640\" cy=\"760\" r=\"70\" fill=\"url(#gold_glow)\"/><circle id=\"moon\" cx=\"640\" cy=\"1402\" r=\"72\" fill=\"#D8E4F2\"/><circle cx=\"672\" cy=\"1375\" r=\"68\" fill=\"#111F39\"/><line id=\"hand\" x1=\"640\" y1=\"1090\" x2=\"640\" y2=\"760\" stroke=\"#ECBE83\" stroke-width=\"17\" stroke-linecap=\"round\"/><circle cx=\"640\" cy=\"1090\" r=\"25\" fill=\"#F6DAA8\"/><text id=\"phrase\" x=\"640\" y=\"1660\" fill=\"#C9E7DF\" font-family=\"DejaVu Sans,sans-serif\" font-size=\"43\" font-weight=\"600\" text-anchor=\"middle\">LUZ DE DIA · CALMA À NOITE</text></svg>",
+      "animacoes": [
+        {
+          "alvo": "dial",
+          "tipo": "rotacao",
+          "inicio": 0,
+          "fim": 1.0,
+          "easing": "sine.inOut",
+          "repeticoes": 1,
+          "yoyo": true,
+          "de": -13.0,
+          "ate": 13.0,
+          "de_x": 0.0,
+          "de_y": 0.0,
+          "ate_x": 0.0,
+          "ate_y": 0.0
+        },
+        {
+          "alvo": "sun",
+          "tipo": "escala",
+          "inicio": 0,
+          "fim": 0.35,
+          "easing": "bounce.out",
+          "repeticoes": 0,
+          "yoyo": false,
+          "de": 0.55,
+          "ate": 1.0,
+          "de_x": 0.0,
+          "de_y": 0.0,
+          "ate_x": 0.0,
+          "ate_y": 0.0
+        },
+        {
+          "alvo": "moon",
+          "tipo": "fade",
+          "inicio": 0.2,
+          "fim": 0.56,
+          "easing": "power2.out",
+          "repeticoes": 0,
+          "yoyo": false,
+          "de": 0,
+          "ate": 1,
+          "de_x": 0.0,
+          "de_y": 0.0,
+          "ate_x": 0.0,
+          "ate_y": 0.0
+        },
+        {
+          "alvo": "hand",
+          "tipo": "rotacao",
+          "inicio": 0,
+          "fim": 1.0,
+          "easing": "sine.inOut",
+          "repeticoes": 0,
+          "yoyo": false,
+          "de": -65.0,
+          "ate": 60.0,
+          "de_x": 0.0,
+          "de_y": 0.0,
+          "ate_x": 0.0,
+          "ate_y": 0.0
+        },
+        {
+          "alvo": "phrase",
+          "tipo": "fade",
+          "inicio": 0.18,
+          "fim": 0.42,
+          "easing": "power2.out",
+          "repeticoes": 0,
+          "yoyo": false,
+          "de": 0,
+          "ate": 1,
+          "de_x": 0.0,
+          "de_y": 0.0,
+          "ate_x": 0.0,
+          "ate_y": 0.0
+        }
+      ],
+      "video_clipe": {
+        "arquivo": "",
+        "x": 0.5,
+        "y": 0.56,
+        "w": 0.7,
+        "h": 0.4,
+        "fit": "cover",
+        "inicio": 0,
+        "repetir": true,
+        "opacidade": 1
+      },
+      "imagem": {
+        "arquivo": "",
+        "fit": "cover",
+        "align_x": 0.5,
+        "align_y": 0.5,
+        "bg": "#241b1a",
+        "crop": [],
+        "modo": "quadro",
+        "x": 0.5,
+        "y": 0.52,
+        "w": 0.82,
+        "h": 0.34,
+        "frame": true
+      },
+      "cores": {
+        "fundo": "#061729",
+        "destaque": "#8CE5D7",
+        "texto": "#F2F7F5"
+      },
+      "audio": {
+        "voice_text": "Observe a diferença entre o dia e a noite. A claridade matinal favorece o alinhamento do relógio biológico. No fim do dia, tente diminuir estímulos, brilho e atividades agitadas.",
+        "voice_enabled": true,
+        "voice_file": "",
+        "voice_volume": 1.0,
+        "voice_delay": 0.12,
+        "music_file": "",
+        "music_volume": 0.16,
+        "duck_music": true,
+        "muted": false,
+        "tracks": [
+          {
+            "file": "sino_suave_original.mp3",
+            "start": 1.4,
+            "volume": 0.34,
+            "fade_in": 0.04,
+            "fade_out": 0.3,
+            "loop": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "05_regularidade_barras",
+      "tipo": "barras",
+      "duracao": 9.0,
+      "titulo": "ROTINA CONSISTENTE",
+      "subtitulo": "Exemplo fictício de horas reservadas ao sono",
+      "fala": "Acordar e deitar em horários parecidos, inclusive nos fins de semana, favorece a regularidade. Este gráfico é apenas um exemplo de planejamento semanal, não representa uma pesquisa ou medição clínica.",
+      "fonte": "DADOS SIMULADOS PARA TESTAR OS GRÁFICOS — não são dados de estudo clínico.",
+      "categoria": "GRÁFICO DIDÁTICO",
+      "movimento": "suave",
+      "dados": [
+        {
+          "x": "Seg",
+          "y": 7.5
+        },
+        {
+          "x": "Ter",
+          "y": 8
+        },
+        {
+          "x": "Qua",
+          "y": 7.7
+        },
+        {
+          "x": "Qui",
+          "y": 8
+        },
+        {
+          "x": "Sex",
+          "y": 7.8
+        },
+        {
+          "x": "Sáb",
+          "y": 8
+        },
+        {
+          "x": "Dom",
+          "y": 7.6
+        }
+      ],
+      "itens": [],
+      "valor": "",
+      "unidade": "",
+      "sufixo": "",
+      "destaque": "",
+      "svg": "",
+      "animacoes": [
+        {
+          "alvo": "__titulo__",
+          "tipo": "fade",
+          "inicio": 0,
+          "fim": 0.25,
+          "easing": "power2.out",
+          "repeticoes": 0,
+          "yoyo": false,
+          "de": 0,
+          "ate": 1,
+          "de_x": 0.0,
+          "de_y": 0.0,
+          "ate_x": 0.0,
+          "ate_y": 0.0
+        },
+        {
+          "alvo": "__conteudo__",
+          "tipo": "translacao",
+          "inicio": 0,
+          "fim": 0.22,
+          "easing": "power2.out",
+          "repeticoes": 0,
+          "yoyo": false,
+          "de": 0.0,
+          "ate": 0.0,
+          "de_x": 0.0,
+          "de_y": 110.0,
+          "ate_x": 0.0,
+          "ate_y": 0.0
+        }
+      ],
+      "video_clipe": {
+        "arquivo": "",
+        "x": 0.5,
+        "y": 0.56,
+        "w": 0.7,
+        "h": 0.4,
+        "fit": "cover",
+        "inicio": 0,
+        "repetir": true,
+        "opacidade": 1
+      },
+      "imagem": {
+        "arquivo": "",
+        "fit": "cover",
+        "align_x": 0.5,
+        "align_y": 0.5,
+        "bg": "#241b1a",
+        "crop": [],
+        "modo": "quadro",
+        "x": 0.5,
+        "y": 0.52,
+        "w": 0.82,
+        "h": 0.34,
+        "frame": true
+      },
+      "cores": {
+        "fundo": "#061729",
+        "destaque": "#E6BC8D",
+        "texto": "#F2F7F5"
+      },
+      "audio": {
+        "voice_text": "Acordar e deitar em horários parecidos, inclusive nos fins de semana, favorece a regularidade. Este gráfico é apenas um exemplo de planejamento semanal, não representa uma pesquisa ou medição clínica.",
+        "voice_enabled": true,
+        "voice_file": "",
+        "voice_volume": 1.0,
+        "voice_delay": 0.12,
+        "music_file": "",
+        "music_volume": 0.16,
+        "duck_music": true,
+        "muted": false,
+        "tracks": []
+      }
+    },
+    {
+      "id": "06_luz_manha",
+      "tipo": "foto",
+      "duracao": 7.5,
+      "titulo": "LUZ NATURAL DE MANHÃ",
+      "subtitulo": "Abra as cortinas e, se possível, caminhe",
+      "fala": "Logo após acordar, procure uma oportunidade de receber luz natural. Uma caminhada curta pode combinar claridade, movimento e um começo de dia mais ativo.",
+      "fonte": "NHLBI/NIH e CDC — hábitos saudáveis de sono; material educativo",
+      "categoria": "IMAGEM · RECORTE DE PRANCHA",
+      "movimento": "suave",
+      "dados": [],
+      "itens": [],
+      "valor": "",
+      "unidade": "",
+      "sufixo": "",
+      "destaque": "",
+      "svg": "",
+      "animacoes": [
+        {
+          "alvo": "__imagem__",
+          "tipo": "fade",
+          "inicio": 0,
+          "fim": 0.2,
+          "easing": "power2.out",
+          "repeticoes": 0,
+          "yoyo": false,
+          "de": 0,
+          "ate": 1,
+          "de_x": 0.0,
+          "de_y": 0.0,
+          "ate_x": 0.0,
+          "ate_y": 0.0
+        },
+        {
+          "alvo": "__titulo__",
+          "tipo": "fade",
+          "inicio": 0,
+          "fim": 0.22,
+          "easing": "power2.out",
+          "repeticoes": 0,
+          "yoyo": false,
+          "de": 0,
+          "ate": 1,
+          "de_x": 0.0,
+          "de_y": 0.0,
+          "ate_x": 0.0,
+          "ate_y": 0.0
+        }
+      ],
+      "video_clipe": {
+        "arquivo": "",
+        "x": 0.5,
+        "y": 0.56,
+        "w": 0.7,
+        "h": 0.4,
+        "fit": "cover",
+        "inicio": 0,
+        "repetir": true,
+        "opacidade": 1
+      },
+      "imagem": {
+        "arquivo": "prancha_sono_4_quadros.jpg",
+        "fit": "cover",
+        "align_x": 0.5,
+        "align_y": 0.5,
+        "bg": "#0A1827",
+        "crop": [
+          0.5,
+          0,
+          0.5,
+          0.5
+        ],
+        "modo": "fundo",
+        "x": 0.5,
+        "y": 0.53,
+        "w": 0.84,
+        "h": 0.4,
+        "frame": true
+      },
+      "cores": {
+        "fundo": "#061729",
+        "destaque": "#F0C77F",
+        "texto": "#F2F7F5"
+      },
+      "audio": {
+        "voice_text": "Logo após acordar, procure uma oportunidade de receber luz natural. Uma caminhada curta pode combinar claridade, movimento e um começo de dia mais ativo.",
+        "voice_enabled": true,
+        "voice_file": "",
+        "voice_volume": 1.0,
+        "voice_delay": 0.12,
+        "music_file": "",
+        "music_volume": 0.16,
+        "duck_music": true,
+        "muted": false,
+        "tracks": []
+      }
+    },
+    {
+      "id": "07_cafeina",
+      "tipo": "cartoes",
+      "duracao": 9.5,
+      "titulo": "ATENÇÃO AOS ESTIMULANTES",
+      "subtitulo": "Cafeína, álcool e refeições tardias",
+      "fala": "Cafeína no fim da tarde pode atrapalhar o início do sono. O álcool pode fragmentar a noite, mesmo quando provoca sonolência. E refeições muito pesadas perto de deitar também podem incomodar.",
+      "fonte": "NHLBI/NIH e CDC — hábitos saudáveis de sono; material educativo",
+      "categoria": "CARTÕES E IMAGEM",
+      "movimento": "suave",
+      "dados": [],
+      "itens": [
+        "Evite cafeína à tarde ou à noite",
+        "Álcool não melhora a qualidade do sono",
+        "Prefira refeições leves perto de deitar"
+      ],
+      "valor": "",
+      "unidade": "",
+      "sufixo": "",
+      "destaque": "",
+      "svg": "",
+      "animacoes": [
+        {
+          "alvo": "__imagem__",
+          "tipo": "escala",
+          "inicio": 0,
+          "fim": 0.38,
+          "easing": "back.out",
+          "repeticoes": 0,
+          "yoyo": false,
+          "de": 0.85,
+          "ate": 1.0,
+          "de_x": 0.0,
+          "de_y": 0.0,
+          "ate_x": 0.0,
+          "ate_y": 0.0
+        },
+        {
+          "alvo": "__imagem__",
+          "tipo": "fade",
+          "inicio": 0,
+          "fim": 0.2,
+          "easing": "power2.out",
+          "repeticoes": 0,
+          "yoyo": false,
+          "de": 0,
+          "ate": 1,
+          "de_x": 0.0,
+          "de_y": 0.0,
+          "ate_x": 0.0,
+          "ate_y": 0.0
+        }
+      ],
+      "video_clipe": {
+        "arquivo": "",
+        "x": 0.5,
+        "y": 0.56,
+        "w": 0.7,
+        "h": 0.4,
+        "fit": "cover",
+        "inicio": 0,
+        "repetir": true,
+        "opacidade": 1
+      },
+      "imagem": {
+        "arquivo": "sono_03_cafe_telas.jpg",
+        "fit": "cover",
+        "align_x": 0.5,
+        "align_y": 0.5,
+        "bg": "#0A1827",
+        "crop": [
+          0,
+          0.1,
+          1,
+          0.75
+        ],
+        "modo": "quadro",
+        "x": 0.5,
+        "y": 0.75,
+        "w": 0.73,
+        "h": 0.23,
+        "frame": true
+      },
+      "cores": {
+        "fundo": "#061729",
+        "destaque": "#F6B77E",
+        "texto": "#F2F7F5"
+      },
+      "audio": {
+        "voice_text": "Cafeína no fim da tarde pode atrapalhar o início do sono. O álcool pode fragmentar a noite, mesmo quando provoca sonolência. E refeições muito pesadas perto de deitar também podem incomodar.",
+        "voice_enabled": true,
+        "voice_file": "",
+        "voice_volume": 1.0,
+        "voice_delay": 0.12,
+        "music_file": "",
+        "music_volume": 0.16,
+        "duck_music": true,
+        "muted": false,
+        "tracks": []
+      }
+    },
+    {
+      "id": "08_telas_luz",
+      "tipo": "svg",
+      "duracao": 8.5,
+      "titulo": "DIMINUA AS TELAS",
+      "subtitulo": "Uma rotina desacelerada facilita a transição",
+      "fala": "Na última parte da noite, prefira atividades tranquilas e limite telas muito brilhantes. Não é apenas a luz: mensagens e vídeos estimulantes também podem manter a mente em alerta.",
+      "fonte": "NHLBI/NIH e CDC — hábitos saudáveis de sono; material educativo",
+      "categoria": "ANIMAÇÃO SVG · TELAS",
+      "movimento": "suave",
+      "dados": [],
+      "itens": [],
+      "valor": "",
+      "unidade": "",
+      "sufixo": "",
+      "destaque": "",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1280 2276\"><defs><linearGradient id=\"night\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop offset=\"0\" stop-color=\"#101F40\"/><stop offset=\"1\" stop-color=\"#08162B\"/></linearGradient><radialGradient id=\"gold_glow\"><stop stop-color=\"#FFE0AA\"/><stop offset=\"0.75\" stop-color=\"#F9B25C\"/><stop offset=\"1\" stop-color=\"#F18D59\"/></radialGradient><linearGradient id=\"blue_glow\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop stop-color=\"#93F4E1\"/><stop offset=\"1\" stop-color=\"#2988BA\"/></linearGradient></defs><rect  x=\"80\" y=\"570\" width=\"1120\" height=\"1220\" rx=\"50\" fill=\"#0F243B\" fill-opacity=\"1\" stroke=\"#43717E\" stroke-width=\"4\"/><g id=\"phone\"><rect x=\"370\" y=\"690\" width=\"540\" height=\"815\" rx=\"72\" fill=\"#07121F\" stroke=\"#B7DDE0\" stroke-width=\"14\"/><rect id=\"screen\" x=\"411\" y=\"760\" width=\"458\" height=\"634\" rx=\"26\" fill=\"#33C7F1\" fill-opacity=\".52\"/><line x1=\"470\" y1=\"850\" x2=\"790\" y2=\"850\" stroke=\"#DBFBFF\" stroke-width=\"14\" stroke-linecap=\"round\" stroke-opacity=\".4\"/><line x1=\"470\" y1=\"908\" x2=\"790\" y2=\"908\" stroke=\"#DBFBFF\" stroke-width=\"14\" stroke-linecap=\"round\" stroke-opacity=\".4\"/><line x1=\"470\" y1=\"966\" x2=\"790\" y2=\"966\" stroke=\"#DBFBFF\" stroke-width=\"14\" stroke-linecap=\"round\" stroke-opacity=\".4\"/><line x1=\"470\" y1=\"1024\" x2=\"790\" y2=\"1024\" stroke=\"#DBFBFF\" stroke-width=\"14\" stroke-linecap=\"round\" stroke-opacity=\".4\"/><line x1=\"470\" y1=\"1082\" x2=\"790\" y2=\"1082\" stroke=\"#DBFBFF\" stroke-width=\"14\" stroke-linecap=\"round\" stroke-opacity=\".4\"/><line x1=\"470\" y1=\"1140\" x2=\"790\" y2=\"1140\" stroke=\"#DBFBFF\" stroke-width=\"14\" stroke-linecap=\"round\" stroke-opacity=\".4\"/><line x1=\"470\" y1=\"1198\" x2=\"790\" y2=\"1198\" stroke=\"#DBFBFF\" stroke-width=\"14\" stroke-linecap=\"round\" stroke-opacity=\".4\"/><circle cx=\"640\" cy=\"1450\" r=\"20\" fill=\"#97D6DD\"/></g><path id=\"ray_l\" d=\"M370 890 L185 720 M370 1060 L125 1060 M370 1220 L185 1360\" stroke=\"#6DDDF0\" stroke-width=\"16\" stroke-linecap=\"round\" opacity=\".8\"/><path id=\"ray_r\" d=\"M910 890 L1095 720 M910 1060 L1155 1060 M910 1220 L1095 1360\" stroke=\"#6DDDF0\" stroke-width=\"16\" stroke-linecap=\"round\" opacity=\".8\"/><text id=\"caption\" x=\"640\" y=\"1625\" fill=\"#E5EEF4\" font-family=\"DejaVu Sans,sans-serif\" font-size=\"43\" font-weight=\"600\" text-anchor=\"middle\">DESACELERE A LUMINOSIDADE</text></svg>",
+      "animacoes": [
+        {
+          "alvo": "screen",
+          "tipo": "fade",
+          "inicio": 0,
+          "fim": 0.7,
+          "easing": "sine.inOut",
+          "repeticoes": 0,
+          "yoyo": false,
+          "de": 1,
+          "ate": 0.15,
+          "de_x": 0.0,
+          "de_y": 0.0,
+          "ate_x": 0.0,
+          "ate_y": 0.0
+        },
+        {
+          "alvo": "ray_l",
+          "tipo": "fade",
+          "inicio": 0,
+          "fim": 0.5,
+          "easing": "power2.out",
+          "repeticoes": 0,
+          "yoyo": false,
+          "de": 0.9,
+          "ate": 0,
+          "de_x": 0.0,
+          "de_y": 0.0,
+          "ate_x": 0.0,
+          "ate_y": 0.0
+        },
+        {
+          "alvo": "ray_r",
+          "tipo": "fade",
+          "inicio": 0,
+          "fim": 0.5,
+          "easing": "power2.out",
+          "repeticoes": 0,
+          "yoyo": false,
+          "de": 0.9,
+          "ate": 0,
+          "de_x": 0.0,
+          "de_y": 0.0,
+          "ate_x": 0.0,
+          "ate_y": 0.0
+        },
+        {
+          "alvo": "phone",
+          "tipo": "escala",
+          "inicio": 0,
+          "fim": 0.28,
+          "easing": "back.out",
+          "repeticoes": 0,
+          "yoyo": false,
+          "de": 0.92,
+          "ate": 1.0,
+          "de_x": 0.0,
+          "de_y": 0.0,
+          "ate_x": 0.0,
+          "ate_y": 0.0
+        },
+        {
+          "alvo": "caption",
+          "tipo": "fade",
+          "inicio": 0.4,
+          "fim": 0.8,
+          "easing": "power2.out",
+          "repeticoes": 0,
+          "yoyo": false,
+          "de": 0,
+          "ate": 1,
+          "de_x": 0.0,
+          "de_y": 0.0,
+          "ate_x": 0.0,
+          "ate_y": 0.0
+        }
+      ],
+      "video_clipe": {
+        "arquivo": "",
+        "x": 0.5,
+        "y": 0.56,
+        "w": 0.7,
+        "h": 0.4,
+        "fit": "cover",
+        "inicio": 0,
+        "repetir": true,
+        "opacidade": 1
+      },
+      "imagem": {
+        "arquivo": "",
+        "fit": "cover",
+        "align_x": 0.5,
+        "align_y": 0.5,
+        "bg": "#241b1a",
+        "crop": [],
+        "modo": "quadro",
+        "x": 0.5,
+        "y": 0.52,
+        "w": 0.82,
+        "h": 0.34,
+        "frame": true
+      },
+      "cores": {
+        "fundo": "#061729",
+        "destaque": "#93DFF5",
+        "texto": "#F2F7F5"
+      },
+      "audio": {
+        "voice_text": "Na última parte da noite, prefira atividades tranquilas e limite telas muito brilhantes. Não é apenas a luz: mensagens e vídeos estimulantes também podem manter a mente em alerta.",
+        "voice_enabled": true,
+        "voice_file": "",
+        "voice_volume": 1.0,
+        "voice_delay": 0.12,
+        "music_file": "",
+        "music_volume": 0.16,
+        "duck_music": true,
+        "muted": false,
+        "tracks": []
+      }
+    },
+    {
+      "id": "09_ambiente",
+      "tipo": "foto",
+      "duracao": 8.5,
+      "titulo": "O QUARTO IMPORTA",
+      "subtitulo": "Escuro, silencioso e confortável",
+      "fala": "Um quarto com pouca luz, menos ruído e temperatura agradável favorece o descanso. Se necessário, considere cortinas opacas, máscara de dormir ou redução de ruídos.",
+      "fonte": "NHLBI/NIH e CDC — hábitos saudáveis de sono; material educativo",
+      "categoria": "IMAGEM · QUARTO",
+      "movimento": "suave",
+      "dados": [],
+      "itens": [],
+      "valor": "",
+      "unidade": "",
+      "sufixo": "",
+      "destaque": "",
+      "svg": "",
+      "animacoes": [
+        {
+          "alvo": "__imagem__",
+          "tipo": "escala",
+          "inicio": 0,
+          "fim": 1.0,
+          "easing": "sine.inOut",
+          "repeticoes": 0,
+          "yoyo": false,
+          "de": 1.04,
+          "ate": 1.0,
+          "de_x": 0.0,
+          "de_y": 0.0,
+          "ate_x": 0.0,
+          "ate_y": 0.0
+        }
+      ],
+      "video_clipe": {
+        "arquivo": "",
+        "x": 0.5,
+        "y": 0.56,
+        "w": 0.7,
+        "h": 0.4,
+        "fit": "cover",
+        "inicio": 0,
+        "repetir": true,
+        "opacidade": 1
+      },
+      "imagem": {
+        "arquivo": "sono_01_quarto_noite.jpg",
+        "fit": "cover",
+        "align_x": 0.5,
+        "align_y": 0.5,
+        "bg": "#0A1827",
+        "crop": [
+          0.04,
+          0.05,
+          0.92,
+          0.88
+        ],
+        "modo": "fundo",
+        "x": 0.5,
+        "y": 0.53,
+        "w": 0.84,
+        "h": 0.4,
+        "frame": true
+      },
+      "cores": {
+        "fundo": "#061729",
+        "destaque": "#92D2F4",
+        "texto": "#F2F7F5"
+      },
+      "audio": {
+        "voice_text": "Um quarto com pouca luz, menos ruído e temperatura agradável favorece o descanso. Se necessário, considere cortinas opacas, máscara de dormir ou redução de ruídos.",
+        "voice_enabled": true,
+        "voice_file": "",
+        "voice_volume": 1.0,
+        "voice_delay": 0.12,
+        "music_file": "",
+        "music_volume": 0.16,
+        "duck_music": true,
+        "muted": false,
+        "tracks": []
+      }
+    },
+    {
+      "id": "10_rotina_arvore",
+      "tipo": "arvore",
+      "duracao": 8.5,
+      "titulo": "UMA ROTINA QUE CRESCE",
+      "subtitulo": "Repita pequenas escolhas na mesma ordem",
+      "fala": "Siga um ritual noturno: luz mais baixa, leitura tranquila, banho morno ou relaxamento. Repetir uma sequência simples pode ajudar a reconhecer o momento de descansar.",
+      "fonte": "NHLBI/NIH e CDC — hábitos saudáveis de sono; material educativo",
+      "categoria": "ÁRVORE VETORIAL · RAMIFICAÇÃO",
+      "movimento": "suave",
+      "dados": [],
+      "itens": [],
+      "valor": "",
+      "unidade": "",
+      "sufixo": "",
+      "destaque": "",
+      "svg": "",
+      "animacoes": [
+        {
+          "alvo": "__titulo__",
+          "tipo": "fade",
+          "inicio": 0,
+          "fim": 0.28,
+          "easing": "power2.out",
+          "repeticoes": 0,
+          "yoyo": false,
+          "de": 0,
+          "ate": 1,
+          "de_x": 0.0,
+          "de_y": 0.0,
+          "ate_x": 0.0,
+          "ate_y": 0.0
+        },
+        {
+          "alvo": "__conteudo__",
+          "tipo": "fade",
+          "inicio": 0,
+          "fim": 0.27,
+          "easing": "power2.out",
+          "repeticoes": 0,
+          "yoyo": false,
+          "de": 0,
+          "ate": 1,
+          "de_x": 0.0,
+          "de_y": 0.0,
+          "ate_x": 0.0,
+          "ate_y": 0.0
+        }
+      ],
+      "video_clipe": {
+        "arquivo": "",
+        "x": 0.5,
+        "y": 0.56,
+        "w": 0.7,
+        "h": 0.4,
+        "fit": "cover",
+        "inicio": 0,
+        "repetir": true,
+        "opacidade": 1
+      },
+      "imagem": {
+        "arquivo": "",
+        "fit": "cover",
+        "align_x": 0.5,
+        "align_y": 0.5,
+        "bg": "#241b1a",
+        "crop": [],
+        "modo": "quadro",
+        "x": 0.5,
+        "y": 0.52,
+        "w": 0.82,
+        "h": 0.34,
+        "frame": true
+      },
+      "cores": {
+        "fundo": "#061729",
+        "destaque": "#B2D4A9",
+        "texto": "#F2F7F5"
+      },
+      "audio": {
+        "voice_text": "Siga um ritual noturno: luz mais baixa, leitura tranquila, banho morno ou relaxamento. Repetir uma sequência simples pode ajudar a reconhecer o momento de descansar.",
+        "voice_enabled": true,
+        "voice_file": "",
+        "voice_volume": 1.0,
+        "voice_delay": 0.12,
+        "music_file": "",
+        "music_volume": 0.16,
+        "duck_music": true,
+        "muted": false,
+        "tracks": []
+      }
+    },
+    {
+      "id": "11_espacial",
+      "tipo": "espacial",
+      "duracao": 9.0,
+      "titulo": "HÁBITOS SE COMBINAM",
+      "subtitulo": "Cena 3D: hierarquia, câmera e ciclos",
+      "fala": "O sono não é controlado por um único botão. Luz, rotina, atividade e ambiente interagem. Aqui, os objetos e a câmera se movem apenas para demonstrar as capacidades do compositor espacial.",
+      "fonte": "NHLBI/NIH e CDC — hábitos saudáveis de sono; material educativo",
+      "categoria": "ESPACIAL · CÂMERA E HIERARQUIA",
+      "movimento": "suave",
+      "dados": [],
+      "itens": [],
+      "valor": "",
+      "unidade": "",
+      "sufixo": "",
+      "destaque": "",
+      "svg": "",
+      "animacoes": [
+        {
+          "alvo": "__titulo__",
+          "tipo": "fade",
+          "inicio": 0,
+          "fim": 0.18,
+          "easing": "expo.out",
+          "repeticoes": 0,
+          "yoyo": false,
+          "de": 0,
+          "ate": 1,
+          "de_x": 0.0,
+          "de_y": 0.0,
+          "ate_x": 0.0,
+          "ate_y": 0.0
+        }
+      ],
+      "video_clipe": {
+        "arquivo": "",
+        "x": 0.5,
+        "y": 0.56,
+        "w": 0.7,
+        "h": 0.4,
+        "fit": "cover",
+        "inicio": 0,
+        "repetir": true,
+        "opacidade": 1
+      },
+      "imagem": {
+        "arquivo": "",
+        "fit": "cover",
+        "align_x": 0.5,
+        "align_y": 0.5,
+        "bg": "#241b1a",
+        "crop": [],
+        "modo": "quadro",
+        "x": 0.5,
+        "y": 0.52,
+        "w": 0.82,
+        "h": 0.34,
+        "frame": true
+      },
+      "cores": {
+        "fundo": "#061729",
+        "destaque": "#79E2D9",
+        "texto": "#F2F7F5"
+      },
+      "audio": {
+        "voice_text": "O sono não é controlado por um único botão. Luz, rotina, atividade e ambiente interagem. Aqui, os objetos e a câmera se movem apenas para demonstrar as capacidades do compositor espacial.",
+        "voice_enabled": true,
+        "voice_file": "",
+        "voice_volume": 1.0,
+        "voice_delay": 0.12,
+        "music_file": "",
+        "music_volume": 0.16,
+        "duck_music": true,
+        "muted": false,
+        "tracks": []
+      },
+      "espacial": {
+        "camera": {
+          "azimute": -14.0,
+          "elevacao": 20.0,
+          "distancia": 13.0,
+          "alvo": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "objetos": [
+          {
+            "id": "grupo_relogio",
+            "tipo": "grupo",
+            "posicao": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotacao": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "escala": 1.0,
+            "cor": "#64bcdb",
+            "visivel": true,
+            "pai": ""
+          },
+          {
+            "id": "centro",
+            "tipo": "esfera",
+            "posicao": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotacao": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "escala": 1.1,
+            "cor": "#D8E8F3",
+            "visivel": true,
+            "pai": "grupo_relogio"
+          },
+          {
+            "id": "sol",
+            "tipo": "esfera",
+            "posicao": [
+              -2.1,
+              0.6,
+              0.0
+            ],
+            "rotacao": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "escala": 0.63,
+            "cor": "#F8BF7D",
+            "visivel": true,
+            "pai": "grupo_relogio"
+          },
+          {
+            "id": "lua",
+            "tipo": "esfera",
+            "posicao": [
+              2.1,
+              0.4,
+              0.2
+            ],
+            "rotacao": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "escala": 0.56,
+            "cor": "#7DCBD5",
+            "visivel": true,
+            "pai": "grupo_relogio"
+          },
+          {
+            "id": "ponte",
+            "tipo": "cilindro",
+            "posicao": [
+              0.0,
+              -1.5,
+              0.0
+            ],
+            "rotacao": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "escala": 0.5,
+            "cor": "#D6BD91",
+            "visivel": true,
+            "pai": "grupo_relogio"
+          },
+          {
+            "id": "casa",
+            "tipo": "cubo",
+            "posicao": [
+              0.0,
+              -2.3,
+              0.0
+            ],
+            "rotacao": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "escala": 0.5,
+            "cor": "#4E8DAE",
+            "visivel": true,
+            "pai": ""
+          },
+          {
+            "id": "telhado",
+            "tipo": "piramide",
+            "posicao": [
+              0.0,
+              -1.5,
+              0.0
+            ],
+            "rotacao": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "escala": 0.55,
+            "cor": "#C8D6E4",
+            "visivel": true,
+            "pai": ""
+          },
+          {
+            "id": "seta",
+            "tipo": "cone",
+            "posicao": [
+              0.0,
+              2.0,
+              0.0
+            ],
+            "rotacao": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "escala": 0.39,
+            "cor": "#F0A97B",
+            "visivel": true,
+            "pai": ""
+          }
+        ],
+        "animacoes": [
+          {
+            "alvo": "grupo_relogio",
+            "propriedade": "rotacao_y",
+            "inicio": 0,
+            "fim": 1,
+            "de": 0.0,
+            "ate": 360.0,
+            "easing": "linear",
+            "repeticoes": 0,
+            "yoyo": false
+          },
+          {
+            "alvo": "sol",
+            "propriedade": "escala",
+            "inicio": 0,
+            "fim": 1,
+            "de": 0.54,
+            "ate": 0.88,
+            "easing": "sine.inOut",
+            "repeticoes": 3,
+            "yoyo": true
+          },
+          {
+            "alvo": "lua",
+            "propriedade": "posicao_y",
+            "inicio": 0,
+            "fim": 1,
+            "de": 0.4,
+            "ate": 1.0,
+            "easing": "power2.inOut",
+            "repeticoes": 1,
+            "yoyo": true
+          },
+          {
+            "alvo": "__camera__",
+            "propriedade": "azimute",
+            "inicio": 0,
+            "fim": 1,
+            "de": -28.0,
+            "ate": 24.0,
+            "easing": "sine.inOut",
+            "repeticoes": 0,
+            "yoyo": false
+          },
+          {
+            "alvo": "__camera__",
+            "propriedade": "distancia",
+            "inicio": 0,
+            "fim": 1,
+            "de": 14.0,
+            "ate": 10.0,
+            "easing": "power2.out",
+            "repeticoes": 0,
+            "yoyo": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "12_relaxamento",
+      "tipo": "svg",
+      "duracao": 9.0,
+      "titulo": "DESACELERE",
+      "subtitulo": "Respiração lenta e um ritual simples",
+      "fala": "Antes de dormir, escolha uma atividade relaxante: uma leitura leve, um banho morno ou alguns instantes de respiração tranquila. O objetivo é reduzir estímulos, sem transformar o sono em obrigação.",
+      "fonte": "NHLBI/NIH e CDC — hábitos saudáveis de sono; material educativo",
+      "categoria": "ANIMAÇÃO · ESCALA E YOYO",
+      "movimento": "suave",
+      "dados": [],
+      "itens": [],
+      "valor": "",
+      "unidade": "",
+      "sufixo": "",
+      "destaque": "",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1280 2276\"><defs><linearGradient id=\"night\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop offset=\"0\" stop-color=\"#101F40\"/><stop offset=\"1\" stop-color=\"#08162B\"/></linearGradient><radialGradient id=\"gold_glow\"><stop stop-color=\"#FFE0AA\"/><stop offset=\"0.75\" stop-color=\"#F9B25C\"/><stop offset=\"1\" stop-color=\"#F18D59\"/></radialGradient><linearGradient id=\"blue_glow\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop stop-color=\"#93F4E1\"/><stop offset=\"1\" stop-color=\"#2988BA\"/></linearGradient></defs><rect  x=\"110\" y=\"560\" width=\"1060\" height=\"1220\" rx=\"58\" fill=\"#091D34\" fill-opacity=\"1\" stroke=\"#315873\" stroke-width=\"5\"/><circle cx=\"1020.00\" cy=\"1120.00\" r=\"6\" fill=\"#8DCBD3\" opacity=\".32\"/><circle cx=\"1008.96\" cy=\"1210.94\" r=\"7\" fill=\"#8DCBD3\" opacity=\".32\"/><circle cx=\"976.47\" cy=\"1296.59\" r=\"8\" fill=\"#8DCBD3\" opacity=\".32\"/><circle cx=\"924.43\" cy=\"1371.99\" r=\"9\" fill=\"#8DCBD3\" opacity=\".32\"/><circle cx=\"855.86\" cy=\"1432.73\" r=\"6\" fill=\"#8DCBD3\" opacity=\".32\"/><circle cx=\"774.75\" cy=\"1475.31\" r=\"7\" fill=\"#8DCBD3\" opacity=\".32\"/><circle cx=\"685.80\" cy=\"1497.23\" r=\"8\" fill=\"#8DCBD3\" opacity=\".32\"/><circle cx=\"594.20\" cy=\"1497.23\" r=\"9\" fill=\"#8DCBD3\" opacity=\".32\"/><circle cx=\"505.25\" cy=\"1475.31\" r=\"6\" fill=\"#8DCBD3\" opacity=\".32\"/><circle cx=\"424.14\" cy=\"1432.73\" r=\"7\" fill=\"#8DCBD3\" opacity=\".32\"/><circle cx=\"355.57\" cy=\"1371.99\" r=\"8\" fill=\"#8DCBD3\" opacity=\".32\"/><circle cx=\"303.53\" cy=\"1296.59\" r=\"9\" fill=\"#8DCBD3\" opacity=\".32\"/><circle cx=\"271.04\" cy=\"1210.94\" r=\"6\" fill=\"#8DCBD3\" opacity=\".32\"/><circle cx=\"260.00\" cy=\"1120.00\" r=\"7\" fill=\"#8DCBD3\" opacity=\".32\"/><circle cx=\"271.04\" cy=\"1029.06\" r=\"8\" fill=\"#8DCBD3\" opacity=\".32\"/><circle cx=\"303.53\" cy=\"943.41\" r=\"9\" fill=\"#8DCBD3\" opacity=\".32\"/><circle cx=\"355.57\" cy=\"868.01\" r=\"6\" fill=\"#8DCBD3\" opacity=\".32\"/><circle cx=\"424.14\" cy=\"807.27\" r=\"7\" fill=\"#8DCBD3\" opacity=\".32\"/><circle cx=\"505.25\" cy=\"764.69\" r=\"8\" fill=\"#8DCBD3\" opacity=\".32\"/><circle cx=\"594.20\" cy=\"742.77\" r=\"9\" fill=\"#8DCBD3\" opacity=\".32\"/><circle cx=\"685.80\" cy=\"742.77\" r=\"6\" fill=\"#8DCBD3\" opacity=\".32\"/><circle cx=\"774.75\" cy=\"764.69\" r=\"7\" fill=\"#8DCBD3\" opacity=\".32\"/><circle cx=\"855.86\" cy=\"807.27\" r=\"8\" fill=\"#8DCBD3\" opacity=\".32\"/><circle cx=\"924.43\" cy=\"868.01\" r=\"9\" fill=\"#8DCBD3\" opacity=\".32\"/><circle cx=\"976.47\" cy=\"943.41\" r=\"6\" fill=\"#8DCBD3\" opacity=\".32\"/><circle cx=\"1008.96\" cy=\"1029.06\" r=\"7\" fill=\"#8DCBD3\" opacity=\".32\"/><circle cx=\"640\" cy=\"1120\" r=\"320\" fill=\"none\" stroke=\"#4A7C9A\" stroke-width=\"8\" stroke-dasharray=\"10 24\"/><circle id=\"breath_outer\" cx=\"640\" cy=\"1120\" r=\"250\" fill=\"url(#blue_glow)\" fill-opacity=\".26\" stroke=\"#79DED7\" stroke-width=\"12\"/><circle id=\"breath_inner\" cx=\"640\" cy=\"1120\" r=\"145\" fill=\"#9ED7E0\" fill-opacity=\".3\" stroke=\"#E8F9F7\" stroke-opacity=\".7\" stroke-width=\"6\"/><text id=\"breath_text\" x=\"640\" y=\"1138\" fill=\"#F6F4DF\" font-family=\"DejaVu Sans,sans-serif\" font-size=\"68\" font-weight=\"700\" text-anchor=\"middle\">RESPIRE</text><text id=\"caption\" x=\"640\" y=\"1600\" fill=\"#D1F0EE\" font-family=\"DejaVu Sans,sans-serif\" font-size=\"43\" font-weight=\"600\" text-anchor=\"middle\">RITMO CALMO · SEM PRESSA</text></svg>",
+      "animacoes": [
+        {
+          "alvo": "breath_outer",
+          "tipo": "escala",
+          "inicio": 0,
+          "fim": 1.0,
+          "easing": "sine.inOut",
+          "repeticoes": 5,
+          "yoyo": true,
+          "de": 0.68,
+          "ate": 1.09,
+          "de_x": 0.0,
+          "de_y": 0.0,
+          "ate_x": 0.0,
+          "ate_y": 0.0
+        },
+        {
+          "alvo": "breath_inner",
+          "tipo": "escala",
+          "inicio": 0,
+          "fim": 1.0,
+          "easing": "sine.inOut",
+          "repeticoes": 5,
+          "yoyo": true,
+          "de": 0.9,
+          "ate": 1.13,
+          "de_x": 0.0,
+          "de_y": 0.0,
+          "ate_x": 0.0,
+          "ate_y": 0.0
+        },
+        {
+          "alvo": "breath_text",
+          "tipo": "fade",
+          "inicio": 0,
+          "fim": 0.3,
+          "easing": "power2.out",
+          "repeticoes": 0,
+          "yoyo": false,
+          "de": 0,
+          "ate": 1,
+          "de_x": 0.0,
+          "de_y": 0.0,
+          "ate_x": 0.0,
+          "ate_y": 0.0
+        }
+      ],
+      "video_clipe": {
+        "arquivo": "",
+        "x": 0.5,
+        "y": 0.56,
+        "w": 0.7,
+        "h": 0.4,
+        "fit": "cover",
+        "inicio": 0,
+        "repetir": true,
+        "opacidade": 1
+      },
+      "imagem": {
+        "arquivo": "",
+        "fit": "cover",
+        "align_x": 0.5,
+        "align_y": 0.5,
+        "bg": "#241b1a",
+        "crop": [],
+        "modo": "quadro",
+        "x": 0.5,
+        "y": 0.52,
+        "w": 0.82,
+        "h": 0.34,
+        "frame": true
+      },
+      "cores": {
+        "fundo": "#061729",
+        "destaque": "#8ACDDA",
+        "texto": "#F2F7F5"
+      },
+      "audio": {
+        "voice_text": "Antes de dormir, escolha uma atividade relaxante: uma leitura leve, um banho morno ou alguns instantes de respiração tranquila. O objetivo é reduzir estímulos, sem transformar o sono em obrigação.",
+        "voice_enabled": true,
+        "voice_file": "",
+        "voice_volume": 1.0,
+        "voice_delay": 0.12,
+        "music_file": "",
+        "music_volume": 0.16,
+        "duck_music": true,
+        "muted": false,
+        "tracks": []
+      }
+    },
+    {
+      "id": "13_linha_diario",
+      "tipo": "linha",
+      "duracao": 8.5,
+      "titulo": "UM DIÁRIO PODE AJUDAR",
+      "subtitulo": "Exemplo fictício de registro de hábitos",
+      "fala": "Registrar horário de deitar, despertar e como você se sente pela manhã pode ajudar a observar padrões. Esta curva é apenas uma demonstração gráfica, não mostra dados reais nem mede qualidade clínica.",
+      "fonte": "DADOS SIMULADOS PARA TESTAR OS GRÁFICOS — não são dados de estudo clínico.",
+      "categoria": "GRÁFICO DE LINHA · DADOS SIMULADOS",
+      "movimento": "suave",
+      "dados": [
+        {
+          "x": "Seg",
+          "y": 6.0
+        },
+        {
+          "x": "Ter",
+          "y": 6.7
+        },
+        {
+          "x": "Qua",
+          "y": 7.2
+        },
+        {
+          "x": "Qui",
+          "y": 7.3
+        },
+        {
+          "x": "Sex",
+          "y": 7.8
+        },
+        {
+          "x": "Sáb",
+          "y": 7.9
+        },
+        {
+          "x": "Dom",
+          "y": 8.0
+        }
+      ],
+      "itens": [],
+      "valor": "",
+      "unidade": "",
+      "sufixo": "",
+      "destaque": "",
+      "svg": "",
+      "animacoes": [
+        {
+          "alvo": "__conteudo__",
+          "tipo": "fade",
+          "inicio": 0,
+          "fim": 0.22,
+          "easing": "power2.out",
+          "repeticoes": 0,
+          "yoyo": false,
+          "de": 0,
+          "ate": 1,
+          "de_x": 0.0,
+          "de_y": 0.0,
+          "ate_x": 0.0,
+          "ate_y": 0.0
+        },
+        {
+          "alvo": "__titulo__",
+          "tipo": "translacao",
+          "inicio": 0,
+          "fim": 0.2,
+          "easing": "power3.inOut",
+          "repeticoes": 0,
+          "yoyo": false,
+          "de": 0.0,
+          "ate": 0.0,
+          "de_x": 100.0,
+          "de_y": 0.0,
+          "ate_x": 0.0,
+          "ate_y": 0.0
+        }
+      ],
+      "video_clipe": {
+        "arquivo": "",
+        "x": 0.5,
+        "y": 0.56,
+        "w": 0.7,
+        "h": 0.4,
+        "fit": "cover",
+        "inicio": 0,
+        "repetir": true,
+        "opacidade": 1
+      },
+      "imagem": {
+        "arquivo": "",
+        "fit": "cover",
+        "align_x": 0.5,
+        "align_y": 0.5,
+        "bg": "#241b1a",
+        "crop": [],
+        "modo": "quadro",
+        "x": 0.5,
+        "y": 0.52,
+        "w": 0.82,
+        "h": 0.34,
+        "frame": true
+      },
+      "cores": {
+        "fundo": "#061729",
+        "destaque": "#B5C7F4",
+        "texto": "#F2F7F5"
+      },
+      "audio": {
+        "voice_text": "Registrar horário de deitar, despertar e como você se sente pela manhã pode ajudar a observar padrões. Esta curva é apenas uma demonstração gráfica, não mostra dados reais nem mede qualidade clínica.",
+        "voice_enabled": true,
+        "voice_file": "",
+        "voice_volume": 1.0,
+        "voice_delay": 0.12,
+        "music_file": "",
+        "music_volume": 0.16,
+        "duck_music": true,
+        "muted": false,
+        "tracks": []
+      }
+    },
+    {
+      "id": "14_leitura",
+      "tipo": "foto",
+      "duracao": 8.0,
+      "titulo": "LEIA OU RELAXE",
+      "subtitulo": "Troque estímulos intensos por um ritual",
+      "fala": "Se você gosta de ler, reserve alguns minutos antes de dormir. Prefira uma luz suave e uma atividade tranquila. O importante é construir uma rotina que faça sentido para você.",
+      "fonte": "NHLBI/NIH e CDC — hábitos saudáveis de sono; material educativo",
+      "categoria": "MÍDIA · FOTO E RECORTE",
+      "movimento": "suave",
+      "dados": [],
+      "itens": [],
+      "valor": "",
+      "unidade": "",
+      "sufixo": "",
+      "destaque": "",
+      "svg": "",
+      "animacoes": [
+        {
+          "alvo": "__imagem__",
+          "tipo": "fade",
+          "inicio": 0,
+          "fim": 0.18,
+          "easing": "power2.out",
+          "repeticoes": 0,
+          "yoyo": false,
+          "de": 0,
+          "ate": 1,
+          "de_x": 0.0,
+          "de_y": 0.0,
+          "ate_x": 0.0,
+          "ate_y": 0.0
+        },
+        {
+          "alvo": "__subtitulo__",
+          "tipo": "fade",
+          "inicio": 0.1,
+          "fim": 0.32,
+          "easing": "power2.out",
+          "repeticoes": 0,
+          "yoyo": false,
+          "de": 0,
+          "ate": 1,
+          "de_x": 0.0,
+          "de_y": 0.0,
+          "ate_x": 0.0,
+          "ate_y": 0.0
+        }
+      ],
+      "video_clipe": {
+        "arquivo": "",
+        "x": 0.5,
+        "y": 0.56,
+        "w": 0.7,
+        "h": 0.4,
+        "fit": "cover",
+        "inicio": 0,
+        "repetir": true,
+        "opacidade": 1
+      },
+      "imagem": {
+        "arquivo": "sono_04_relaxar_livro.jpg",
+        "fit": "cover",
+        "align_x": 0.5,
+        "align_y": 0.5,
+        "bg": "#0A1827",
+        "crop": [
+          0.02,
+          0.02,
+          0.96,
+          0.96
+        ],
+        "modo": "fundo",
+        "x": 0.5,
+        "y": 0.53,
+        "w": 0.84,
+        "h": 0.4,
+        "frame": true
+      },
+      "cores": {
+        "fundo": "#061729",
+        "destaque": "#F7CAA1",
+        "texto": "#F2F7F5"
+      },
+      "audio": {
+        "voice_text": "Se você gosta de ler, reserve alguns minutos antes de dormir. Prefira uma luz suave e uma atividade tranquila. O importante é construir uma rotina que faça sentido para você.",
+        "voice_enabled": true,
+        "voice_file": "",
+        "voice_volume": 1.0,
+        "voice_delay": 0.12,
+        "music_file": "",
+        "music_volume": 0.16,
+        "duck_music": true,
+        "muted": false,
+        "tracks": []
+      }
+    },
+    {
+      "id": "15_resumo",
+      "tipo": "svg",
+      "duracao": 9.5,
+      "titulo": "SEU PLANO PARA HOJE",
+      "subtitulo": "Quatro passos, sem fórmulas milagrosas",
+      "fala": "Comece com um horário regular, busque luz natural de manhã, diminua os estímulos antes de deitar e reserve tempo suficiente para dormir. Se o problema persistir, procure avaliação profissional.",
+      "fonte": "NHLBI/NIH e CDC — hábitos saudáveis de sono; material educativo",
+      "categoria": "CHECKLIST FINAL · SVG",
+      "movimento": "suave",
+      "dados": [],
+      "itens": [],
+      "valor": "",
+      "unidade": "",
+      "sufixo": "",
+      "destaque": "",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1280 2276\"><defs><linearGradient id=\"night\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop offset=\"0\" stop-color=\"#101F40\"/><stop offset=\"1\" stop-color=\"#08162B\"/></linearGradient><radialGradient id=\"gold_glow\"><stop stop-color=\"#FFE0AA\"/><stop offset=\"0.75\" stop-color=\"#F9B25C\"/><stop offset=\"1\" stop-color=\"#F18D59\"/></radialGradient><linearGradient id=\"blue_glow\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop stop-color=\"#93F4E1\"/><stop offset=\"1\" stop-color=\"#2988BA\"/></linearGradient></defs><rect  x=\"105\" y=\"555\" width=\"1070\" height=\"1310\" rx=\"68\" fill=\"#0E2640\" fill-opacity=\"1\" stroke=\"#65B2B5\" stroke-width=\"4\"/><rect id=\"card1\" x=\"180\" y=\"650\" width=\"920\" height=\"222\" rx=\"36\" fill=\"#183550\" fill-opacity=\"1\" stroke=\"#406D7F\" stroke-width=\"3\"/><circle id=\"dot1\" cx=\"290\" cy=\"762\" r=\"65\" fill=\"#83E4D8\" fill-opacity=\".93\"/><text  x=\"290\" y=\"780\" fill=\"#102337\" font-family=\"DejaVu Sans,sans-serif\" font-size=\"51\" font-weight=\"800\" text-anchor=\"middle\">01</text><text id=\"line1\" x=\"405\" y=\"782\" fill=\"#EAF5F6\" font-family=\"DejaVu Sans,sans-serif\" font-size=\"48\" font-weight=\"600\" text-anchor=\"start\">HORÁRIO REGULAR</text><rect id=\"card2\" x=\"180\" y=\"928\" width=\"920\" height=\"222\" rx=\"36\" fill=\"#183550\" fill-opacity=\"1\" stroke=\"#406D7F\" stroke-width=\"3\"/><circle id=\"dot2\" cx=\"290\" cy=\"1040\" r=\"65\" fill=\"#F5C17A\" fill-opacity=\".93\"/><text  x=\"290\" y=\"1058\" fill=\"#102337\" font-family=\"DejaVu Sans,sans-serif\" font-size=\"51\" font-weight=\"800\" text-anchor=\"middle\">02</text><text id=\"line2\" x=\"405\" y=\"1060\" fill=\"#EAF5F6\" font-family=\"DejaVu Sans,sans-serif\" font-size=\"48\" font-weight=\"600\" text-anchor=\"start\">LUZ DE MANHÃ</text><rect id=\"card3\" x=\"180\" y=\"1206\" width=\"920\" height=\"222\" rx=\"36\" fill=\"#183550\" fill-opacity=\"1\" stroke=\"#406D7F\" stroke-width=\"3\"/><circle id=\"dot3\" cx=\"290\" cy=\"1318\" r=\"65\" fill=\"#C6BCF0\" fill-opacity=\".93\"/><text  x=\"290\" y=\"1336\" fill=\"#102337\" font-family=\"DejaVu Sans,sans-serif\" font-size=\"51\" font-weight=\"800\" text-anchor=\"middle\">03</text><text id=\"line3\" x=\"405\" y=\"1338\" fill=\"#EAF5F6\" font-family=\"DejaVu Sans,sans-serif\" font-size=\"48\" font-weight=\"600\" text-anchor=\"start\">NOITE TRANQUILA</text><rect id=\"card4\" x=\"180\" y=\"1484\" width=\"920\" height=\"222\" rx=\"36\" fill=\"#183550\" fill-opacity=\"1\" stroke=\"#406D7F\" stroke-width=\"3\"/><circle id=\"dot4\" cx=\"290\" cy=\"1596\" r=\"65\" fill=\"#99BDE5\" fill-opacity=\".93\"/><text  x=\"290\" y=\"1614\" fill=\"#102337\" font-family=\"DejaVu Sans,sans-serif\" font-size=\"51\" font-weight=\"800\" text-anchor=\"middle\">04</text><text id=\"line4\" x=\"405\" y=\"1616\" fill=\"#EAF5F6\" font-family=\"DejaVu Sans,sans-serif\" font-size=\"48\" font-weight=\"600\" text-anchor=\"start\">SONO SUFICIENTE</text></svg>",
+      "animacoes": [
+        {
+          "alvo": "card1",
+          "tipo": "translacao",
+          "inicio": 0,
+          "fim": 0.18,
+          "easing": "back.out",
+          "repeticoes": 0,
+          "yoyo": false,
+          "de": 0.0,
+          "ate": 0.0,
+          "de_x": -180.0,
+          "de_y": 0.0,
+          "ate_x": 0.0,
+          "ate_y": 0.0
+        },
+        {
+          "alvo": "card2",
+          "tipo": "translacao",
+          "inicio": 0.13,
+          "fim": 0.31,
+          "easing": "back.out",
+          "repeticoes": 0,
+          "yoyo": false,
+          "de": 0.0,
+          "ate": 0.0,
+          "de_x": -180.0,
+          "de_y": 0.0,
+          "ate_x": 0.0,
+          "ate_y": 0.0
+        },
+        {
+          "alvo": "card3",
+          "tipo": "translacao",
+          "inicio": 0.26,
+          "fim": 0.44,
+          "easing": "back.out",
+          "repeticoes": 0,
+          "yoyo": false,
+          "de": 0.0,
+          "ate": 0.0,
+          "de_x": -180.0,
+          "de_y": 0.0,
+          "ate_x": 0.0,
+          "ate_y": 0.0
+        },
+        {
+          "alvo": "card4",
+          "tipo": "translacao",
+          "inicio": 0.39,
+          "fim": 0.5700000000000001,
+          "easing": "back.out",
+          "repeticoes": 0,
+          "yoyo": false,
+          "de": 0.0,
+          "ate": 0.0,
+          "de_x": -180.0,
+          "de_y": 0.0,
+          "ate_x": 0.0,
+          "ate_y": 0.0
+        },
+        {
+          "alvo": "dot1",
+          "tipo": "escala",
+          "inicio": 0,
+          "fim": 0.18,
+          "easing": "bounce.out",
+          "repeticoes": 0,
+          "yoyo": false,
+          "de": 0.4,
+          "ate": 1.0,
+          "de_x": 0.0,
+          "de_y": 0.0,
+          "ate_x": 0.0,
+          "ate_y": 0.0
+        },
+        {
+          "alvo": "dot2",
+          "tipo": "escala",
+          "inicio": 0.13,
+          "fim": 0.31,
+          "easing": "bounce.out",
+          "repeticoes": 0,
+          "yoyo": false,
+          "de": 0.4,
+          "ate": 1.0,
+          "de_x": 0.0,
+          "de_y": 0.0,
+          "ate_x": 0.0,
+          "ate_y": 0.0
+        },
+        {
+          "alvo": "dot3",
+          "tipo": "escala",
+          "inicio": 0.26,
+          "fim": 0.44,
+          "easing": "bounce.out",
+          "repeticoes": 0,
+          "yoyo": false,
+          "de": 0.4,
+          "ate": 1.0,
+          "de_x": 0.0,
+          "de_y": 0.0,
+          "ate_x": 0.0,
+          "ate_y": 0.0
+        },
+        {
+          "alvo": "dot4",
+          "tipo": "escala",
+          "inicio": 0.39,
+          "fim": 0.5700000000000001,
+          "easing": "bounce.out",
+          "repeticoes": 0,
+          "yoyo": false,
+          "de": 0.4,
+          "ate": 1.0,
+          "de_x": 0.0,
+          "de_y": 0.0,
+          "ate_x": 0.0,
+          "ate_y": 0.0
+        },
+        {
+          "alvo": "__titulo__",
+          "tipo": "fade",
+          "inicio": 0,
+          "fim": 0.2,
+          "easing": "power2.out",
+          "repeticoes": 0,
+          "yoyo": false,
+          "de": 0,
+          "ate": 1,
+          "de_x": 0.0,
+          "de_y": 0.0,
+          "ate_x": 0.0,
+          "ate_y": 0.0
+        }
+      ],
+      "video_clipe": {
+        "arquivo": "",
+        "x": 0.5,
+        "y": 0.56,
+        "w": 0.7,
+        "h": 0.4,
+        "fit": "cover",
+        "inicio": 0,
+        "repetir": true,
+        "opacidade": 1
+      },
+      "imagem": {
+        "arquivo": "",
+        "fit": "cover",
+        "align_x": 0.5,
+        "align_y": 0.5,
+        "bg": "#241b1a",
+        "crop": [],
+        "modo": "quadro",
+        "x": 0.5,
+        "y": 0.52,
+        "w": 0.82,
+        "h": 0.34,
+        "frame": true
+      },
+      "cores": {
+        "fundo": "#061729",
+        "destaque": "#9DE3D5",
+        "texto": "#F2F7F5"
+      },
+      "audio": {
+        "voice_text": "Comece com um horário regular, busque luz natural de manhã, diminua os estímulos antes de deitar e reserve tempo suficiente para dormir. Se o problema persistir, procure avaliação profissional.",
+        "voice_enabled": true,
+        "voice_file": "",
+        "voice_volume": 1.0,
+        "voice_delay": 0.12,
+        "music_file": "",
+        "music_volume": 0.16,
+        "duck_music": true,
+        "muted": false,
+        "tracks": []
+      }
+    },
+    {
+      "id": "16_sinais_alerta",
+      "tipo": "cartoes",
+      "duracao": 9.0,
+      "titulo": "QUANDO PEDIR AJUDA?",
+      "subtitulo": "Persistência de sintomas exige avaliação",
+      "fala": "Ronco intenso acompanhado de pausas respiratórias, sonolência excessiva ou dificuldade persistente para dormir merecem avaliação. A higiene do sono ajuda, mas não substitui investigação e tratamento de distúrbios do sono.",
+      "fonte": "NHLBI/NIH e CDC — hábitos saudáveis de sono; material educativo",
+      "categoria": "ORIENTAÇÃO GERAL",
+      "movimento": "suave",
+      "dados": [],
+      "itens": [
+        "Ronco alto e pausas respiratórias",
+        "Sonolência diurna importante",
+        "Insônia persistente ou incapacitante"
+      ],
+      "valor": "",
+      "unidade": "",
+      "sufixo": "",
+      "destaque": "",
+      "svg": "",
+      "animacoes": [
+        {
+          "alvo": "__titulo__",
+          "tipo": "fade",
+          "inicio": 0,
+          "fim": 0.2,
+          "easing": "power2.out",
+          "repeticoes": 0,
+          "yoyo": false,
+          "de": 0,
+          "ate": 1,
+          "de_x": 0.0,
+          "de_y": 0.0,
+          "ate_x": 0.0,
+          "ate_y": 0.0
+        },
+        {
+          "alvo": "__conteudo__",
+          "tipo": "translacao",
+          "inicio": 0,
+          "fim": 0.25,
+          "easing": "back.out",
+          "repeticoes": 0,
+          "yoyo": false,
+          "de": 0.0,
+          "ate": 0.0,
+          "de_x": 0.0,
+          "de_y": 110.0,
+          "ate_x": 0.0,
+          "ate_y": 0.0
+        }
+      ],
+      "video_clipe": {
+        "arquivo": "",
+        "x": 0.5,
+        "y": 0.56,
+        "w": 0.7,
+        "h": 0.4,
+        "fit": "cover",
+        "inicio": 0,
+        "repetir": true,
+        "opacidade": 1
+      },
+      "imagem": {
+        "arquivo": "",
+        "fit": "cover",
+        "align_x": 0.5,
+        "align_y": 0.5,
+        "bg": "#241b1a",
+        "crop": [],
+        "modo": "quadro",
+        "x": 0.5,
+        "y": 0.52,
+        "w": 0.82,
+        "h": 0.34,
+        "frame": true
+      },
+      "cores": {
+        "fundo": "#061729",
+        "destaque": "#ECAEB8",
+        "texto": "#F2F7F5"
+      },
+      "audio": {
+        "voice_text": "Ronco intenso acompanhado de pausas respiratórias, sonolência excessiva ou dificuldade persistente para dormir merecem avaliação. A higiene do sono ajuda, mas não substitui investigação e tratamento de distúrbios do sono.",
+        "voice_enabled": true,
+        "voice_file": "",
+        "voice_volume": 1.0,
+        "voice_delay": 0.12,
+        "music_file": "",
+        "music_volume": 0.16,
+        "duck_music": true,
+        "muted": false,
+        "tracks": []
+      }
+    },
+    {
+      "id": "17_clipe_sobreposto",
+      "tipo": "foto",
+      "duracao": 7.0,
+      "titulo": "O AMBIENTE MUDA",
+      "subtitulo": "Vídeo móvel sobre imagem de fundo",
+      "fala": "Observe a transição ilustrada da noite para o dia. O movimento mostra um clipe independente, sobreposto à imagem da cena. Esta passagem é um teste do sistema gráfico, não uma simulação fisiológica do sono.",
+      "fonte": "NHLBI/NIH e CDC — hábitos saudáveis de sono; material educativo",
+      "categoria": "CAMADA DE VÍDEO · TESTE",
+      "movimento": "suave",
+      "dados": [],
+      "itens": [],
+      "valor": "",
+      "unidade": "",
+      "sufixo": "",
+      "destaque": "",
+      "svg": "",
+      "animacoes": [
+        {
+          "alvo": "__titulo__",
+          "tipo": "fade",
+          "inicio": 0,
+          "fim": 0.2,
+          "easing": "power2.out",
+          "repeticoes": 0,
+          "yoyo": false,
+          "de": 0,
+          "ate": 1,
+          "de_x": 0.0,
+          "de_y": 0.0,
+          "ate_x": 0.0,
+          "ate_y": 0.0
+        },
+        {
+          "alvo": "__imagem__",
+          "tipo": "fade",
+          "inicio": 0,
+          "fim": 0.25,
+          "easing": "power2.out",
+          "repeticoes": 0,
+          "yoyo": false,
+          "de": 0,
+          "ate": 1,
+          "de_x": 0.0,
+          "de_y": 0.0,
+          "ate_x": 0.0,
+          "ate_y": 0.0
+        }
+      ],
+      "video_clipe": {
+        "arquivo": "clipe_luz_circadiana.mp4",
+        "x": 0.5,
+        "y": 0.71,
+        "w": 0.84,
+        "h": 0.24,
+        "fit": "cover",
+        "inicio": 0,
+        "repetir": true,
+        "opacidade": 0.94
+      },
+      "imagem": {
+        "arquivo": "sono_02_sol_manha.jpg",
+        "fit": "cover",
+        "align_x": 0.5,
+        "align_y": 0.5,
+        "bg": "#0A1827",
+        "crop": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "modo": "fundo",
+        "x": 0.5,
+        "y": 0.53,
+        "w": 0.84,
+        "h": 0.4,
+        "frame": true
+      },
+      "cores": {
+        "fundo": "#061729",
+        "destaque": "#EFC68F",
+        "texto": "#F2F7F5"
+      },
+      "audio": {
+        "voice_text": "Observe a transição ilustrada da noite para o dia. O movimento mostra um clipe independente, sobreposto à imagem da cena. Esta passagem é um teste do sistema gráfico, não uma simulação fisiológica do sono.",
+        "voice_enabled": true,
+        "voice_file": "",
+        "voice_volume": 1.0,
+        "voice_delay": 0.12,
+        "music_file": "",
+        "music_volume": 0.16,
+        "duck_music": true,
+        "muted": false,
+        "tracks": []
+      }
+    }
+  ]
+}

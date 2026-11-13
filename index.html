@@ -154,6 +154,14 @@
 @media(max-width:860px){.rd-editorial-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:570px){.rd-editorial-cards{grid-template-columns:1fr}.rd-editorial-cards a{min-height:0}}
 
+\n  /* RD-ESTUDIO-SVG-V3-EXPERIMENTAL: edição independente */
+  .rd-studio-experiment{background:linear-gradient(135deg,#eaf8f8,#f6fbfc);border-block:1px solid #d6e8ea}
+  .rd-studio-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(22px,4vw,56px);align-items:start}
+  .rd-studio-desc{color:#466370;max-width:48ch}
+  .rd-studio-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+  .rd-studio-iframe{display:block;width:100%;aspect-ratio:16/10;min-height:300px;border:1px solid #a9ccd3;border-radius:15px;background:#111923;box-shadow:0 18px 50px #0b536013}
+  .rd-studio-note{font:500 13px/1.5 var(--sans);color:#536f79;margin-top:12px}
+  @media(max-width:860px){.rd-studio-grid{grid-template-columns:1fr}.rd-studio-iframe{aspect-ratio:9/12;min-height:480px}}
 </style>
 </head>
 <body>
@@ -232,6 +240,26 @@
             <div class="project-visual" aria-hidden="true" style="background:#edf5f9"><svg viewBox="0 0 360 196" fill="none"><g stroke="#8FB8CC" stroke-width="1.4"><path d="M77 139L147 54L213 111L285 47M77 139L190 154L285 47M147 54L190 154M213 111L147 54M213 111L190 154"/></g><g fill="white" stroke="#087F96" stroke-width="2.2"><circle cx="77" cy="139" r="11"/><circle cx="147" cy="54" r="11"/><circle cx="213" cy="111" r="11"/><circle cx="285" cy="47" r="11"/><circle cx="190" cy="154" r="11"/></g><g fill="#47996A"><circle cx="77" cy="139" r="4"/><circle cx="147" cy="54" r="4"/><circle cx="213" cy="111" r="4"/><circle cx="285" cy="47" r="4"/><circle cx="190" cy="154" r="4"/></g></svg></div>
             <div class="project-body"><p class="project-type">Software experimental · Código aberto</p><h3>SpatialSeed</h3><p>Projeto de edição e experimentação espacial, explorando estruturas geométricas, interação tridimensional e ferramentas de criação computacional.</p><a class="more" href="https://github.com/livredopodervil/SpatialSeed" target="_blank" rel="noopener noreferrer">Ver repositório <span aria-hidden="true">↗</span></a></div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- RD-ESTUDIO-SVG-V3-EXPERIMENTAL -->
+    <section class="section rd-studio-experiment" id="experimentos" aria-labelledby="studio-experiment-title">
+      <div class="wrap rd-studio-grid">
+        <div>
+          <div class="kicker">Laboratório experimental · Código aberto</div>
+          <h2 id="studio-experiment-title">Estúdio SVG V3</h2>
+          <p class="rd-studio-desc">Editor de apresentações e vídeos desenvolvido para o Termux. Esta demonstração usa SVG e animações espaciais calculadas no navegador, com narração e controles de reprodução.</p>
+          <p class="rd-studio-desc"><strong>Versão experimental:</strong> ainda há diferenças entre o Player Web e a exportação MP4. Não se trata da versão estável do editor.</p>
+          <div class="rd-studio-actions">
+            <a class="button button-primary" href="./projetos/estudio-svg/vetorial-v3/">Abrir demonstração <span aria-hidden="true">↗</span></a>
+            <a class="button button-outline" href="https://github.com/livredopodervil/estudio-svg/tree/release/v3-alpha4-rc1" target="_blank" rel="noopener noreferrer">Código no GitHub <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div>
+          <iframe class="rd-studio-iframe" title="Demonstração experimental do Estúdio SVG V3" loading="lazy" src="./projetos/estudio-svg/vetorial-v3/" allow="fullscreen" allowfullscreen></iframe>
+          <p class="rd-studio-note">A narração começa após interação com o player. Esta apresentação é um exemplo, não um sistema clínico.</p>
         </div>
       </div>
     </section>
