@@ -1,0 +1,6 @@
+# Estúdio SVG — fontes públicas para LLMs
+Página: https://rogerioduarte.org/projetos/estudio-svg/
+Skill atual: https://rogerioduarte.org/projetos/estudio-svg/skill/SKILL.md
+Manifesto: https://rogerioduarte.org/projetos/estudio-svg/skill/manifest.json
+Versão fixa: https://rogerioduarte.org/projetos/estudio-svg/skill/v1.0.0/SKILL.md
+Contrato: https://rogerioduarte.org/projetos/estudio-svg/skill/v1.0.0/assets/projeto.schema.json

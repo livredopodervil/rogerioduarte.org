@@ -1,0 +1,662 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Estúdio SVG V3 Alpha 4 — contrato audiovisual experimental",
+  "description": "Formato das cenas, animações, imagens, vídeo local e gravação de áudio.",
+  "type": "object",
+  "required": [
+    "titulo",
+    "cenas"
+  ],
+  "properties": {
+    "versao": {
+      "type": "string"
+    },
+    "titulo": {
+      "type": "string",
+      "maxLength": 180
+    },
+    "video": {
+      "type": "object",
+      "required": [
+        "width",
+        "height"
+      ],
+      "properties": {
+        "width": {
+          "type": "integer",
+          "minimum": 320,
+          "maximum": 1920,
+          "multipleOf": 2
+        },
+        "height": {
+          "type": "integer",
+          "minimum": 320,
+          "maximum": 1920,
+          "multipleOf": 2
+        },
+        "fps": {
+          "enum": [
+            24,
+            25,
+            30
+          ]
+        },
+        "draw_fps": {
+          "enum": [
+            1,
+            2,
+            3,
+            4,
+            6,
+            8,
+            10,
+            12,
+            15,
+            24
+          ]
+        },
+        "background": {
+          "$ref": "#/$defs/color"
+        }
+      }
+    },
+    "voz": {
+      "type": "string"
+    },
+    "velocidade_voz": {
+      "type": "string"
+    },
+    "encaixe_voz": {
+      "enum": [
+        "estender",
+        "avisar"
+      ]
+    },
+    "trilha": {
+      "type": "string"
+    },
+    "volume_musica": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 2
+    },
+    "volume_voz": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 3
+    },
+    "cenas": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 150,
+      "items": {
+        "$ref": "#/$defs/scene"
+      }
+    },
+    "motor_voz": {
+      "type": "string",
+      "enum": [
+        "edge-tts",
+        "espeak-ng",
+        "piper"
+      ],
+      "description": "Motor de síntese para MP4"
+    },
+    "modelo_piper": {
+      "type": "string",
+      "description": "Modelo .onnx em modelos/ para voz neural offline"
+    },
+    "voz_espeak": {
+      "type": "string",
+      "description": "Voz local do eSpeak NG; pt-br"
+    },
+    "velocidade_espeak": {
+      "type": "integer",
+      "minimum": 80,
+      "maximum": 260
+    },
+    "trilha_continua": {
+      "type": "boolean",
+      "description": "Música global contínua ao longo de todo o filme, sem reiniciar nas mudanças de cena"
+    }
+  },
+  "$defs": {
+    "color": {
+      "type": "string",
+      "pattern": "^#[0-9a-fA-F]{6}$"
+    },
+    "scene": {
+      "type": "object",
+      "required": [
+        "tipo",
+        "duracao",
+        "titulo"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "tipo": {
+          "enum": [
+            "arvore",
+            "barras",
+            "cartoes",
+            "espacial",
+            "foto",
+            "globo",
+            "linha",
+            "numero",
+            "svg"
+          ]
+        },
+        "duracao": {
+          "type": "number",
+          "minimum": 0.5,
+          "maximum": 600
+        },
+        "titulo": {
+          "type": "string"
+        },
+        "subtitulo": {
+          "type": "string"
+        },
+        "fonte": {
+          "type": "string"
+        },
+        "categoria": {
+          "type": "string"
+        },
+        "movimento": {
+          "enum": [
+            "suave",
+            "linear",
+            "entrada",
+            "saida"
+          ]
+        },
+        "dados": {
+          "type": "array"
+        },
+        "itens": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "valor": {},
+        "unidade": {
+          "type": "string"
+        },
+        "sufixo": {
+          "type": "string"
+        },
+        "destaque": {
+          "type": "string"
+        },
+        "svg": {
+          "type": "string"
+        },
+        "cores": {
+          "type": "object",
+          "properties": {
+            "fundo": {
+              "$ref": "#/$defs/color"
+            },
+            "destaque": {
+              "$ref": "#/$defs/color"
+            },
+            "texto": {
+              "$ref": "#/$defs/color"
+            }
+          }
+        },
+        "imagem": {
+          "type": "object",
+          "properties": {
+            "arquivo": {
+              "type": "string"
+            },
+            "fit": {
+              "enum": [
+                "contain",
+                "cover",
+                "pad",
+                "stretch",
+                "crop"
+              ]
+            },
+            "align_x": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "align_y": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "bg": {
+              "$ref": "#/$defs/color"
+            },
+            "crop": {
+              "type": "array",
+              "maxItems": 4,
+              "items": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              }
+            },
+            "modo": {
+              "enum": [
+                "fundo",
+                "quadro"
+              ]
+            },
+            "x": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "y": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "w": {
+              "type": "number",
+              "minimum": 0.08,
+              "maximum": 1
+            },
+            "h": {
+              "type": "number",
+              "minimum": 0.08,
+              "maximum": 1
+            },
+            "frame": {
+              "type": "boolean"
+            }
+          }
+        },
+        "audio": {
+          "$ref": "#/$defs/audio"
+        },
+        "animacoes": {
+          "type": "array",
+          "maxItems": 32,
+          "description": "Animações por elemento SVG, imagem, título, subtítulo ou conteúdo gráfico da cena",
+          "items": {
+            "type": "object",
+            "properties": {
+              "alvo": {
+                "type": "string"
+              },
+              "tipo": {
+                "enum": [
+                  "translacao",
+                  "rotacao",
+                  "escala",
+                  "fade"
+                ]
+              },
+              "inicio": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "fim": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "easing": {
+                "enum": [
+                  "linear",
+                  "suave",
+                  "power1.in",
+                  "power1.out",
+                  "power1.inOut",
+                  "power2.in",
+                  "power2.out",
+                  "power2.inOut",
+                  "power3.inOut",
+                  "sine.in",
+                  "sine.out",
+                  "sine.inOut",
+                  "expo.out",
+                  "back.out",
+                  "bounce.out"
+                ]
+              },
+              "de": {
+                "type": "number"
+              },
+              "ate": {
+                "type": "number"
+              },
+              "de_x": {
+                "type": "number"
+              },
+              "de_y": {
+                "type": "number"
+              },
+              "ate_x": {
+                "type": "number"
+              },
+              "ate_y": {
+                "type": "number"
+              },
+              "repeticoes": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 20
+              },
+              "yoyo": {
+                "type": "boolean"
+              },
+              "alvos": {
+                "type": "array",
+                "minItems": 1,
+                "maxItems": 16,
+                "items": {
+                  "type": "string"
+                }
+              },
+              "intervalo": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 0.5
+              }
+            },
+            "required": [
+              "tipo"
+            ],
+            "anyOf": [
+              {
+                "required": [
+                  "alvo"
+                ]
+              },
+              {
+                "required": [
+                  "alvos"
+                ]
+              }
+            ]
+          }
+        },
+        "video_clipe": {
+          "type": "object",
+          "description": "Clipe local sobreposto ao SVG. Arquivo importado pela interface.",
+          "properties": {
+            "arquivo": {
+              "type": "string",
+              "description": "Nome em midia/ (MP4, WebM, MOV, MKV ou M4V)"
+            },
+            "x": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "y": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "w": {
+              "type": "number",
+              "minimum": 0.08,
+              "maximum": 1
+            },
+            "h": {
+              "type": "number",
+              "minimum": 0.08,
+              "maximum": 1
+            },
+            "fit": {
+              "enum": [
+                "cover",
+                "contain"
+              ]
+            },
+            "inicio": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 3600
+            },
+            "repetir": {
+              "type": "boolean"
+            },
+            "opacidade": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            }
+          }
+        },
+        "espacial": {
+          "type": "object",
+          "description": "Motor espacial experimental sem WebGL",
+          "properties": {
+            "camera": {
+              "type": "object",
+              "properties": {
+                "azimute": {
+                  "type": "number"
+                },
+                "elevacao": {
+                  "type": "number"
+                },
+                "distancia": {
+                  "type": "number",
+                  "minimum": 3,
+                  "maximum": 40
+                },
+                "alvo": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  },
+                  "minItems": 3,
+                  "maxItems": 3
+                }
+              }
+            },
+            "objetos": {
+              "type": "array",
+              "maxItems": 32,
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "tipo": {
+                    "enum": [
+                      "cubo",
+                      "esfera",
+                      "piramide",
+                      "cilindro",
+                      "cone",
+                      "grupo"
+                    ]
+                  },
+                  "posicao": {
+                    "type": "array",
+                    "minItems": 3,
+                    "maxItems": 3,
+                    "items": {
+                      "type": "number"
+                    }
+                  },
+                  "rotacao": {
+                    "type": "array",
+                    "minItems": 3,
+                    "maxItems": 3,
+                    "items": {
+                      "type": "number"
+                    }
+                  },
+                  "escala": {
+                    "type": "number"
+                  },
+                  "pai": {
+                    "type": "string"
+                  },
+                  "cor": {
+                    "$ref": "#/$defs/color"
+                  },
+                  "visivel": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            },
+            "animacoes": {
+              "type": "array",
+              "maxItems": 64,
+              "items": {
+                "type": "object",
+                "required": [
+                  "alvo",
+                  "propriedade"
+                ],
+                "properties": {
+                  "alvo": {
+                    "type": "string"
+                  },
+                  "propriedade": {
+                    "enum": [
+                      "rotacao_x",
+                      "rotacao_y",
+                      "rotacao_z",
+                      "posicao_x",
+                      "posicao_y",
+                      "posicao_z",
+                      "escala",
+                      "azimute",
+                      "elevacao",
+                      "distancia"
+                    ]
+                  },
+                  "inicio": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                  },
+                  "fim": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                  },
+                  "de": {
+                    "type": "number"
+                  },
+                  "ate": {
+                    "type": "number"
+                  },
+                  "easing": {
+                    "enum": [
+                      "linear",
+                      "suave",
+                      "power1.in",
+                      "power1.out",
+                      "power1.inOut",
+                      "power2.in",
+                      "power2.out",
+                      "power2.inOut",
+                      "power3.inOut",
+                      "sine.in",
+                      "sine.out",
+                      "sine.inOut",
+                      "expo.out",
+                      "back.out",
+                      "bounce.out"
+                    ]
+                  },
+                  "repeticoes": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 20
+                  },
+                  "yoyo": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "audio": {
+      "type": "object",
+      "properties": {
+        "voice_enabled": {
+          "type": "boolean"
+        },
+        "voice_text": {
+          "type": "string"
+        },
+        "voice_file": {
+          "type": "string"
+        },
+        "voice_volume": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "voice_delay": {
+          "type": "number",
+          "minimum": 0
+        },
+        "music_file": {
+          "type": "string"
+        },
+        "music_volume": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 2
+        },
+        "duck_music": {
+          "type": "boolean"
+        },
+        "tracks": {
+          "type": "array",
+          "maxItems": 20,
+          "items": {
+            "type": "object",
+            "required": [
+              "file"
+            ],
+            "properties": {
+              "file": {
+                "type": "string"
+              },
+              "start": {
+                "type": "number",
+                "minimum": 0
+              },
+              "volume": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 3
+              },
+              "fade_in": {
+                "type": "number",
+                "minimum": 0
+              },
+              "fade_out": {
+                "type": "number",
+                "minimum": 0
+              },
+              "loop": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

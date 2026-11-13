@@ -1,0 +1,72 @@
+{
+  "versao": "3.0.0-alpha.4",
+  "titulo": "Ciclo do sono: introdução visual",
+  "video": {
+    "width": 720,
+    "height": 1280,
+    "fps": 24,
+    "draw_fps": 6,
+    "background": "#0D1C2A"
+  },
+  "voz": "pt-BR-AntonioNeural",
+  "motor_voz": "edge-tts",
+  "encaixe_voz": "estender",
+  "cenas": [
+    {
+      "id": "ritmo",
+      "tipo": "svg",
+      "duracao": 6,
+      "titulo": "Ritmo circadiano",
+      "svg": "<g><circle id=\"mostrador\" cx=\"360\" cy=\"620\" r=\"164\" fill=\"#172D41\" stroke=\"#83D9C8\" stroke-width=\"9\"/><line id=\"ponteiro\" x1=\"360\" y1=\"620\" x2=\"360\" y2=\"495\" stroke=\"#F9CB80\" stroke-width=\"17\" stroke-linecap=\"round\"/><circle cx=\"360\" cy=\"620\" r=\"17\" fill=\"#F9CB80\"/></g>",
+      "cores": {
+        "fundo": "#0D1C2A",
+        "destaque": "#83D9C8",
+        "texto": "#F6F8FA"
+      },
+      "animacoes": [
+        {
+          "alvo": "__titulo__",
+          "tipo": "fade",
+          "inicio": 0,
+          "fim": 0.2,
+          "de": 0,
+          "ate": 1,
+          "easing": "power2.out"
+        }
+      ],
+      "audio": {
+        "voice_enabled": true,
+        "voice_text": "O relógio biológico organiza ciclos de sono e vigília ao longo do dia."
+      }
+    },
+    {
+      "id": "luz",
+      "tipo": "numero",
+      "duracao": 5,
+      "titulo": "Luz e rotina",
+      "valor": 24,
+      "unidade": "horas",
+      "subtitulo": "Um ciclo diário aproximado",
+      "cores": {
+        "fundo": "#0D1C2A",
+        "destaque": "#F9CB80",
+        "texto": "#F6F8FA"
+      },
+      "animacoes": [
+        {
+          "alvo": "__conteudo__",
+          "tipo": "escala",
+          "inicio": 0,
+          "fim": 0.2,
+          "de": 0.85,
+          "ate": 1,
+          "easing": "power2.out"
+        }
+      ],
+      "audio": {
+        "voice_enabled": true,
+        "voice_text": "A exposição à luz e a regularidade dos horários ajudam a ajustar esse ritmo."
+      }
+    }
+  ]
+}

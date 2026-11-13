@@ -1,0 +1,21 @@
+{
+  "skill": "estudio-svg-project-author",
+  "skillVersion": "1.0.0",
+  "contractVersion": "3.0.0-alpha.4",
+  "sourceRepository": "https://github.com/livredopodervil/estudio-svg",
+  "sourceBranch": "release/v3-alpha4-rc1",
+  "sourceCommit": "309535f14d2b6034b5a0b9a802db37830fc1696a",
+  "filesSha256": {
+    "assets/projeto.schema.json": "76af96dc324180cddf2625f7d090d2d42641a2e01370dad7fb7c4d760e053aae",
+    "references/GUIA_ORIGINAL.md": "8ab92f1760f7b446d476d430571716759ebba3d73894f10ebad5d893d7205999",
+    "references/PROMPT_ORIGINAL.md": "43dab4ef4d777c9795173b03a8b4efd48b59f0a3f6a43bf1e51469e1537fb077",
+    "assets/timeline_original_v3.json": "53c31e145b92ef68542dbca01760e2e25cf2526c834471f58442474aff440297",
+    "SKILL.md": "8cefebf920c3d99b40ac2374ff4006f868946dfe922e2eb33a5ec2c27192975e",
+    "references/CONTRATO.md": "c5c6ec0d31c49092a54f8fa0f58e0c3abd06be2299fa5cd5cc7f035b8d64e222",
+    "references/MIDIA.md": "5bfa1b2d40958c676f0a1940aa2129b14e7bf563fc63c968693b9ad56da58411",
+    "references/QUALIDADE.md": "9c8dd07dc209b16a0eeb3ab3213683592e7b8174384efbdccaf214e91abc9456",
+    "assets/exemplo_educacao.json": "275159d63355e83fad05cc085fcc1548a9467cb0ad7cc05c653815a21ee8242d",
+    "assets/exemplo_espacial.json": "6d8a22986c48ae8f62dae660d0898dd7a942c1d4381961720f831a43ffab44f3"
+  },
+  "author": "Rogério Duarte"
+}

@@ -1,0 +1,93 @@
+{
+  "versao": "3.0.0-alpha.4",
+  "titulo": "Geometria espacial: cubo e câmera",
+  "video": {
+    "width": 1280,
+    "height": 720,
+    "fps": 24,
+    "draw_fps": 6,
+    "background": "#102533"
+  },
+  "voz": "pt-BR-AntonioNeural",
+  "encaixe_voz": "estender",
+  "cenas": [
+    {
+      "id": "cena_3d",
+      "tipo": "espacial",
+      "duracao": 9,
+      "titulo": "Transformações espaciais",
+      "cores": {
+        "fundo": "#102533",
+        "destaque": "#86D9D1",
+        "texto": "#F7F8F9"
+      },
+      "espacial": {
+        "camera": {
+          "azimute": 38,
+          "elevacao": 20,
+          "distancia": 13,
+          "alvo": [
+            0,
+            0,
+            0
+          ]
+        },
+        "objetos": [
+          {
+            "id": "cubo_a",
+            "tipo": "cubo",
+            "posicao": [
+              -1.4,
+              0,
+              0
+            ],
+            "rotacao": [
+              0,
+              0,
+              0
+            ],
+            "escala": 1.1,
+            "cor": "#70D8CB",
+            "visivel": true
+          },
+          {
+            "id": "esfera_b",
+            "tipo": "esfera",
+            "posicao": [
+              1.6,
+              0,
+              0
+            ],
+            "escala": 0.8,
+            "cor": "#F4BB78",
+            "visivel": true
+          }
+        ],
+        "animacoes": [
+          {
+            "alvo": "cubo_a",
+            "propriedade": "rotacao_y",
+            "inicio": 0,
+            "fim": 1,
+            "de": 0,
+            "ate": 360,
+            "easing": "linear"
+          },
+          {
+            "alvo": "__camera__",
+            "propriedade": "azimute",
+            "inicio": 0,
+            "fim": 1,
+            "de": 38,
+            "ate": 105,
+            "easing": "sine.inOut"
+          }
+        ]
+      },
+      "audio": {
+        "voice_enabled": true,
+        "voice_text": "O Estúdio projeta formas espaciais em SVG. Podemos animar objetos e câmera no mesmo intervalo de tempo."
+      }
+    }
+  ]
+}

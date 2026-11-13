@@ -1,0 +1,14 @@
+{
+  "name": "estudio-svg-project-author",
+  "version": "1.0.0",
+  "contractVersion": "3.0.0-alpha.4",
+  "skillUrl": "https://rogerioduarte.org/projetos/estudio-svg/skill/SKILL.md",
+  "immutableUrl": "https://rogerioduarte.org/projetos/estudio-svg/skill/v1.0.0/SKILL.md",
+  "schemaUrl": "https://rogerioduarte.org/projetos/estudio-svg/skill/v1.0.0/assets/projeto.schema.json",
+  "examples": [
+    "https://rogerioduarte.org/projetos/estudio-svg/skill/v1.0.0/assets/exemplo_educacao.json",
+    "https://rogerioduarte.org/projetos/estudio-svg/skill/v1.0.0/assets/exemplo_espacial.json"
+  ],
+  "releasesUrl": "https://rogerioduarte.org/projetos/estudio-svg/skill/versions.json",
+  "sourceCommit": "309535f14d2b6034b5a0b9a802db37830fc1696a"
+}

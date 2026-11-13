@@ -1,0 +1,11 @@
+{
+  "current": "1.0.0",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "uri": "https://rogerioduarte.org/projetos/estudio-svg/skill/v1.0.0/SKILL.md",
+      "contractVersion": "3.0.0-alpha.4",
+      "sourceCommit": "309535f14d2b6034b5a0b9a802db37830fc1696a"
+    }
+  ]
+}
