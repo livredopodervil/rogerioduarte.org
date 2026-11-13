@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101c27">
+<title>Como funciona o Estúdio SVG V3 | Rogério Duarte</title>
+<meta name="description" content="Exemplos animados de como o Estúdio SVG organiza roteiro, SVG, vídeo e narração para produzir apresentações interativas e MP4.">
+<meta property="og:type" content="website"><meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Rogério Duarte"><meta property="og:title" content="Estúdio SVG V3 — Como funciona">
+<meta property="og:description" content="Do roteiro ao SVG animado, à apresentação interativa e à exportação MP4. Veja os exemplos.">
+<meta property="og:url" content="https://rogerioduarte.org/projetos/estudio-svg/como-funciona/">
+<meta property="og:image" content="https://rogerioduarte.org/projetos/estudio-svg/og-estudio-v3.jpg">
+<meta property="og:image:type" content="image/jpeg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://rogerioduarte.org/projetos/estudio-svg/og-estudio-v3.jpg">
+<link rel="canonical" href="https://rogerioduarte.org/projetos/estudio-svg/como-funciona/">
+<style>
+:root{color-scheme:dark;font:16px/1.55 system-ui,-apple-system,Segoe UI,sans-serif;color:#ecf7fd;background:#101b27}
+*{box-sizing:border-box}body{margin:0}main{width:min(1080px,calc(100% - 28px));margin:0 auto;padding:22px 0 38px}
+a{color:#9bdeef}.eyebrow{font-size:.76rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:#8bdece}
+h1{font-size:clamp(1.45rem,4vw,2.55rem);line-height:1.17;margin:.3em 0}.sub{color:#b7cbd8;max-width:65ch}
+.controls{display:flex;flex-wrap:wrap;gap:9px;margin:18px 0 16px;align-items:center}
+button{border:1px solid #688498;background:#20364a;color:#effcff;border-radius:999px;padding:10px 15px;font:inherit;cursor:pointer}
+button[aria-pressed=true]{background:#b1edd9;color:#123143;border-color:#b1edd9;font-weight:700}
+button:focus-visible,a:focus-visible{outline:3px solid #e9ce86;outline-offset:3px}
+.board{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.87fr);gap:20px;background:linear-gradient(140deg,#172c3a,#142131);border:1px solid #3e6171;border-radius:17px;padding:clamp(14px,2.8vw,30px);min-height:340px}
+.art{aspect-ratio:16/11;position:relative;border:1px solid #476b80;border-radius:12px;overflow:hidden;background:#081827}
+.art svg{display:block;width:100%;height:100%}.orbit{transform-origin:50% 50%;animation:spin 10s linear infinite}.breath{animation:breathe 3s ease-in-out infinite}
+.flow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin-top:12px}.step{text-align:center;border-radius:7px;padding:8px 3px;background:#253e50;color:#b7ccd9;font-size:.75rem}.step.on{background:#b5e2d5;color:#183445;font-weight:800}
+.info{display:flex;flex-direction:column;justify-content:center}.info small{color:#96d7e8;letter-spacing:.07em;text-transform:uppercase;font-weight:800}
+.info h2{font-size:clamp(1.2rem,2.5vw,1.8rem);line-height:1.23;margin:10px 0}.info p{color:#c6dce6;margin:0 0 15px}
+.example{border-left:3px solid #80d9ce;padding:8px 12px;background:#21394a;border-radius:0 8px 8px 0}
+progress{width:100%;height:9px;accent-color:#91decb}footer{margin-top:18px;color:#9fc0cf;font-size:.87rem}
+@keyframes spin{to{transform:rotate(360deg)}}@keyframes breathe{50%{transform:scale(1.08);opacity:.68}}
+@media(max-width:720px){.board{grid-template-columns:1fr}.art{max-height:370px}.controls{margin-block:14px}}
+@media(prefers-reduced-motion:reduce){.orbit,.breath{animation:none}}
+</style></head><body><main>
+<div class="eyebrow">Laboratório experimental · Software livre</div>
+<h1>Do roteiro à apresentação animada</h1>
+<p class="sub">Veja como o Estúdio SVG combina dados, vetores, objetos espaciais, narração e exportação em um fluxo reutilizável.</p>
+<div class="controls" aria-label="Selecionar exemplo">
+<button data-demo="educacao" aria-pressed="true">Educação</button><button data-demo="ciencia" aria-pressed="false">Ciência</button><button data-demo="divulgacao" aria-pressed="false">Divulgação</button>
+<button id="toggle" aria-label="Pausar ou retomar animação">⏸ Pausar</button></div>
+<section class="board" aria-label="Animação explicativa do Estúdio SVG">
+<div><div class="art"><svg viewBox="0 0 600 400" role="img" aria-label="Fluxo animado: roteiro, objetos SVG, linha do tempo e publicação">
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#12334b"/><stop offset="1" stop-color="#091725"/></linearGradient></defs>
+<rect width="600" height="400" fill="url(#bg)"/>
+<g opacity=".28" stroke="#416b83"><path d="M0 80H600M0 160H600M0 240H600M0 320H600M100 0V400M200 0V400M300 0V400M400 0V400M500 0V400"/></g>
+<g id="screen" transform="translate(78 46)"><rect width="444" height="292" rx="18" fill="#112c40" stroke="#75bed0" stroke-width="3"/>
+<path d="M0 44H444" stroke="#4f8ca3"/><circle cx="25" cy="21" r="5" fill="#f5a797"/><circle cx="45" cy="21" r="5" fill="#e4c275"/><circle cx="65" cy="21" r="5" fill="#92e3ce"/>
+<rect x="20" y="64" width="185" height="188" rx="10" fill="#203e4f"/>
+<rect x="238" y="64" width="185" height="188" rx="10" fill="#112337" stroke="#386b82"/>
+<g id="code"><rect x="37" y="83" width="122" height="11" rx="5" fill="#91d5de"/><rect x="37" y="111" width="139" height="8" rx="4" fill="#497a8d"/><rect x="37" y="134" width="118" height="8" rx="4" fill="#497a8d"/><rect x="37" y="157" width="147" height="8" rx="4" fill="#497a8d"/><rect x="37" y="180" width="83" height="8" rx="4" fill="#497a8d"/></g>
+<g id="drawing"><circle cx="331" cy="152" r="64" fill="none" stroke="#8cd8d2" stroke-width="3" stroke-dasharray="5 10"/>
+<g class="orbit" style="transform-box:view-box;transform-origin:331px 198px"><path d="M331 128L385 153L331 184L276 153Z" fill="#91dcdf" fill-opacity=".6" stroke="#c5f7ee" stroke-width="2"/><path d="M276 153L331 184V229L276 199Z" fill="#277a97" stroke="#8bd1df" stroke-width="2"/><path d="M385 153L331 184V229L385 199Z" fill="#3d9ca8" stroke="#8bd1df" stroke-width="2"/></g>
+<circle class="breath" cx="332" cy="153" r="13" fill="#ffd58d" opacity=".8"/></g>
+<path d="M35 266H409" stroke="#5a8798" stroke-width="6" stroke-linecap="round"/><path id="progress-line" d="M35 266H35" stroke="#8be6be" stroke-width="7" stroke-linecap="round"/></g>
+<text x="300" y="378" fill="#c1e7f0" text-anchor="middle" font-size="18" font-family="system-ui" id="svg-label">Cenas vetoriais e linha do tempo</text>
+</svg></div><div class="flow" aria-hidden="true"><div class="step on">Roteiro</div><div class="step">SVG</div><div class="step">Animação</div><div class="step">Publicação</div></div></div>
+<div class="info"><small id="phase">1 / 4 · Planejar</small><h2 id="phase-title">Descrever as cenas</h2><p id="phase-body">Organize título, texto, dados, recursos visuais e locução em um projeto JSON.</p>
+<p class="example"><strong>Exemplo:</strong> <span id="example">Uma aula sobre ciclos circadianos, com relógio animado e voz.</span></p>
+<progress id="bar" max="100" value="0" aria-label="Progresso da explicação"></progress>
+<p><a href="../vetorial-v3/">Abrir apresentação real</a> · <a href="https://github.com/livredopodervil/estudio-svg/tree/release/v3-alpha4-rc1" target="_blank" rel="noopener noreferrer">Código no GitHub</a></p></div>
+</section><footer>Esta é uma representação didática da arquitetura V3, não uma gravação da interface. Ilustra funções experimentais; áudio e vídeo dependem do navegador e da mídia publicada.</footer></main>
+<script>
+(()=>{'use strict';
+const phases=[['1 / 4 · Planejar','Descrever as cenas','Organize título, texto, dados, recursos visuais e locução em um projeto JSON.'],['2 / 4 · Compor','Construir elementos vetoriais','Formas SVG, diagramas, imagens e objetos espaciais são organizados sem exportar um PNG para cada quadro.'],['3 / 4 · Animar','Reproduzir no navegador','A timeline controla translação, rotação, escala, câmera e narração conforme o tempo da cena.'],['4 / 4 · Publicar','Compartilhar HTML e MP4','O navegador executa a apresentação SVG; o motor de exportação gera vídeo MP4 quando solicitado.']];
+const examples={educacao:'Uma aula sobre ciclos circadianos, com relógio animado e voz.',ciencia:'Um consórcio microbiano ilustrado por objetos espaciais e gráficos.',divulgacao:'Um boletim com dados, gráficos animados, imagens e trilha de áudio.'};
+let started=performance.now(),elapsed=0,paused=matchMedia('(prefers-reduced-motion: reduce)').matches,selected='educacao',last=-1;
+const toggle=document.getElementById('toggle'),bar=document.getElementById('bar');
+function paint(){let f=(elapsed%28000)/7000,idx=Math.min(3,Math.floor(f));if(idx!==last){last=idx;document.getElementById('phase').textContent=phases[idx][0];document.getElementById('phase-title').textContent=phases[idx][1];document.getElementById('phase-body').textContent=phases[idx][2];document.querySelectorAll('.step').forEach((e,i)=>e.classList.toggle('on',i===idx));}
+bar.value=100*(f-idx);const x=35+374*(f-idx);document.getElementById('progress-line').setAttribute('d',`M35 266H${x.toFixed(1)}`);}
+function tick(now){if(!paused)elapsed+=Math.min(60,now-started);started=now;paint();requestAnimationFrame(tick)}requestAnimationFrame(tick);
+toggle.onclick=()=>{paused=!paused;toggle.textContent=paused?'▶ Retomar':'⏸ Pausar'};toggle.textContent=paused?'▶ Retomar':'⏸ Pausar';
+for(const b of document.querySelectorAll('[data-demo]'))b.onclick=()=>{selected=b.dataset.demo;document.querySelectorAll('[data-demo]').forEach(n=>n.setAttribute('aria-pressed',String(n===b)));document.getElementById('example').textContent=examples[selected]};
+})();
+</script></body></html>
