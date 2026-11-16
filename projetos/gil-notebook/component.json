@@ -9,14 +9,152 @@
     {
       "path": "index.html",
       "role": "page",
-      "bytes": 272212,
-      "sha256": "730581c9e9e6af9126e5e0a98a36fde0e81f13e951fb1e84a62a9db9e60e95c9"
+      "bytes": 278082,
+      "sha256": "97e3187a791be7389ee2159ee177a3ef339b806586af16023adcad8ec36dc9d6"
     },
     {
       "path": "poster.svg",
       "role": "preview",
       "bytes": 10518,
       "sha256": "4409892f17687d5ec1506f7e9511e543fce82ef03238f2d30a24c3b8ca80a4da"
+    },
+    {
+      "path": "og-image.jpg",
+      "role": "preview",
+      "bytes": 107122,
+      "sha256": "c903c5e6bd2383a7ced812e8a1c7f3feadda776e63b8ca4da6e3e4ecececd62f"
+    },
+    {
+      "path": "home-gil/home.css",
+      "role": "asset",
+      "bytes": 1484,
+      "sha256": "acf8264233a8254eed69f77702b7004570add07e0978b527678e4f57361e7952"
+    },
+    {
+      "path": "home-gil/home.mjs",
+      "role": "asset",
+      "bytes": 4886,
+      "sha256": "023814d9d0e47941b44a1d59c8a6f488bc78a1dd57b42be69fa555e7b761befa"
+    },
+    {
+      "path": "home-gil/scenes.json",
+      "role": "asset",
+      "bytes": 33046,
+      "sha256": "33d4ba9f1a892fb4e1bbdb1c89c2ed96df24f098d95e695148b7bd17579cb6b8"
+    },
+    {
+      "path": "home-gil/src/audio.mjs",
+      "role": "asset",
+      "bytes": 1764,
+      "sha256": "fe61230fc5c17fe0f2ccdea6150aac3fcf7197fa9c0826b2d32e70cb583b0727"
+    },
+    {
+      "path": "home-gil/src/authoring.mjs",
+      "role": "asset",
+      "bytes": 4245,
+      "sha256": "01edac64f4c24b051549d7da85733b76d4145526cdf8517d1aa642fab39ab435"
+    },
+    {
+      "path": "home-gil/src/language.mjs",
+      "role": "asset",
+      "bytes": 3059,
+      "sha256": "c2dba8ccecc9aa07a5e3ed006f6dda8d77f4f70a538296c58efa3e62af6ae6f9"
+    },
+    {
+      "path": "home-gil/src/model.mjs",
+      "role": "asset",
+      "bytes": 8948,
+      "sha256": "275b7dfd25f4665d2e220964487c7493a469884ca6d362d7a4c3e7fa901b46ba"
+    },
+    {
+      "path": "home-gil/src/render-svg.mjs",
+      "role": "asset",
+      "bytes": 4613,
+      "sha256": "bd45b1fb9a09459f331a54c613d53bb8ba8f87450c3f3b4c291c931252e19c52"
+    },
+    {
+      "path": "home-gil/src/roteiro.mjs",
+      "role": "asset",
+      "bytes": 6494,
+      "sha256": "bd4e113032394e0fff4125de91161cc0a79ed8ee878798cb9185053ff5f5e43b"
+    },
+    {
+      "path": "home-gil/src/spatialseed.mjs",
+      "role": "asset",
+      "bytes": 1038,
+      "sha256": "f7c7849b1f6f6e77afdffb2f0dd1955232d4503744f775ed7b73e30e6a3d5163"
+    },
+    {
+      "path": "home-gil/src/timeline.mjs",
+      "role": "asset",
+      "bytes": 2405,
+      "sha256": "3f0b0f91aab98c3699cbbab87c0824695a2ba180a736b64bfa257f81005cedd2"
+    },
+    {
+      "path": "home-gil/vendor/spatialseed/package.json",
+      "role": "asset",
+      "bytes": 33,
+      "sha256": "89c47db7851f89caec72da4f215ebc21cf1e294aeef3b45d2583562d846ab035"
+    },
+    {
+      "path": "home-gil/vendor/spatialseed/packages/math-affine/src/Matrix4.js",
+      "role": "asset",
+      "bytes": 6252,
+      "sha256": "02643623db9ab75a66088267c43a1c0aaf7034d86315bd16e83d02383e15b5a3"
+    },
+    {
+      "path": "home-gil/vendor/spatialseed/packages/occurrence-contracts/src/OccurrenceRef.js",
+      "role": "asset",
+      "bytes": 2131,
+      "sha256": "1679b784a77dfb8191fb6088da05939a54b560e52189d2f7521be1b97481fe5d"
+    },
+    {
+      "path": "home-gil/vendor/spatialseed/packages/property-registry/src/PropertyRegistry.js",
+      "role": "asset",
+      "bytes": 4852,
+      "sha256": "659093ec42e45b5413b52784835c9bc00151957e4532090d9f6ee7db497ad962"
+    },
+    {
+      "path": "home-gil/vendor/spatialseed/packages/runtime-api/src/RuntimeCapabilities.js",
+      "role": "asset",
+      "bytes": 722,
+      "sha256": "8c3712892283fadf829180545bf28f64c11cabf0e57f3bec781e78eee0bdc426"
+    },
+    {
+      "path": "home-gil/vendor/spatialseed/packages/selection-operations/src/AffineAst.js",
+      "role": "asset",
+      "bytes": 3837,
+      "sha256": "e5e79e362edfc98947a011d5e882cd32fa16364c60dbb854bbf9428406816817"
+    },
+    {
+      "path": "home-gil/vendor/spatialseed/packages/selection-operations/src/AffineProgram.js",
+      "role": "asset",
+      "bytes": 18128,
+      "sha256": "a9006c6b332bc43293fcd0f9ec20c0adde32f0e9ef64098e94adf10fda9ef42d"
+    },
+    {
+      "path": "home-gil/vendor/spatialseed/packages/temporal-runtime/src/AnalyticTimeDomains.js",
+      "role": "asset",
+      "bytes": 10358,
+      "sha256": "ce2945138a3284d649a1713d14b5cd12fd3e4a15c7f538fd46d1d0967089d617"
+    },
+    {
+      "path": "home-gil/vendor/spatialseed/packages/temporal-runtime/src/DependencyVersions.js",
+      "role": "asset",
+      "bytes": 1433,
+      "sha256": "0eaeca85dcd6485e2ab3aec070fd31de73f332a47b1d3aa17ef58e9d4d707278"
+    },
+    {
+      "path": "home-gil/vendor/spatialseed/packages/temporal-runtime/src/EvolutionResult.js",
+      "role": "asset",
+      "bytes": 3500,
+      "sha256": "476ae1b61fd7901247f0913f7c5239e9a8c1fa47636099030e84e79b1595e654"
+    },
+    {
+      "path": "home-gil/vendor/spatialseed/packages/temporal-runtime/src/TemporalRuntime.js",
+      "role": "asset",
+      "bytes": 18870,
+      "sha256": "901bdc61cf413249fb2e852316328f1982d0aca6275b34192fafa74c933522ce"
     }
   ]
 }
