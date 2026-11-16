@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "id": "gil-superposicao-ondas",
+  "title": "Superposição de ondas",
+  "description": "Modelo cinemático de uma malha discreta de 63 elementos. Cada altura é a soma de duas funções senoidais no espaço e no tempo. Câmera e luz dinâmicas; telemetria preservada no documento; efeitos sonoros sintetizados. Não é simulação de propagação física. Autoria do sistema: Rogério Duarte.",
+  "producer": "RD Studio / GIL Timeline 0.2.0",
+  "language": "gil-timeline-0.1",
+  "artifacts": [
+    {
+      "path": "player.html",
+      "role": "interactive-derivative",
+      "sha256": "846cd6c659fdac87f222653d0f8534b6afe2fff08a56803795cc11fda7869054",
+      "bytes": 1371820
+    },
+    {
+      "path": "projeto.gil.txt",
+      "role": "source",
+      "sha256": "cd26f33c168648f110db85350d15ece180a8a78df9325bd0f0a59ef7a9fc4760",
+      "bytes": 8957
+    },
+    {
+      "path": "assets/video.mp4",
+      "role": "rendered-video",
+      "sha256": "cf6f65bd460bde53d310f72a7f9a74e1b3372eeba04391c512a94e80fccd8cb9",
+      "bytes": 545884
+    },
+    {
+      "path": "index.html",
+      "role": "page",
+      "sha256": "6af105834e2cb1e059322f8469ae93f3ec96794955add58cd4c2d07291628f88",
+      "bytes": 2092
+    }
+  ],
+  "render": {
+    "source_sha256": "cd26f33c168648f110db85350d15ece180a8a78df9325bd0f0a59ef7a9fc4760",
+    "duration_requested": 18,
+    "fps": 12,
+    "long_side": 640
+  }
+}
