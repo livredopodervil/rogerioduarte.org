@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "id": "gil-notebook",
+  "title": "GIL · Caderno executável",
+  "description": "Notebook interativo GIL Timeline e Roteiro 0.1",
+  "producer": "RD Studio Workspace 0.3.1 (Rogério Duarte)",
+  "language": "gil-timeline-0.1",
+  "artifacts": [
+    {
+      "path": "index.html",
+      "role": "page",
+      "bytes": 272212,
+      "sha256": "730581c9e9e6af9126e5e0a98a36fde0e81f13e951fb1e84a62a9db9e60e95c9"
+    },
+    {
+      "path": "poster.svg",
+      "role": "preview",
+      "bytes": 10518,
+      "sha256": "4409892f17687d5ec1506f7e9511e543fce82ef03238f2d30a24c3b8ca80a4da"
+    }
+  ]
+}

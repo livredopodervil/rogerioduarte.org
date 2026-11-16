@@ -1,0 +1,17 @@
+{
+  "id": "gil-notebook",
+  "title": "GIL · Caderno executável",
+  "summary": "Laboratório interativo de geometria, composição temporal e roteiro.",
+  "status": "demonstracao",
+  "category": "Software experimental",
+  "url": "/projetos/gil-notebook/",
+  "preview": "/projetos/gil-notebook/poster.svg",
+  "color": "#206b62",
+  "topics": [
+    "geometria",
+    "matemática",
+    "animação",
+    "programação"
+  ],
+  "neighbors": []
+}
