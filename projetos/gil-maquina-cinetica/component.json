@@ -1,0 +1,34 @@
+{
+  "schema": 1,
+  "id": "gil-maquina-cinetica",
+  "title": "Máquina cinética — GIL e SpatialSeed",
+  "description": "Máquina cinética procedural: três grupos giram em referenciais distintos. Instâncias partilham recursos; a câmera e a luz têm faixas independentes. A telemetria é um objeto de dados sem geometria. A composição é ilustrativa, não uma simulação física. O player permite pausar, buscar o tempo e reproduzir os efeitos sonoros. O MP4 é renderizado da mesma fonte GIL pelo adaptador SVG com áudio de síntese; não utiliza WebGL nativo.\n",
+  "producer": "RD Studio / GIL Timeline 0.1.2",
+  "language": "gil-timeline-0.1",
+  "artifacts": [
+    {
+      "path": "player.html",
+      "role": "interactive-derivative",
+      "sha256": "b8aee0d1cfc84ba1c6ecd34e59417be609d2e8bb3358811241b67cb7ef351632",
+      "bytes": 1354324
+    },
+    {
+      "path": "projeto.gil.txt",
+      "role": "source",
+      "sha256": "89af2e47324d654201d97240cea991e80554748c8f5ea3788950e2a38002f6f2",
+      "bytes": 3729
+    },
+    {
+      "path": "assets/video.mp4",
+      "role": "attached-video",
+      "sha256": "f1cfe52b18db8445f0da54e265478d85fbd244628439a3883da8ea16270e25f0",
+      "bytes": 1310011
+    },
+    {
+      "path": "index.html",
+      "role": "page",
+      "sha256": "de555b21ac1c849a642c33d6469118b6d8732c981d3122799b185c66ec727f7c",
+      "bytes": 2210
+    }
+  ]
+}
