@@ -4516,5 +4516,18 @@ const RFWebP=(()=>{
       RFWorkspace.init(engine,mapEditor,rfTemplate).catch(e=>{document.getElementById('rf-work-status').textContent=e.message;console.error(e);document.getElementById('rf-work').hidden=false;}).finally(()=>engine.ready.then(()=>engine.start()));
     });
   </script>
+
+<div id="rd-music-player" style="
+ position:fixed; top:48px; right:8px;
+ width:min(300px,85vw); height:42px;
+ z-index:9999; border-radius:8px;
+ overflow:hidden; background:#181818;">
+ <iframe
+ title="Canções do Divino Mestre"
+ style="border:0;width:100%;height:42px;"
+ src="https://bandcamp.com/EmbeddedPlayer/album=157861033/size=small/bgcol=333333/linkcol=ffffff/transparent=true/"
+ allow="autoplay">
+ </iframe>
+</div>
 </body>
 </html>
